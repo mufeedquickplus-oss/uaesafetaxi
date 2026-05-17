@@ -1,30 +1,24 @@
-UAE Safe Drivers - Pricing Cards and Floating Icon Buttons Audit
+UAE Safe Drivers - Send Request Button Visibility Fix Audit
 
-hero_price_removed: PASS
-service_card_prices_added: PASS
-floating_call_icon_link: PASS
-floating_whatsapp_icon_link: PASS
-floating_buttons_are_anchors: PASS
+send_request_button_present: PASS
+send_complaint_button_present: PASS
+submit_visibility_css_present: PASS
+submit_buttons_have_full_width: PASS
+submit_buttons_have_contrast: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-button_js_retained: PASS
-logo_still_present: PASS
+floating_icons_retained: PASS
+pricing_cards_retained: PASS
 no_dead_links: PASS
 
-Applied:
-- Removed AED 80 price note from hero.
-- Added competitor-style pricing on service cards.
-- Replaced floating text buttons with actual icon-shaped buttons.
-- Left floating icon: direct call link.
-- Right floating icon: direct WhatsApp link.
+Fix applied:
+- Send Request button now has full-width dark background and white text.
+- Send Complaint button uses the same visible style.
+- Hover state changes to gold with black text.
+- Mobile sizing locked.
 
-Pricing used:
-- Safe Driver Dubai: AED 80 / one-way
-- Hourly Driver: AED 60 / hour
-- Daily Driver: AED 380 / 10 hours
-- Pick & Drop: AED 400 / day
-- Corporate Driver: From AED 80
-- Chauffeur Service: From AED 80
+Submit buttons found:
+['Send Request', 'Send Complaint']
 
 Bad links:
 PASS

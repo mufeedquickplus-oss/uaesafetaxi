@@ -2646,6 +2646,56 @@ footer .footer-complaint:hover{
   }
 }
 
+
+/* Final form submit button visibility fix */
+.popup-card .form-submit-btn,
+.popup-card button[type="submit"],
+#bookingForm button[type="submit"],
+#complaintForm button[type="submit"]{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:100%!important;
+  min-height:54px!important;
+  margin-top:16px!important;
+  padding:14px 22px!important;
+  border-radius:999px!important;
+  background:#10100d!important;
+  color:#ffffff!important;
+  border:1px solid #10100d!important;
+  font-size:.95rem!important;
+  font-weight:900!important;
+  line-height:1.2!important;
+  text-align:center!important;
+  opacity:1!important;
+  visibility:visible!important;
+  box-shadow:none!important;
+  cursor:pointer!important;
+}
+.popup-card .form-submit-btn:hover,
+.popup-card button[type="submit"]:hover,
+#bookingForm button[type="submit"]:hover,
+#complaintForm button[type="submit"]:hover{
+  background:#f5c400!important;
+  color:#111111!important;
+  border-color:#f5c400!important;
+}
+.popup-card .form-submit-btn:focus-visible,
+.popup-card button[type="submit"]:focus-visible{
+  outline:3px solid rgba(245,196,0,.45)!important;
+  outline-offset:3px!important;
+}
+@media(max-width:620px){
+  .popup-card .form-submit-btn,
+  .popup-card button[type="submit"],
+  #bookingForm button[type="submit"],
+  #complaintForm button[type="submit"]{
+    min-height:52px!important;
+    font-size:.94rem!important;
+    margin-top:14px!important;
+  }
+}
+
 </style>
 </head>
 
@@ -2740,7 +2790,7 @@ footer .footer-complaint:hover{
     </label>
   </div>
 
-  <button class="btn btn-dark full" type="submit">Send Request</button>
+  <button class="btn btn-dark full form-submit-btn" type="submit">Send Request</button>
 </form>
 
         <form class="popup-card complaint-card" id="complaintForm" aria-label="Complaint form">
@@ -2784,7 +2834,7 @@ footer .footer-complaint:hover{
     </label>
   </div>
 
-  <button class="btn btn-dark full" type="submit">Send Complaint</button>
+  <button class="btn btn-dark full form-submit-btn" type="submit">Send Complaint</button>
 </form>
   </div>
 </div>
