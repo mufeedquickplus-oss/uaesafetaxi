@@ -169,3 +169,10 @@ Non-taxi hero update:
 Safe driver form update:
 - Booking form revised for driver service: date, pickup time, pickup/drop-off, map links, duration, car type, passengers and notes.
 - Complaint form revised: name, optional contact number, optional travel date, optional service type, trip details and complaint.
+
+
+Clean UI/forms update:
+- Removed map link fields and car type field from booking form.
+- Cleaned top/bottom color system.
+- Made buttons consistent.
+- Kept booking and complaint popups working.

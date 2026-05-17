@@ -1753,6 +1753,174 @@ textarea:focus-visible{
   }
 }
 
+
+/* Final clean color system - consistent top and bottom */
+html, body{
+  background:#10100d!important;
+}
+.site-header{
+  background:#10100d!important;
+  border-bottom:1px solid rgba(245,196,0,.18)!important;
+  box-shadow:none!important;
+}
+.hero-inspired{
+  background:#10100d!important;
+  color:#ffffff!important;
+}
+.hero-inspired .hero-bg{
+  opacity:.36!important;
+}
+.hero-inner{
+  align-items:center!important;
+}
+.hero-kicker{
+  display:inline-flex!important;
+  align-items:center!important;
+  gap:10px!important;
+  padding:9px 18px!important;
+  margin-bottom:24px!important;
+  border-radius:999px!important;
+  background:rgba(245,196,0,.10)!important;
+  border:1px solid rgba(245,196,0,.28)!important;
+  color:#f5c400!important;
+  box-shadow:none!important;
+}
+.hero-kicker::before{
+  display:none!important;
+}
+.hero-inspired h1{
+  color:#ffffff!important;
+}
+.hero-inspired h1 em{
+  color:#f5c400!important;
+}
+.hero-inspired .hero-sub{
+  color:rgba(255,255,255,.76)!important;
+}
+.hero-inspired .hero-ctas{
+  gap:12px!important;
+}
+.btn,
+.hero-inspired .btn,
+.nav-actions .btn,
+.cta .btn,
+.footer-grid .btn{
+  box-shadow:none!important;
+  background-image:none!important;
+}
+.btn-yellow,
+.btn-yellow:link,
+.btn-yellow:visited,
+.btn-yellow:hover,
+.btn-yellow:active{
+  background:#f5c400!important;
+  color:#111111!important;
+  border:1px solid #f5c400!important;
+}
+.btn-soft,
+.btn-soft:link,
+.btn-soft:visited,
+.btn-soft:hover,
+.btn-soft:active,
+.hero-call-btn{
+  background:transparent!important;
+  color:#ffffff!important;
+  border:1px solid rgba(255,255,255,.38)!important;
+}
+.trust-item{
+  border-right-color:rgba(255,255,255,.14)!important;
+}
+.trust-icon{
+  background:rgba(245,196,0,.13)!important;
+  color:#f5c400!important;
+}
+.trust-item strong{
+  color:#ffffff!important;
+}
+.trust-item small{
+  color:rgba(255,255,255,.62)!important;
+}
+.services,
+.areas,
+.faq{
+  background:#f7f3e8!important;
+  color:#111111!important;
+}
+.cta{
+  background:#10100d!important;
+  color:#ffffff!important;
+}
+.cta h2{
+  color:#ffffff!important;
+}
+footer{
+  background:#10100d!important;
+  color:rgba(255,255,255,.72)!important;
+  border-top:1px solid rgba(245,196,0,.16)!important;
+}
+.footer-grid a,
+.footer-grid span,
+.footer-grid p,
+.footer-grid strong,
+.footer-complaint{
+  color:rgba(255,255,255,.70)!important;
+}
+.footer-grid strong{
+  color:#ffffff!important;
+}
+.footer-complaint,
+.open-complaint.footer-complaint,
+button.footer-complaint{
+  background:transparent!important;
+  border:0!important;
+  color:rgba(255,255,255,.70)!important;
+  padding:0!important;
+  border-radius:0!important;
+  text-align:left!important;
+  width:auto!important;
+}
+.footer-complaint:hover{
+  color:#f5c400!important;
+}
+.form-grid{
+  grid-template-columns:1fr 1fr!important;
+}
+.form-grid .full-field{
+  grid-column:1 / -1!important;
+}
+@media(max-width:760px){
+  .hero-inspired{
+    min-height:auto!important;
+  }
+  .hero-inner{
+    min-height:auto!important;
+    padding-top:104px!important;
+    padding-bottom:42px!important;
+  }
+  .hero-inspired .hero-bg{
+    opacity:.20!important;
+  }
+  .hero-inspired .hero-ctas{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+  }
+  .hero-inspired .btn{
+    width:100%!important;
+  }
+  .trust-item{
+    border-right:0!important;
+  }
+  .form-grid{
+    grid-template-columns:1fr!important;
+  }
+  footer .hero-ctas,
+  .footer-grid .hero-ctas{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+}
+
 </style>
 </head>
 
@@ -1819,19 +1987,9 @@ textarea:focus-visible{
       <input type="text" id="rideFrom" placeholder="Where should the driver come?" />
     </label>
 
-    <label class="optional-field">
-      <span>Pickup map link <small>optional</small></span>
-      <input type="url" id="rideFromMap" placeholder="Paste map link if available" />
-    </label>
-
     <label>
       <span>Drop-off location</span>
       <input type="text" id="rideTo" placeholder="Destination or final stop" />
-    </label>
-
-    <label class="optional-field">
-      <span>Drop-off map link <small>optional</small></span>
-      <input type="url" id="rideToMap" placeholder="Paste map link if available" />
     </label>
 
     <label>
@@ -1847,18 +2005,13 @@ textarea:focus-visible{
     </label>
 
     <label>
-      <span>Car type</span>
-      <input type="text" id="rideCar" placeholder="Example: Sedan, SUV, luxury car" />
-    </label>
-
-    <label>
       <span>No. of passengers</span>
       <input type="number" id="ridePeople" min="1" placeholder="Passengers" />
     </label>
 
     <label class="full-field">
       <span>Notes</span>
-      <textarea id="rideInfo" rows="3" placeholder="Car location, parking details, multiple stops or special instructions"></textarea>
+      <textarea id="rideInfo" rows="3" placeholder="Pickup details, parking, multiple stops or special instructions"></textarea>
     </label>
   </div>
 
@@ -2212,16 +2365,14 @@ textarea:focus-visible{
         "Date: " + (document.getElementById("rideDate")?.value || "-"),
         "Pickup time: " + (document.getElementById("rideTime")?.value || "-"),
         "Pickup location: " + (document.getElementById("rideFrom")?.value.trim() || "-"),
-        "Pickup map link: " + (document.getElementById("rideFromMap")?.value.trim() || "-"),
         "Drop-off location: " + (document.getElementById("rideTo")?.value.trim() || "-"),
-        "Drop-off map link: " + (document.getElementById("rideToMap")?.value.trim() || "-"),
         "Service duration: " + (document.getElementById("rideDuration")?.value || "-"),
-        "Car type: " + (document.getElementById("rideCar")?.value.trim() || "-"),
         "No. of passengers: " + (document.getElementById("ridePeople")?.value || "-"),
         "Notes: " + (document.getElementById("rideInfo")?.value.trim() || "-"),
         "",
         "Please share availability and price."
-      ].join("\n");
+      ].join("
+");
 
       window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
     });
