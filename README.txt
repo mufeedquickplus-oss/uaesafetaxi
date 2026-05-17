@@ -112,3 +112,26 @@ Hero reference update:
 - Added Safe & Secure, Professional Driver and 24/7 Availability blocks.
 - Added feature strip for Airport Transfers, City Rides, Hotel Pickup and Family Trips.
 - Kept buttons clean: Book Now and Call.
+
+
+Minimal content cleanup:
+- Removed extra information-heavy sections.
+- Kept only customer-needed content.
+- Shortened hero, services, FAQ and CTA.
+
+
+Cropped logo visibility fix:
+- Created assets/uae-safe-travel-logo-header-cropped.jpg from the uploaded dark logo.
+- Replaced header/footer logo with the cropped version.
+- Added CSS to force visible logo sizing.
+
+
+Guaranteed final build:
+- Header/footer logo embedded into index.html as data image.
+- Hero image embedded into index.html as data image.
+- Critical visuals no longer depend on asset path loading.
+
+
+Clean car hero fix:
+- Replaced screenshot/mockup-style hero visual with a clean car-only crop.
+- Embedded the clean car visual directly in HTML.

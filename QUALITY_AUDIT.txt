@@ -1,26 +1,24 @@
-UAE Safe Travel - Hero Inspired Site Build Audit
+UAE Safe Travel - Clean Car Hero Final Audit
 
-hero_inspired_section_present: PASS
-safe_professional_24_present: PASS
-button_labels_clean: PASS
-hero_feature_strip_present: PASS
-hero_uses_uploaded_image_asset: PASS
-service_buttons_trigger_form: PASS
+clean_car_asset_created: PASS
+car_image_embedded: PASS
+hero_alt_mentions_car: PASS
+old_hero_asset_not_referenced: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-uploaded_logo_still_used: PASS
 visible_phone_number_hidden: PASS
 visible_platform_mentions_removed: PASS
 no_hash_only_links: PASS
 dead_end_or_missing_asset_links: PASS
 
-Hero update:
-PASS - Hero now follows the supplied reference direction inside the actual website.
-PASS - Includes Safe & Secure, Professional Driver and 24/7 Availability.
-PASS - Buttons match the reference style but use clean labels: Book Now and Call.
-PASS - Feature strip includes Airport Transfers, City Rides, Hotel Pickup and Family Trips.
-PASS - Booking popup behavior is retained.
-PASS - No image generation was used.
+Fix applied:
+PASS - Replaced screenshot/mockup-style hero with a clean car-only crop.
+PASS - Embedded the clean car image directly in HTML to avoid loading failure.
+PASS - Booking and complaint popups remain intact.
+PASS - Uploaded logo remains embedded/visible from prior guaranteed build.
 
-href_count: 24
+Clean car asset:
+assets/uae-safe-travel-car-only-hero.jpg
+
+href_count: 22
 dead_end_or_missing_asset_links_detail: PASS
