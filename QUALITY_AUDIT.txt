@@ -1,25 +1,20 @@
-UAE Safe Drivers - USD Logo Applied to Website Audit
+UAE Safe Drivers - Floating Buttons and Price Update Audit
 
-new_usd_logo_asset_created: PASS
-header_footer_logo_replaced: PASS
-logo_embedded_for_reliable_display: PASS
-old_inline_svg_logo_removed: PASS
-logo_background_matches_header: PASS
+price_added: PASS
+floating_call_left_added: PASS
+floating_whatsapp_right_added: PASS
+floating_css_present: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-button_js_present: PASS
-footer_fix_retained: PASS
+button_js_retained: PASS
+logo_still_present: PASS
 no_dead_links: PASS
 
 Applied:
-- New USD / UAE Safe Drivers logo is applied to header.
-- New USD / UAE Safe Drivers logo is applied to footer.
-- Logo is embedded directly in index.html for reliable display.
-- Optimized copy also saved in assets/uae-safe-drivers-usd-logo.png.
-- Existing footer, forms, button JS and popup behavior retained.
-
-Source logo:
-/mnt/data/sleek_usd_driving_service_logo.png
+- Added fixed Call button on the left.
+- Added fixed WhatsApp booking button on the right.
+- Added price note: Starting from AED 80.
+- Kept existing booking popup, complaint popup, logo, footer and forms.
 
 Bad links:
 PASS

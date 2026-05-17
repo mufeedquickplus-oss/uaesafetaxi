@@ -2495,6 +2495,78 @@ footer .footer-complaint:hover{
   }
 }
 
+
+/* Floating call/WhatsApp buttons + price note */
+.price-note{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  margin:0 0 22px!important;
+  padding:8px 16px!important;
+  border-radius:999px!important;
+  background:rgba(245,196,0,.12)!important;
+  border:1px solid rgba(245,196,0,.28)!important;
+  color:#f5c400!important;
+  font-size:.82rem!important;
+  font-weight:900!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
+}
+.floating-actions{
+  position:fixed!important;
+  left:0!important;
+  right:0!important;
+  bottom:18px!important;
+  z-index:999!important;
+  pointer-events:none!important;
+}
+.floating-btn{
+  position:fixed!important;
+  bottom:18px!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:118px!important;
+  height:48px!important;
+  padding:0 20px!important;
+  border-radius:999px!important;
+  font-size:.88rem!important;
+  font-weight:900!important;
+  text-decoration:none!important;
+  border:1px solid rgba(255,255,255,.18)!important;
+  box-shadow:0 12px 30px rgba(0,0,0,.28)!important;
+  pointer-events:auto!important;
+  cursor:pointer!important;
+}
+.floating-call{
+  left:18px!important;
+  background:#10100d!important;
+  color:#ffffff!important;
+}
+.floating-whatsapp{
+  right:18px!important;
+  background:#25D366!important;
+  color:#10100d!important;
+  border-color:#25D366!important;
+}
+.floating-btn:hover{
+  transform:translateY(-1px)!important;
+}
+@media(max-width:480px){
+  .floating-btn{
+    min-width:104px!important;
+    height:46px!important;
+    padding:0 16px!important;
+    font-size:.82rem!important;
+  }
+  .floating-call{
+    left:12px!important;
+  }
+  .floating-whatsapp{
+    right:12px!important;
+  }
+}
+
 </style>
 </head>
 
@@ -2647,6 +2719,8 @@ footer .footer-complaint:hover{
       <h1>Need a safe driver in Dubai?</h1>
       <p class="hero-sub">Hire a professional driver for your own car. Available for one-way trips, hourly service, daily service and pick & drop.</p>
 
+      <p class="price-note">Starting from AED 80</p>
+
       <div class="hero-ctas">
         <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
         <a class="btn btn-soft hero-call-btn" href="tel:+971507182868">Call</a>
@@ -2763,7 +2837,7 @@ footer .footer-complaint:hover{
   <div class="wrap bottom-action-card">
     <p class="pill">Need a driver?</p>
     <h2>Book your driver easily.</h2>
-    <p class="bottom-action-text">Send your pickup details and service requirement. For support, use the complaint option below.</p>
+    <p class="bottom-action-text">Service starts from AED 80. Send your pickup details and requirement. For support, use the complaint option below.</p>
     <div class="bottom-actions">
       <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
       <button class="btn btn-outline-clean open-complaint" type="button">Report a Complaint</button>
@@ -2972,5 +3046,13 @@ footer .footer-complaint:hover{
 })();
 </script>
 
+<div class="floating-actions" aria-label="Quick contact buttons">
+  <a class="floating-btn floating-call" href="tel:+971507182868" aria-label="Call UAE Safe Drivers">
+    <span>Call</span>
+  </a>
+  <button class="floating-btn floating-whatsapp open-booking" type="button" data-reason="Safe Driver Dubai" aria-label="Book on WhatsApp">
+    <span>WhatsApp</span>
+  </button>
+</div>
 </body>
 </html>
