@@ -101,7 +101,14 @@ Brand color lock final:
 - Locked all visible text/link states to black, white, gold or neutral tones.
 
 
-Logo visibility final fix:
-- Header/footer visible logo is now inline SVG.
-- This guarantees the logo shows without relying on PNG path loading.
-- Generated PNG logo remains in /assets for brand reference.
+Uploaded logo correction:
+- Used exact user-uploaded dark logo for header and footer.
+- Included uploaded light full logo and icon logo in assets.
+- Removed wrong inline/random logo from visible site.
+
+
+Hero reference update:
+- Applied the screenshot-inspired hero layout directly in the website code.
+- Added Safe & Secure, Professional Driver and 24/7 Availability blocks.
+- Added feature strip for Airport Transfers, City Rides, Hotel Pickup and Family Trips.
+- Kept buttons clean: Book Now and Call.
