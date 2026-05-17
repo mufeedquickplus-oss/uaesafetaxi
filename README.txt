@@ -23,3 +23,20 @@ Final requested changes:
 - Complaint now opens a complaint form instead of direct message.
 - Complaint form fields: Name, Trip details, Complaint, Date of traveling optional.
 - Complaint form submits to WhatsApp with structured details.
+
+
+Latest update:
+- Applied the black, gold, cream color set from the approved reference.
+- Booking form now opens as a popup modal instead of scrolling down.
+- Complaint form also opens as a popup modal.
+- Removed background line pattern.
+- Improved font color contrast and visual consistency.
+
+
+Latest brand asset update:
+- Applied the generated UAE Safe Travel logo into header and footer.
+- Added logo image asset: assets/uae-safe-travel-logo.png
+- Added icon logo asset: assets/uae-safe-travel-icon.png
+- Applied the approved taxi hero reference visual inside the website hero card.
+- Added hero image asset: assets/dubai-taxi-hero-reference.png
+- Booking and complaint popup logic retained.

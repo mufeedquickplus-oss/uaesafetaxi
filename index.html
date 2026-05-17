@@ -11,7 +11,7 @@
 <meta property="og:description" content="Safe and reliable Dubai taxi service with WhatsApp booking for airport transfers, hotel pickup, city rides and family travel."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://uaesafetravel.com/"/>
-<meta property="og:image" content="https://uaesafetravel.com/assets/og-image.svg"/>
+<meta property="og:image" content="https://uaesafetravel.com/assets/dubai-taxi-hero-reference.png"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -45,8 +45,8 @@ button,input,textarea{font-family:inherit}
   --shadow:0 22px 60px rgba(18,18,18,.12);
 }
 .wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
-.site-header{position:fixed;top:0;left:0;right:0;height:72px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,54px);transition:.25s;background:rgba(247,243,232,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
-.site-header.scrolled{height:64px;background:rgba(255,255,255,.82);border-bottom-color:var(--border);box-shadow:0 10px 30px rgba(18,18,18,.06)}
+.site-header{position:fixed;top:0;left:0;right:0;height:84px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(18px,5vw,54px);transition:.25s;background:rgba(247,243,232,.72);backdrop-filter:blur(14px);border-bottom:1px solid transparent}
+.site-header.scrolled{height:74px;background:rgba(255,255,255,.82);border-bottom-color:var(--border);box-shadow:0 10px 30px rgba(18,18,18,.06)}
 .brand{display:flex;align-items:center;gap:11px}
 .brand-mark{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#2d2d2d,#050505);color:var(--yellow);font-size:.72rem;font-weight:900;letter-spacing:.06em;box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 12px 30px rgba(18,18,18,.22)}
 .brand-text{display:flex;flex-direction:column;line-height:1.1}
@@ -66,8 +66,8 @@ button,input,textarea{font-family:inherit}
 .menu-btn{display:none;width:44px;height:44px;border:0;border-radius:14px;background:rgba(245,196,0,.18);padding:10px}
 .menu-btn span{display:block;height:2px;background:#111;margin:6px 0;border-radius:4px}
 .mobile-nav{display:none}
-.hero{padding:132px 0 0;background:radial-gradient(circle at 78% 12%,rgba(245,196,0,.30),transparent 32%),linear-gradient(180deg,#f7f3e8,#efe4c4);position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-160px;top:120px;width:480px;height:480px;border-radius:50%;background:repeating-linear-gradient(45deg,rgba(18,18,18,.045) 0 10px,transparent 10px 22px)}
+.hero{padding:142px 0 0;background:radial-gradient(circle at 78% 12%,rgba(245,196,0,.30),transparent 32%),linear-gradient(180deg,#f7f3e8,#efe4c4);position:relative;overflow:hidden}
+.hero::after{content:none}
 .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.06fr .94fr;gap:54px;align-items:center;padding-bottom:58px}
 .pill{display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;padding:7px 14px;border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.78),rgba(245,196,0,.12));border:1px solid rgba(164,111,0,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.85);color:#8d6000;font-size:.68rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
 .pill::before{content:"";width:6px;height:6px;background:var(--yellow);border-radius:50%;box-shadow:0 0 0 4px rgba(245,196,0,.18)}
@@ -158,7 +158,7 @@ footer{background:#111;color:#fff;padding:56px 0 0}
 @media(max-width:920px){
   .nav-links,.nav-actions{display:none}
   .menu-btn{display:block}
-  .mobile-nav{position:fixed;top:72px;left:18px;right:18px;z-index:49;background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:12px}
+  .mobile-nav{position:fixed;top:84px;left:18px;right:18px;z-index:49;background:rgba(255,255,255,.94);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow);padding:12px}
   .mobile-nav.open{display:grid}
   .mobile-nav a,.mobile-nav button{padding:13px 14px;border:0;background:transparent;text-align:left;border-radius:12px;font-weight:900;color:#111}
   .mobile-nav a:hover,.mobile-nav button:hover{background:rgba(245,196,0,.14)}
@@ -200,14 +200,221 @@ footer{background:#111;color:#fff;padding:56px 0 0}
 .btn-link{border:0}
 button.btn-link{cursor:pointer}
 
+
+/* Final visual cleanup and popup behavior */
+body.modal-open{
+  overflow:hidden;
+}
+.hero{
+  background:
+    linear-gradient(90deg,rgba(247,243,232,.96) 0%,rgba(247,243,232,.90) 38%,rgba(239,228,196,.60) 100%),
+    radial-gradient(circle at 78% 12%,rgba(245,196,0,.22),transparent 32%),
+    linear-gradient(180deg,#f7f3e8,#efe4c4);
+}
+.hero::after{content:none!important}
+.site-header{
+  background:#111111;
+  color:#ffffff;
+  border-bottom:1px solid rgba(245,196,0,.16);
+}
+.site-header.scrolled{
+  background:rgba(17,17,17,.94);
+  color:#ffffff;
+  border-bottom-color:rgba(245,196,0,.20);
+}
+.nav-links a{color:rgba(255,255,255,.76)}
+.nav-links a:hover{color:#f5c400}
+.brand-text strong{color:#ffffff}
+.brand-text small{color:rgba(255,255,255,.56)}
+.site-header .btn-soft{
+  background:rgba(255,255,255,.04);
+  border-color:rgba(245,196,0,.30);
+  color:#ffffff;
+}
+.menu-btn{background:rgba(245,196,0,.18)}
+.menu-btn span{background:#ffffff}
+.hero-service-card{
+  position:relative;
+  background:linear-gradient(180deg,rgba(255,255,255,.90),rgba(255,255,255,.58));
+  border:1px solid rgba(18,18,18,.10);
+  border-radius:24px;
+  padding:28px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.84),0 22px 60px rgba(18,18,18,.12);
+  backdrop-filter:blur(12px);
+  align-self:start;
+}
+.hero-service-card::before{
+  content:"";
+  display:block;
+  height:168px;
+  border-radius:18px;
+  margin-bottom:24px;
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.12),rgba(255,255,255,0) 24%),
+    linear-gradient(135deg,rgba(18,18,18,.90),rgba(18,18,18,.52)),
+    url('assets/taxi-visual.svg') center/cover no-repeat;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16);
+}
+.hero-service-card strong{
+  display:block;
+  font-family:'Fraunces',serif;
+  font-size:1.42rem;
+  font-weight:400;
+  line-height:1.1;
+  margin:8px 0;
+  color:#111111;
+}
+.hero-service-card p{
+  font-size:.84rem;
+  color:#4e493f;
+  line-height:1.7;
+  margin-bottom:18px;
+}
+.modal-layer{
+  position:fixed;
+  inset:0;
+  z-index:200;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.modal-layer.show{display:flex}
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(17,17,17,.58);
+  backdrop-filter:blur(10px);
+}
+.modal-shell{
+  position:relative;
+  width:min(560px,100%);
+  max-height:min(88vh,820px);
+  overflow:auto;
+  border-radius:26px;
+  box-shadow:0 28px 90px rgba(0,0,0,.34);
+}
+.popup-card{
+  display:none;
+  width:100%;
+  background:linear-gradient(180deg,rgba(255,255,255,.96),rgba(255,251,238,.92));
+  border:1px solid rgba(18,18,18,.12);
+  border-radius:26px;
+  padding:28px;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.92);
+}
+.popup-card.show{display:block;animation:modalIn .22s ease both}
+.popup-card::before{display:none!important}
+@keyframes modalIn{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+.booking-top{
+  border-bottom:1px solid rgba(18,18,18,.08);
+  padding-bottom:14px;
+}
+.booking-top strong,
+.popup-card label span,
+.popup-card summary{
+  color:#111111;
+}
+.form-grid label span{
+  color:#3d382f;
+}
+.form-grid input,
+.form-grid textarea{
+  color:#111111;
+  background:#fffdf7;
+  border-color:rgba(18,18,18,.16);
+}
+.form-grid input::placeholder,
+.form-grid textarea::placeholder{
+  color:#7c7569;
+}
+.optional-field span{color:#665e51!important}
+.optional-field small{color:#8a6a17!important}
+.pill{
+  color:#9a6800;
+  background:linear-gradient(180deg,rgba(255,255,255,.86),rgba(245,196,0,.14));
+}
+.hero-sub,
+.section-head p,
+.muted{
+  color:#4e493f;
+}
+.trust-line span,
+.area-grid span{
+  color:#2b2b2b;
+}
+.btn-link{
+  color:#4e493f;
+}
+.btn-link:hover{color:#111111}
+.service-card p{color:#4e493f}
+.service-card.featured p{color:rgba(255,255,255,.70)}
+.footer-grid p,.footer-grid a,.footer-grid span,.footer-complaint{
+  color:rgba(255,255,255,.58);
+}
+.footer-grid a:hover,.footer-complaint:hover{color:#ffffff}
+@media(max-width:600px){
+  .modal-layer{padding:12px}
+  .popup-card{padding:22px}
+  .modal-shell{max-height:90vh}
+}
+
+
+/* Applied brand logo and approved hero reference image */
+.brand-image{
+  min-width:0;
+}
+.brand-image img{
+  display:block;
+  height:52px;
+  width:auto;
+  max-width:250px;
+  object-fit:contain;
+}
+.site-header.scrolled .brand-image img{
+  height:48px;
+}
+.footer-logo img{
+  height:62px;
+  max-width:280px;
+  object-fit:contain;
+}
+.hero-image-card{
+  padding:0;
+  overflow:hidden;
+  background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,255,255,.62));
+}
+.hero-image-card::before{
+  display:none!important;
+}
+.hero-image-card > img{
+  display:block;
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  object-position:center;
+  border-bottom:1px solid rgba(18,18,18,.10);
+}
+.hero-image-card-content{
+  padding:24px;
+}
+@media(max-width:920px){
+  .brand-image img{height:46px;max-width:220px}
+  .hero-image-card > img{height:220px}
+}
+@media(max-width:600px){
+  .brand-image img{height:38px;max-width:180px}
+  .footer-logo img{height:52px}
+  .hero-image-card > img{height:190px}
+}
+
 </style>
 </head>
 
 <body>
 <header class="site-header" id="siteHeader">
-  <a class="brand" href="#home" aria-label="UAE Safe Travel Home">
-    <span class="brand-mark">UST</span>
-    <span class="brand-text"><strong>UAE Safe Travel</strong><small>Dubai Taxi Service</small></span>
+  <a class="brand brand-image" href="#home" aria-label="UAE Safe Travel Home">
+    <img src="assets/uae-safe-travel-logo.png" alt="UAE Safe Travel Dubai Taxi Service logo"/>
   </a>
 
   <nav class="nav-links" aria-label="Main navigation">
@@ -237,37 +444,10 @@ button.btn-link{cursor:pointer}
   <button type="button" class="open-complaint">Report a Complaint</button>
 </div>
 
-<main>
-  <section class="hero" id="home">
-    <div class="wrap hero-grid">
-      <div>
-        <p class="pill">Dubai taxi service with direct WhatsApp booking</p>
-        <h1>Executive taxi service in <em>Dubai</em>, booked with ease.</h1>
-        <p class="hero-sub">Airport transfers, hotel pickup, city rides and family travel with direct booking support. Share your trip details and receive availability through WhatsApp.</p>
-
-        <div class="hero-ctas">
-          <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Book on WhatsApp</button>
-          <a class="btn btn-soft" href="tel:+971507182868">Call</a>
-          <button class="btn btn-link open-complaint" type="button">Report a complaint</button>
-        </div>
-        <p class="hero-note">Start with WhatsApp booking and share your ride details in a few seconds.</p>
-
-        <div class="trust-line">
-          <span>Airport pickup</span>
-          <span>Hotel transfer</span>
-          <span>Family friendly</span>
-        </div>
-      </div>
-
-      <div>
-        <div class="booking-teaser" id="bookingTeaser">
-          <span class="tiny">Quick booking</span>
-          <strong>Request your ride</strong>
-          <p>Enter your trip details and submit the request directly through WhatsApp.</p>
-          <button class="btn btn-dark full open-booking" type="button" data-reason="General taxi booking">Open Booking Form</button>
-        </div>
-
-        <form class="booking-card" id="bookingForm" aria-label="Taxi booking form">
+<div class="modal-layer" id="formModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal="true"></div>
+  <div class="modal-shell" role="dialog" aria-modal="true" aria-label="UAE Safe Travel form popup">
+        <form class="popup-card" id="bookingForm" aria-label="Taxi booking form">
           <div class="booking-top">
             <div>
               <span class="tiny">Quick booking</span>
@@ -291,7 +471,7 @@ button.btn-link{cursor:pointer}
           <button class="btn btn-dark full" type="submit">Send Booking on WhatsApp</button>
         </form>
 
-        <form class="booking-card complaint-card" id="complaintForm" aria-label="Complaint form">
+        <form class="popup-card complaint-card" id="complaintForm" aria-label="Complaint form">
           <div class="booking-top">
             <div>
               <span class="tiny">Complaint support</span>
@@ -324,6 +504,41 @@ button.btn-link{cursor:pointer}
 
           <button class="btn btn-dark full" type="submit">Send Complaint on WhatsApp</button>
         </form>
+  </div>
+</div>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="pill">Dubai taxi service with direct WhatsApp booking</p>
+        <h1>Executive taxi service in <em>Dubai</em>, booked with ease.</h1>
+        <p class="hero-sub">Airport transfers, hotel pickup, city rides and family travel with direct booking support. Share your trip details and receive availability through WhatsApp.</p>
+
+        <div class="hero-ctas">
+          <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Book on WhatsApp</button>
+          <a class="btn btn-soft" href="tel:+971507182868">Call</a>
+          <button class="btn btn-link open-complaint" type="button">Report a complaint</button>
+        </div>
+        <p class="hero-note">Start with WhatsApp booking and share your ride details in a few seconds.</p>
+
+        <div class="trust-line">
+          <span>Airport pickup</span>
+          <span>Hotel transfer</span>
+          <span>Family friendly</span>
+        </div>
+      </div>
+
+      <div>
+        <div class="hero-service-card hero-image-card">
+          <img src="assets/dubai-taxi-hero-reference.png" alt="Premium Dubai taxi service visual with UAE Safe Travel branding"/>
+          <div class="hero-image-card-content">
+            <span class="tiny">Direct booking</span>
+            <strong>Request your ride</strong>
+            <p>Choose a travel type, enter your trip details and send the request through WhatsApp.</p>
+            <button class="btn btn-dark full open-booking" type="button" data-reason="General taxi booking">Open Booking Form</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -458,7 +673,9 @@ button.btn-link{cursor:pointer}
 <footer>
   <div class="wrap footer-grid">
     <div>
-      <a class="brand" href="#home"><span class="brand-mark">UST</span><span class="brand-text"><strong>UAE Safe Travel</strong><small>Dubai Taxi Service</small></span></a>
+      <a class="brand brand-image footer-logo" href="#home" aria-label="UAE Safe Travel Home">
+        <img src="assets/uae-safe-travel-logo.png" alt="UAE Safe Travel Dubai Taxi Service logo"/>
+      </a>
       <p>Safe and reliable taxi service in Dubai with direct WhatsApp booking.</p>
     </div>
     <div>
@@ -496,7 +713,7 @@ button.btn-link{cursor:pointer}
   const menuBtn = document.getElementById("menuBtn");
   const mobileNav = document.getElementById("mobileNav");
   const bookingForm = document.getElementById("bookingForm");
-  const bookingTeaser = document.getElementById("bookingTeaser");
+  const formModal = document.getElementById("formModal");
   const hideBookingBtn = document.getElementById("hideBookingBtn");
   const title = document.getElementById("bookingFormTitle");
   const reasonField = document.getElementById("rideReason");
@@ -522,35 +739,41 @@ button.btn-link{cursor:pointer}
     if(title) title.textContent = selectedReason === "General taxi booking" ? "Fill ride details" : selectedReason;
 
     complaintForm?.classList.remove("show");
-    bookingTeaser?.classList.add("hide");
     bookingForm?.classList.add("show");
+    formModal?.classList.add("show");
+    formModal?.setAttribute("aria-hidden","false");
+    document.body.classList.add("modal-open");
 
-    bookingForm?.scrollIntoView({behavior:"smooth", block:"center"});
-    setTimeout(() => document.getElementById("rideDate")?.focus(), 180);
+    setTimeout(() => document.getElementById("rideDate")?.focus(), 120);
     closeMobileNav();
   }
 
   function hideBooking(){
     bookingForm?.classList.remove("show");
     if(!complaintForm?.classList.contains("show")){
-      bookingTeaser?.classList.remove("hide");
+      formModal?.classList.remove("show");
+      formModal?.setAttribute("aria-hidden","true");
+      document.body.classList.remove("modal-open");
     }
   }
 
   function showComplaint(){
     bookingForm?.classList.remove("show");
-    bookingTeaser?.classList.add("hide");
     complaintForm?.classList.add("show");
+    formModal?.classList.add("show");
+    formModal?.setAttribute("aria-hidden","false");
+    document.body.classList.add("modal-open");
 
-    complaintForm?.scrollIntoView({behavior:"smooth", block:"center"});
-    setTimeout(() => document.getElementById("complaintName")?.focus(), 180);
+    setTimeout(() => document.getElementById("complaintName")?.focus(), 120);
     closeMobileNav();
   }
 
   function hideComplaint(){
     complaintForm?.classList.remove("show");
     if(!bookingForm?.classList.contains("show")){
-      bookingTeaser?.classList.remove("hide");
+      formModal?.classList.remove("show");
+      formModal?.setAttribute("aria-hidden","true");
+      document.body.classList.remove("modal-open");
     }
   }
 
@@ -606,6 +829,21 @@ button.btn-link{cursor:pointer}
     ].join("\\n");
 
     window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+  });
+
+
+  document.querySelectorAll("[data-close-modal]").forEach(item => {
+    item.addEventListener("click", () => {
+      hideBooking();
+      hideComplaint();
+    });
+  });
+
+  document.addEventListener("keydown", event => {
+    if(event.key === "Escape" && formModal?.classList.contains("show")){
+      hideBooking();
+      hideComplaint();
+    }
   });
 
   bookingForm?.addEventListener("submit", event => {
