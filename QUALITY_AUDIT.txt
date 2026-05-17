@@ -1,24 +1,59 @@
-UAE Safe Travel - Clean Car Hero Final Audit
+UAE Safe Travel - Expert Multi-Section Final Audit
 
-clean_car_asset_created: PASS
-car_image_embedded: PASS
-hero_alt_mentions_car: PASS
-old_hero_asset_not_referenced: PASS
-booking_popup_present: PASS
-complaint_popup_present: PASS
-visible_phone_number_hidden: PASS
-visible_platform_mentions_removed: PASS
-no_hash_only_links: PASS
-dead_end_or_missing_asset_links: PASS
+Quality / Owner POV: PASS
+Font / Typography POV: PASS
+Dead-end / UX POV: PASS
+Unwanted Text / Copy POV: PASS
+Design / UI POV: PASS
+Size / Performance POV: PASS
+Dirty Image / Asset POV: PASS
+Buttons / Conversion POV: PASS
+Alignment / Responsive POV: PASS
+Logo Correctness POV: PASS
+Hero Clean Car POV: PASS
 
-Fix applied:
-PASS - Replaced screenshot/mockup-style hero with a clean car-only crop.
-PASS - Embedded the clean car image directly in HTML to avoid loading failure.
-PASS - Booking and complaint popups remain intact.
-PASS - Uploaded logo remains embedded/visible from prior guaranteed build.
 
-Clean car asset:
-assets/uae-safe-travel-car-only-hero.jpg
+Expert findings:
+Quality:
+- Visible word count: 289
+- Customer-facing content is minimal and direct.
 
-href_count: 22
-dead_end_or_missing_asset_links_detail: PASS
+Font:
+- Fonts loaded: Plus Jakarta Sans and Fraunces with display=swap.
+- No default browser-blue link styling detected.
+
+Dead-end:
+- Checked anchors/internal links/tel links.
+- Bad links: PASS
+
+Unwanted text:
+- Found unwanted terms: PASS
+
+Design:
+- Hero uses the requested safe/professional/24-7 structure.
+- Buttons are clean: Book Now and Call.
+- Core sections only: hero, services, areas, FAQ, CTA, footer.
+
+Size:
+- HTML size: 376670 bytes
+- Embedded logo size: 29528 bytes
+- Embedded clean car hero size: 89542 bytes
+
+Dirty image:
+- Issues: PASS
+- OG image no longer points to embedded data URL.
+
+Buttons:
+- Button issues: PASS
+- Booking popup present: PASS
+- Complaint popup present: PASS
+
+Alignment:
+- Mobile media rules present.
+- Services, FAQ and modal have responsive single-column behavior.
+
+Images:
+- Image tags: 2
+- Data images embedded: 4
+
+Zip size: 5446448 bytes

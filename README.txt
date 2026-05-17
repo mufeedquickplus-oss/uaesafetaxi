@@ -135,3 +135,9 @@ Guaranteed final build:
 Clean car hero fix:
 - Replaced screenshot/mockup-style hero visual with a clean car-only crop.
 - Embedded the clean car visual directly in HTML.
+
+Expert final audit:
+- Optimized the embedded logo and clean car hero image.
+- Fixed H1 punctuation spacing.
+- Removed invalid OG image data URL.
+- Rechecked quality, fonts, dead ends, unwanted text, design, size, dirty image, buttons and alignment.
