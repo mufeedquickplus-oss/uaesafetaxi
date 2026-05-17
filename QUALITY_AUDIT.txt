@@ -1,9 +1,10 @@
-UAE Safe Drivers - Floating Buttons and Price Update Audit
+UAE Safe Drivers - Pricing Cards and Floating Icon Buttons Audit
 
-price_added: PASS
-floating_call_left_added: PASS
-floating_whatsapp_right_added: PASS
-floating_css_present: PASS
+hero_price_removed: PASS
+service_card_prices_added: PASS
+floating_call_icon_link: PASS
+floating_whatsapp_icon_link: PASS
+floating_buttons_are_anchors: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
 button_js_retained: PASS
@@ -11,10 +12,19 @@ logo_still_present: PASS
 no_dead_links: PASS
 
 Applied:
-- Added fixed Call button on the left.
-- Added fixed WhatsApp booking button on the right.
-- Added price note: Starting from AED 80.
-- Kept existing booking popup, complaint popup, logo, footer and forms.
+- Removed AED 80 price note from hero.
+- Added competitor-style pricing on service cards.
+- Replaced floating text buttons with actual icon-shaped buttons.
+- Left floating icon: direct call link.
+- Right floating icon: direct WhatsApp link.
+
+Pricing used:
+- Safe Driver Dubai: AED 80 / one-way
+- Hourly Driver: AED 60 / hour
+- Daily Driver: AED 380 / 10 hours
+- Pick & Drop: AED 400 / day
+- Corporate Driver: From AED 80
+- Chauffeur Service: From AED 80
 
 Bad links:
 PASS
