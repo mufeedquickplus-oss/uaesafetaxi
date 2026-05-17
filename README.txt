@@ -159,3 +159,13 @@ Final hero image update:
 Safe driver concept rebuild:
 - Changed the website from taxi-style to safe-driver/private-driver concept.
 - Updated hero, services, booking form, FAQ, CTA, footer and SEO metadata.
+
+
+Non-taxi hero update:
+- Removed taxi-looking hero image treatment.
+- Replaced with a softer Dubai skyline / premium chauffeur-style background.
+
+
+Safe driver form update:
+- Booking form revised for driver service: date, pickup time, pickup/drop-off, map links, duration, car type, passengers and notes.
+- Complaint form revised: name, optional contact number, optional travel date, optional service type, trip details and complaint.
