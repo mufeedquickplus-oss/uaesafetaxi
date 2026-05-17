@@ -1548,6 +1548,93 @@ body.nav-open{
   }
 }
 
+
+/* Final navigation working lock */
+.nav-links{
+  display:flex!important;
+  align-items:center!important;
+  gap:26px!important;
+}
+.nav-links a{
+  color:rgba(255,255,255,.78)!important;
+  font-weight:800!important;
+}
+.nav-links a:hover{
+  color:#f5c400!important;
+}
+.nav-actions{
+  display:flex!important;
+  align-items:center!important;
+  gap:10px!important;
+}
+.menu-btn{
+  display:none!important;
+  width:44px!important;
+  height:44px!important;
+  border:0!important;
+  border-radius:14px!important;
+  background:rgba(245,196,0,.18)!important;
+  padding:9px!important;
+  cursor:pointer!important;
+  z-index:130!important;
+}
+.menu-btn span{
+  display:block!important;
+  height:2px!important;
+  background:#ffffff!important;
+  margin:6px 0!important;
+  border-radius:5px!important;
+}
+.mobile-nav{
+  display:none!important;
+}
+.mobile-nav.open{
+  display:grid!important;
+}
+body.nav-open{
+  overflow:hidden!important;
+}
+@media(max-width:920px){
+  .nav-links,
+  .nav-actions{
+    display:none!important;
+  }
+  .menu-btn{
+    display:block!important;
+  }
+  .mobile-nav{
+    position:fixed!important;
+    top:76px!important;
+    left:12px!important;
+    right:12px!important;
+    z-index:120!important;
+    background:rgba(17,17,17,.97)!important;
+    border:1px solid rgba(245,196,0,.28)!important;
+    border-radius:18px!important;
+    box-shadow:0 24px 70px rgba(0,0,0,.35)!important;
+    padding:10px!important;
+  }
+  .mobile-nav a,
+  .mobile-nav button{
+    display:block!important;
+    width:100%!important;
+    padding:14px 15px!important;
+    border:0!important;
+    border-radius:12px!important;
+    background:transparent!important;
+    color:rgba(255,255,255,.90)!important;
+    text-align:left!important;
+    font-weight:900!important;
+    font-size:.9rem!important;
+    cursor:pointer!important;
+  }
+  .mobile-nav a:hover,
+  .mobile-nav button:hover{
+    background:rgba(245,196,0,.14)!important;
+    color:#f5c400!important;
+  }
+}
+
 </style>
 </head>
 
@@ -1569,7 +1656,9 @@ body.nav-open{
   </div>
 
   <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-controls="mobileNav" aria-expanded="false">
-    <span></span><span></span><span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 </header>
 
@@ -1787,199 +1876,177 @@ body.nav-open{
   </div>
 </footer>
 
+
+
+
+
+
 <script>
 (function(){
-  const phone = "971507182868";
+  "use strict";
+
   const header = document.getElementById("siteHeader");
   const menuBtn = document.getElementById("menuBtn");
   const mobileNav = document.getElementById("mobileNav");
-  const bookingForm = document.getElementById("bookingForm");
   const formModal = document.getElementById("formModal");
+  const bookingForm = document.getElementById("bookingForm");
+  const complaintForm = document.getElementById("complaintForm");
   const hideBookingBtn = document.getElementById("hideBookingBtn");
-  const title = document.getElementById("bookingFormTitle");
-  const reasonField = document.getElementById("rideReason");
+  const hideComplaintBtn = document.getElementById("hideComplaintBtn");
+  const bookingTitle = document.getElementById("bookingFormTitle");
+  const rideReason = document.getElementById("rideReason");
   const year = document.getElementById("year");
+  const phone = "971507182868";
 
   function setHeader(){
-    header.classList.toggle("scrolled", window.scrollY > 24);
+    if(header){
+      header.classList.toggle("scrolled", window.scrollY > 16);
+    }
   }
 
-  const complaintForm = document.getElementById("complaintForm");
-  const hideComplaintBtn = document.getElementById("hideComplaintBtn");
-
   function closeMobileNav(){
-    if(mobileNav && mobileNav.classList.contains("open")){
-      mobileNav.classList.remove("open");
-      menuBtn?.setAttribute("aria-expanded","false");
+    if(!mobileNav || !menuBtn) return;
+    mobileNav.classList.remove("open");
+    mobileNav.setAttribute("aria-hidden", "true");
+    menuBtn.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("nav-open");
+  }
+
+  function toggleMobileNav(){
+    if(!mobileNav || !menuBtn) return;
+    const isOpen = mobileNav.classList.toggle("open");
+    mobileNav.setAttribute("aria-hidden", String(!isOpen));
+    menuBtn.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("nav-open", isOpen);
+  }
+
+  function openModal(){
+    if(!formModal) return;
+    formModal.classList.add("show");
+    formModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("modal-open");
+    closeMobileNav();
+  }
+
+  function closeModal(){
+    if(bookingForm) bookingForm.classList.remove("show");
+    if(complaintForm) complaintForm.classList.remove("show");
+    if(formModal){
+      formModal.classList.remove("show");
+      formModal.setAttribute("aria-hidden", "true");
     }
+    document.body.classList.remove("modal-open");
   }
 
   function showBooking(reason){
-    const selectedReason = reason || "General Taxi Booking";
-    if(reasonField) reasonField.value = selectedReason;
-    if(title) title.textContent = selectedReason === "General Taxi Booking" ? "Fill ride details" : selectedReason;
-
-    complaintForm?.classList.remove("show");
-    bookingForm?.classList.add("show");
-    formModal?.classList.add("show");
-    formModal?.setAttribute("aria-hidden","false");
-    document.body.classList.add("modal-open");
-
-    setTimeout(() => document.getElementById("rideDate")?.focus(), 120);
-    closeMobileNav();
-  }
-
-  function hideBooking(){
-    bookingForm?.classList.remove("show");
-    if(!complaintForm?.classList.contains("show")){
-      formModal?.classList.remove("show");
-      formModal?.setAttribute("aria-hidden","true");
-      document.body.classList.remove("modal-open");
-    }
+    const selected = reason || "General Taxi Booking";
+    if(complaintForm) complaintForm.classList.remove("show");
+    if(bookingForm) bookingForm.classList.add("show");
+    if(rideReason) rideReason.value = selected;
+    if(bookingTitle) bookingTitle.textContent = selected === "General Taxi Booking" ? "Fill ride details" : selected;
+    openModal();
+    setTimeout(function(){ document.getElementById("rideDate")?.focus(); }, 80);
   }
 
   function showComplaint(){
-    bookingForm?.classList.remove("show");
-    complaintForm?.classList.add("show");
-    formModal?.classList.add("show");
-    formModal?.setAttribute("aria-hidden","false");
-    document.body.classList.add("modal-open");
-
-    setTimeout(() => document.getElementById("complaintName")?.focus(), 120);
-    closeMobileNav();
+    if(bookingForm) bookingForm.classList.remove("show");
+    if(complaintForm) complaintForm.classList.add("show");
+    openModal();
+    setTimeout(function(){ document.getElementById("complaintName")?.focus(); }, 80);
   }
 
-  function hideComplaint(){
-    complaintForm?.classList.remove("show");
-    if(!bookingForm?.classList.contains("show")){
-      formModal?.classList.remove("show");
-      formModal?.setAttribute("aria-hidden","true");
-      document.body.classList.remove("modal-open");
-    }
-  }
-
-  window.addEventListener("scroll", setHeader);
+  window.addEventListener("scroll", setHeader, {passive:true});
   setHeader();
 
   if(year) year.textContent = new Date().getFullYear();
 
-  menuBtn?.addEventListener("click", () => {
-    const open = mobileNav.classList.toggle("open");
-    menuBtn.setAttribute("aria-expanded", String(open));
-  });
-
-  document.querySelectorAll(".open-booking").forEach(button => {
-    button.addEventListener("click", () => showBooking(button.dataset.reason));
-  });
-
-  document.querySelectorAll(".service-select").forEach(card => {
-    card.addEventListener("click", () => showBooking(card.dataset.reason));
-  });
-
-  document.querySelectorAll(".footer-service").forEach(link => {
-    link.addEventListener("click", event => {
+  if(menuBtn){
+    menuBtn.addEventListener("click", function(event){
       event.preventDefault();
-      showBooking(link.dataset.reason);
+      event.stopPropagation();
+      toggleMobileNav();
+    });
+  }
+
+  document.querySelectorAll(".mobile-nav a").forEach(function(link){
+    link.addEventListener("click", function(){
+      closeMobileNav();
     });
   });
 
-  hideBookingBtn?.addEventListener("click", hideBooking);
-  hideComplaintBtn?.addEventListener("click", hideComplaint);
-
-  document.querySelectorAll(".open-complaint").forEach(button => {
-    button.addEventListener("click", showComplaint);
-  });
-
-  complaintForm?.addEventListener("submit", event => {
-    event.preventDefault();
-
-    const name = document.getElementById("complaintName")?.value.trim() || "";
-    const travelDate = document.getElementById("complaintDate")?.value || "";
-    const trip = document.getElementById("complaintTrip")?.value.trim() || "";
-    const complaint = document.getElementById("complaintDetails")?.value.trim() || "";
-
-    const message = [
-      "Hello UAE Safe Travel, I want to report a complaint.",
-      "",
-      "Name: " + (name || "-"),
-      "Travel date: " + (travelDate || "-"),
-      "Trip details: " + (trip || "-"),
-      "Complaint: " + (complaint || "-"),
-      "",
-      "Please review and respond."
-    ].join("\\n");
-
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
-  });
-
-
-  document.querySelectorAll("[data-close-modal]").forEach(item => {
-    item.addEventListener("click", () => {
-      hideBooking();
-      hideComplaint();
+  document.querySelectorAll(".open-booking, .service-select, .footer-service").forEach(function(item){
+    item.addEventListener("click", function(event){
+      if(item.tagName.toLowerCase() === "a"){
+        event.preventDefault();
+      }
+      showBooking(item.getAttribute("data-reason") || "General Taxi Booking");
     });
   });
 
-  document.addEventListener("keydown", event => {
-    if(event.key === "Escape" && formModal?.classList.contains("show")){
-      hideBooking();
-      hideComplaint();
+  document.querySelectorAll(".open-complaint").forEach(function(item){
+    item.addEventListener("click", function(event){
+      event.preventDefault();
+      showComplaint();
+    });
+  });
+
+  if(hideBookingBtn){
+    hideBookingBtn.addEventListener("click", closeModal);
+  }
+  if(hideComplaintBtn){
+    hideComplaintBtn.addEventListener("click", closeModal);
+  }
+
+  document.querySelectorAll("[data-close-modal]").forEach(function(item){
+    item.addEventListener("click", closeModal);
+  });
+
+  document.addEventListener("keydown", function(event){
+    if(event.key === "Escape"){
+      closeModal();
+      closeMobileNav();
     }
   });
 
-  bookingForm?.addEventListener("submit", event => {
-    event.preventDefault();
-
-    const reason = document.getElementById("rideReason")?.value || "General Taxi Booking";
-    const date = document.getElementById("rideDate")?.value || "";
-    const to = document.getElementById("rideTo")?.value.trim() || "";
-    const toMap = document.getElementById("rideToMap")?.value.trim() || "";
-    const from = document.getElementById("rideFrom")?.value.trim() || "";
-    const fromMap = document.getElementById("rideFromMap")?.value.trim() || "";
-    const people = document.getElementById("ridePeople")?.value || "";
-    const info = document.getElementById("rideInfo")?.value.trim() || "";
-
-    const message = [
-      "Hello UAE Safe Travel, I need a taxi service in Dubai.",
-      "",
-      "Type of travel: " + reason,
-      "Date: " + (date || "-"),
-      "To: " + (to || "-"),
-      "To map link: " + (toMap || "-"),
-      "From: " + (from || "-"),
-      "From map link: " + (fromMap || "-"),
-      "Number of people: " + (people || "-"),
-      "Additional info: " + (info || "-"),
-      "",
-      "Please share availability and price."
-    ].join("\n");
-
-    window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
-  });
-})();
-</script>
-
-<script>
-(function(){
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileNav = document.getElementById("mobileNav");
-
-  if(menuBtn && mobileNav){
-    menuBtn.addEventListener("click", function(event){
+  if(bookingForm){
+    bookingForm.addEventListener("submit", function(event){
       event.preventDefault();
-      const isOpen = mobileNav.classList.toggle("open");
-      mobileNav.setAttribute("aria-hidden", String(!isOpen));
-      menuBtn.setAttribute("aria-expanded", String(isOpen));
-      document.body.classList.toggle("nav-open", isOpen);
-    });
 
-    mobileNav.querySelectorAll("a, button").forEach(function(item){
-      item.addEventListener("click", function(){
-        mobileNav.classList.remove("open");
-        mobileNav.setAttribute("aria-hidden", "true");
-        menuBtn.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("nav-open");
-      });
+      const message = [
+        "Hello UAE Safe Travel, I need a taxi service in Dubai.",
+        "",
+        "Type of travel: " + (document.getElementById("rideReason")?.value || "General Taxi Booking"),
+        "Date: " + (document.getElementById("rideDate")?.value || "-"),
+        "To: " + (document.getElementById("rideTo")?.value.trim() || "-"),
+        "To map link: " + (document.getElementById("rideToMap")?.value.trim() || "-"),
+        "From: " + (document.getElementById("rideFrom")?.value.trim() || "-"),
+        "From map link: " + (document.getElementById("rideFromMap")?.value.trim() || "-"),
+        "Number of people: " + (document.getElementById("ridePeople")?.value || "-"),
+        "Additional info: " + (document.getElementById("rideInfo")?.value.trim() || "-"),
+        "",
+        "Please share availability and price."
+      ].join("\n");
+
+      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
+    });
+  }
+
+  if(complaintForm){
+    complaintForm.addEventListener("submit", function(event){
+      event.preventDefault();
+
+      const message = [
+        "Hello UAE Safe Travel, I want to report a complaint.",
+        "",
+        "Name: " + (document.getElementById("complaintName")?.value.trim() || "-"),
+        "Date of traveling: " + (document.getElementById("complaintDate")?.value || "-"),
+        "Trip details: " + (document.getElementById("complaintTrip")?.value.trim() || "-"),
+        "Complaint: " + (document.getElementById("complaintDetails")?.value.trim() || "-"),
+        "",
+        "Please review and respond."
+      ].join("\n");
+
+      window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
     });
   }
 })();
