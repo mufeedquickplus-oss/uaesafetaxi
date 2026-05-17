@@ -1,43 +1,22 @@
-UAE Safe Travel - Clean UI and Safe Driver Form Update Audit
+UAE Safe Travel - Footer Complaint Visibility Fix Audit
 
-removed_map_and_car_fields: PASS
-booking_fields_still_valid: PASS
-complaint_fields_still_valid: PASS
-top_color_system_cleaned: PASS
-bottom_footer_cleaned: PASS
-buttons_consistent: PASS
-forms_mobile_single_column: PASS
-no_unwanted_visible_terms: PASS
+footer_complaint_button_exists: PASS
+complaint_button_visible_css: PASS
+footer_actions_full_width: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-nav_still_present: PASS
+complaint_js_marker_present: PASS
+book_js_marker_present: PASS
 no_dead_links: PASS
 
-Removed from booking form:
-- Pickup map link
-- Drop-off map link
-- Car type
+Fix applied:
+- Report a Complaint button in footer/contact area is now a proper full-width white button.
+- Text is black for strong contrast.
+- Book Now and Report a Complaint stack cleanly on mobile.
+- Popup and JS markers retained.
 
-Remaining booking fields:
-['rideReason', 'rideDate', 'rideTime', 'rideFrom', 'rideTo', 'rideDuration', 'ridePeople', 'rideInfo']
-
-Missing booking fields:
-PASS
-
-Remaining complaint fields:
-['complaintName', 'complaintPhone', 'complaintDate', 'complaintService', 'complaintTrip', 'complaintDetails']
-
-Missing complaint fields:
-PASS
-
-Unwanted visible terms:
-PASS
+Footer complaint buttons found:
+1
 
 Bad links:
 PASS
-
-UI update:
-PASS - Top and bottom now use the same clean black/gold system.
-PASS - Removed mismatched silver/grey button look.
-PASS - Footer complaint button no longer appears like an awkward pale pill.
-PASS - Forms are simpler and mobile-friendly.

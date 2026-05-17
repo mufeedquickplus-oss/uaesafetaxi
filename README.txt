@@ -176,3 +176,16 @@ Clean UI/forms update:
 - Cleaned top/bottom color system.
 - Made buttons consistent.
 - Kept booking and complaint popups working.
+
+
+Mobile polish update:
+- Removed distracting hero watermark/background.
+- Cleaned hero spacing and buttons.
+- Cleaned footer spacing and complaint button.
+- Kept forms without map links and car type.
+
+
+Logo/buttons fix:
+- Logo background normalized to header black.
+- Rebuilt clean JS for all buttons.
+- Confirmed nav, booking, complaint, close and submit markers.
