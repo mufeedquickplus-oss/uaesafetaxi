@@ -12,7 +12,7 @@
 <meta property="og:description" content="Reliable Dubai taxi service for airport transfers, hotel pickup, city rides, family travel and tourist trips."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://uaesafetravel.com/"/>
-<meta property="og:image" content="https://uaesafetravel.com/assets/dubai-taxi-hero-reference.png"/>
+<meta property="og:image" content="https://uaesafetravel.com/assets/og-image.svg"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -820,41 +820,199 @@ img,svg{
   }
 }
 
+
+/* Final visual satisfaction polish */
+.site-header{
+  min-height:78px;
+}
+.ust-logo-svg{
+  width:295px;
+  max-height:66px;
+}
+.footer-logo .ust-logo-svg{
+  width:300px;
+}
+.hero-grid{
+  align-items:center;
+}
+.hero-image-card{
+  border-radius:28px;
+  overflow:hidden;
+}
+.hero-image-card > img{
+  display:block;
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  object-position:center center;
+  background:#111111;
+}
+.hero-image-card-content{
+  padding:24px 26px 26px;
+}
+.hero-image-card-content p{
+  color:#3f3a32;
+}
+.hero-ctas .btn{
+  min-width:128px;
+}
+.service-card{
+  border-radius:20px;
+}
+.service-card h3{
+  min-height:44px;
+}
+.service-card p{
+  line-height:1.65;
+}
+.footer-grid .btn{
+  width:max-content;
+  min-width:132px;
+}
+.footer-complaint{
+  width:max-content;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+@media(max-width:920px){
+  .ust-logo-svg{
+    width:235px;
+    max-height:58px;
+  }
+  .hero-image-card > img{
+    height:240px;
+  }
+}
+@media(max-width:600px){
+  .site-header{
+    height:76px!important;
+    min-height:76px!important;
+  }
+  .mobile-nav{
+    top:76px!important;
+  }
+  .hero{
+    padding-top:104px!important;
+  }
+  .ust-logo-svg{
+    width:190px!important;
+    max-height:54px!important;
+  }
+  .hero-image-card{
+    display:none;
+  }
+  .hero-ctas .btn,
+  .hero-ctas .support-link{
+    width:100%;
+  }
+  .support-link{
+    text-align:center;
+  }
+  .trust-line{
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:7px;
+  }
+  .trust-line span{
+    min-width:0;
+    padding:8px 6px;
+    font-size:.68rem;
+  }
+  .hero-strip{
+    margin-top:20px;
+  }
+  .hero-strip div{
+    min-height:78px;
+  }
+  .service-card h3{
+    min-height:auto;
+  }
+  .footer-grid .btn,
+  .footer-complaint{
+    width:100%;
+    text-align:center;
+  }
+  .footer-grid p,
+  .footer-grid a,
+  .footer-grid span,
+  .footer-complaint{
+    font-size:.82rem;
+  }
+}
+@media(max-width:380px){
+  .ust-logo-svg{
+    width:170px!important;
+  }
+  h1{
+    font-size:2.2rem!important;
+  }
+  .trust-line{
+    grid-template-columns:1fr;
+  }
+}
+
+
+/* No external image dependency: inline logo and inline hero visual */
+.inline-hero-svg{
+  display:block;
+  width:100%;
+  height:330px;
+  background:#111111;
+  border-bottom:1px solid rgba(18,18,18,.10);
+}
+.hero-image-card > img{
+  display:none!important;
+}
+.hero-image-card > .inline-hero-svg{
+  display:block;
+}
+.ust-logo-svg{
+  color:#ffffff;
+}
+@media(max-width:920px){
+  .inline-hero-svg{
+    height:240px;
+  }
+}
+@media(max-width:600px){
+  .hero-image-card{
+    display:none;
+  }
+}
+
 </style>
 </head>
 
 <body>
 <header class="site-header" id="siteHeader">
   <a class="brand brand-svg" href="#home" aria-label="UAE Safe Travel Home">
-    <svg class="ust-logo-svg" viewBox="0 0 560 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
+    <svg class="ust-logo-svg" viewBox="0 0 620 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="ustGold" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="goldLogo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff0a8"/>
       <stop offset="48%" stop-color="#f5c400"/>
       <stop offset="100%" stop-color="#a46f00"/>
     </linearGradient>
-    <linearGradient id="ustBlack" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3b3b3b"/>
-      <stop offset="55%" stop-color="#080808"/>
-      <stop offset="100%" stop-color="#2a2a2a"/>
+    <linearGradient id="blackLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#393939"/>
+      <stop offset="58%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#2b2b2b"/>
     </linearGradient>
-    <filter id="ustShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.20"/>
-    </filter>
   </defs>
 
-  <g filter="url(#ustShadow)">
-    <rect x="8" y="23" width="104" height="104" rx="30" fill="url(#ustBlack)"/>
-    <path d="M34 49v38c0 21 13 34 32 34s32-13 32-34V49H80v38c0 11-5 17-14 17s-14-6-14-17V49H34Z" fill="url(#ustGold)"/>
-    <path d="M36 96c24-18 45-20 71-9" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
-    <path d="M54 93c13-5 25-5 38 0" fill="none" stroke="#f5c400" stroke-width="4" stroke-linecap="round"/>
+  <g>
+    <text x="10" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="url(#goldLogo)">U</text>
+    <text x="80" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="#ffffff">S</text>
+    <text x="148" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="#ffffff">T</text>
+    <path d="M34 105 C75 78, 130 78, 194 103" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M58 105 C96 91, 133 91, 174 105" fill="none" stroke="url(#goldLogo)" stroke-width="5" stroke-linecap="round"/>
   </g>
 
   <g>
-    <text x="132" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="#f5c400">UAE</text>
-    <text x="230" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="currentColor">SAFE TRAVEL</text>
-    <rect x="132" y="88" width="92" height="3" rx="2" fill="#f5c400"/>
-    <text x="238" y="97" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4.4" fill="currentColor">DUBAI TAXI SERVICE</text>
+    <text x="230" y="62" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" letter-spacing="2.2" fill="#f5c400">UAE SAFE TRAVEL</text>
+    <line x1="230" y1="82" x2="318" y2="82" stroke="#f5c400" stroke-width="3" stroke-linecap="round"/>
+    <line x1="520" y1="82" x2="606" y2="82" stroke="#f5c400" stroke-width="3" stroke-linecap="round"/>
+    <text x="334" y="89" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="4.2" fill="#ffffff">DUBAI TAXI SERVICE</text>
   </g>
 </svg>
   </a>
@@ -973,7 +1131,53 @@ img,svg{
 
       <div>
         <div class="hero-service-card hero-image-card">
-          <img src="assets/dubai-taxi-hero-reference.png" alt="Premium Dubai taxi service visual with UAE Safe Travel branding"/>
+          <svg class="inline-hero-svg" viewBox="0 0 920 540" role="img" aria-label="Dubai taxi service hero visual" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="skyHero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7df"/>
+      <stop offset="55%" stop-color="#eeddb8"/>
+      <stop offset="100%" stop-color="#c9a15a"/>
+    </linearGradient>
+    <linearGradient id="taxiGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="45%" stop-color="#f5c400"/>
+      <stop offset="100%" stop-color="#b87900"/>
+    </linearGradient>
+    <linearGradient id="taxiBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff7de"/>
+      <stop offset="70%" stop-color="#d7c7a8"/>
+      <stop offset="100%" stop-color="#a9906a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="920" height="540" rx="34" fill="url(#skyHero)"/>
+  <circle cx="725" cy="96" r="78" fill="#f5c400" opacity=".20"/>
+  <path d="M0 340 C150 270, 250 320, 410 240 C560 165, 710 208, 920 130 L920 540 L0 540 Z" fill="#111111" opacity=".10"/>
+
+  <g opacity=".28" fill="#111111">
+    <rect x="105" y="150" width="32" height="150" rx="6"/>
+    <rect x="160" y="105" width="46" height="195" rx="6"/>
+    <rect x="232" y="130" width="34" height="170" rx="6"/>
+    <rect x="635" y="135" width="38" height="165" rx="6"/>
+    <rect x="698" y="86" width="48" height="214" rx="6"/>
+    <rect x="776" y="150" width="30" height="150" rx="6"/>
+  </g>
+
+  <g transform="translate(132 306)">
+    <path d="M52 88 L124 23 C141 7 164 1 188 5 L456 42 C496 48 531 75 548 115 L566 158 H45 C20 158 0 138 0 114 C0 100 11 88 25 88 Z" fill="url(#taxiBody)"/>
+    <path d="M172 29 L127 88 H310 L292 44 Z" fill="#ffffff" opacity=".84"/>
+    <path d="M326 47 L348 88 H515 C500 64 477 53 444 49 Z" fill="#ffffff" opacity=".84"/>
+    <rect x="242" y="-22" width="110" height="40" rx="11" fill="url(#taxiGold)"/>
+    <text x="297" y="5" text-anchor="middle" font-size="21" font-family="Arial" font-weight="900" fill="#111111">TAXI</text>
+    <path d="M28 96 H550" stroke="#111111" stroke-width="13" stroke-linecap="round" opacity=".78"/>
+    <circle cx="136" cy="158" r="46" fill="#111111"/>
+    <circle cx="136" cy="158" r="18" fill="#ffffff"/>
+    <circle cx="456" cy="158" r="46" fill="#111111"/>
+    <circle cx="456" cy="158" r="18" fill="#ffffff"/>
+    <text x="372" y="130" text-anchor="middle" font-family="Arial Black, Arial" font-size="28" fill="#111111">UST</text>
+    <path d="M338 138 C362 126, 389 126, 416 138" fill="none" stroke="#f5c400" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>
           <div class="hero-image-card-content">
             <span class="tiny">Direct booking</span>
             <strong>Quick booking</strong>
@@ -1072,7 +1276,7 @@ img,svg{
         <p>Safe rides, clear pickup details and direct communication from booking to drop-off.</p>
       </div>
       <ul class="check-list">
-        <li>Direct booking booking</li>
+        <li>Direct booking</li>
         <li>Call support</li>
         <li>Airport and hotel pickup</li>
         <li>Ride type selected</li>
@@ -1118,35 +1322,33 @@ img,svg{
   <div class="wrap footer-grid">
     <div>
       <a class="brand brand-svg footer-logo" href="#home" aria-label="UAE Safe Travel Home">
-        <svg class="ust-logo-svg" viewBox="0 0 560 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
+        <svg class="ust-logo-svg" viewBox="0 0 620 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="ustGold" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="goldLogo" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#fff0a8"/>
       <stop offset="48%" stop-color="#f5c400"/>
       <stop offset="100%" stop-color="#a46f00"/>
     </linearGradient>
-    <linearGradient id="ustBlack" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#3b3b3b"/>
-      <stop offset="55%" stop-color="#080808"/>
-      <stop offset="100%" stop-color="#2a2a2a"/>
+    <linearGradient id="blackLogo" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#393939"/>
+      <stop offset="58%" stop-color="#050505"/>
+      <stop offset="100%" stop-color="#2b2b2b"/>
     </linearGradient>
-    <filter id="ustShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.20"/>
-    </filter>
   </defs>
 
-  <g filter="url(#ustShadow)">
-    <rect x="8" y="23" width="104" height="104" rx="30" fill="url(#ustBlack)"/>
-    <path d="M34 49v38c0 21 13 34 32 34s32-13 32-34V49H80v38c0 11-5 17-14 17s-14-6-14-17V49H34Z" fill="url(#ustGold)"/>
-    <path d="M36 96c24-18 45-20 71-9" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
-    <path d="M54 93c13-5 25-5 38 0" fill="none" stroke="#f5c400" stroke-width="4" stroke-linecap="round"/>
+  <g>
+    <text x="10" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="url(#goldLogo)">U</text>
+    <text x="80" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="#ffffff">S</text>
+    <text x="148" y="86" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="72" font-weight="900" letter-spacing="-7" fill="#ffffff">T</text>
+    <path d="M34 105 C75 78, 130 78, 194 103" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+    <path d="M58 105 C96 91, 133 91, 174 105" fill="none" stroke="url(#goldLogo)" stroke-width="5" stroke-linecap="round"/>
   </g>
 
   <g>
-    <text x="132" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="#f5c400">UAE</text>
-    <text x="230" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="currentColor">SAFE TRAVEL</text>
-    <rect x="132" y="88" width="92" height="3" rx="2" fill="#f5c400"/>
-    <text x="238" y="97" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4.4" fill="currentColor">DUBAI TAXI SERVICE</text>
+    <text x="230" y="62" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="900" letter-spacing="2.2" fill="#f5c400">UAE SAFE TRAVEL</text>
+    <line x1="230" y1="82" x2="318" y2="82" stroke="#f5c400" stroke-width="3" stroke-linecap="round"/>
+    <line x1="520" y1="82" x2="606" y2="82" stroke="#f5c400" stroke-width="3" stroke-linecap="round"/>
+    <text x="334" y="89" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="800" letter-spacing="4.2" fill="#ffffff">DUBAI TAXI SERVICE</text>
   </g>
 </svg>
       </a>

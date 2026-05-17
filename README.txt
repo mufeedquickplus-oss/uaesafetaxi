@@ -82,3 +82,18 @@ Final SEO/copy cleanup:
 - Shortened title.
 - Reduced visible WhatsApp mentions.
 - Kept functionality unchanged.
+
+
+Visual satisfaction update:
+- Embedded hero image directly into HTML to prevent broken image display.
+- Strengthened logo sizing.
+- Hid extra hero image card on mobile for cleaner first screen.
+- Improved mobile footer/button stacking.
+- Confirmed no visible WhatsApp repetition.
+
+
+No image dependency fix:
+- Removed normal image tags from the page.
+- Logo is now inline SVG in index.html.
+- Hero taxi visual is now inline SVG in index.html.
+- This prevents logo/hero image loading failures caused by missing asset paths.
