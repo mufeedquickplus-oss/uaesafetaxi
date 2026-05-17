@@ -1,38 +1,26 @@
-UAE Safe Travel - Merged Final Corrections Audit
+UAE Safe Travel - Footer Mobile Final Fix Audit
 
-bottom_action_simple_visible: PASS
-footer_complaint_visible: PASS
-emirates_only_present: PASS
-old_dubai_area_details_removed: PASS
-map_and_car_fields_removed: PASS
-booking_fields_valid: PASS
-complaint_fields_valid: PASS
-buttons_js_clean: PASS
-single_non_json_script: PASS
+footer_rebuilt_clean: PASS
+call_text_size_locked: PASS
+complaint_button_visible: PASS
+footer_buttons_not_giant: PASS
+disclaimer_readable: PASS
+emirates_only_retained: PASS
+map_car_fields_removed: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
+button_js_present: PASS
 no_dead_links: PASS
-no_visible_taxi_phone_whatsapp: PASS
 
-This build re-applies all previously approved corrections together:
-- Bottom Book/Complaint section is simple and visible.
-- Report a Complaint is not a pale hidden pill.
-- Coverage lists emirates only.
-- Detailed Dubai locations removed.
-- Booking form has no map fields and no car type.
-- Button JS is rebuilt cleanly.
+Fixed issue from screenshot:
+- Footer Contact area no longer has giant 'Call' text.
+- Book Now button is no longer huge.
+- Report a Complaint button is clearly visible with black text on white.
+- Disclaimer is smaller and readable.
+- Emirates-only coverage and no map/car fields are retained.
 
-Old areas found:
-PASS
-
-Old fields/text found:
-PASS
-
-Missing booking fields:
-PASS
-
-Missing complaint fields:
-PASS
+Footer visible text:
+Independent private driver service in the UAE. Services Safe Driver Dubai Hourly Driver Daily Driver Corporate Driver Contact Call Book Now Report a Complaint Disclaimer UAE Safe Travel is an independent private driver service. Service availability depends on location, timing and driver schedule.
 
 Bad links:
 PASS
