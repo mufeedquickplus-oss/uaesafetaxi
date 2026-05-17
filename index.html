@@ -5,7 +5,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Safe Driver Dubai | Private Driver Service | UAE Safe Travel</title>
-<meta name="description" content="Hire a safe driver in Dubai for your own car. UAE Safe Travel offers private driver service, hourly driver, daily driver, corporate driver and pick and drop support."/>
+<meta name="description" content="Hire a safe driver in Dubai or across the UAE for your own car. Book hourly, daily, corporate, chauffeur, pick and drop driver service."/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="keywords" content="safe driver service in Dubai, Dubai airport transfer, hotel pickup Dubai, city taxi Dubai, family taxi Dubai, tourist taxi Dubai"/>
 <link rel="canonical" href="https://uaesafetravel.com/"/>
@@ -21,7 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Dubai safe driver service.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":["Dubai Airport Transfer","Dubai City Taxi Service","Hotel Pickup","Family & Tourist Ride"],"priceRange":"AED"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Dubai safe driver service.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":[" Transfer","Dubai City Taxi Service","Hotel Pickup","Family & Tourist Ride"],"priceRange":"AED"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you provide airport pickup in Dubai?","acceptedAnswer":{"@type":"Answer","text":"Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai."}},{"@type":"Question","name":"Can I book through direct booking?","acceptedAnswer":{"@type":"Answer","text":"Yes, bookings can be made directly through direct booking by sharing pickup, drop-off, date and passenger details."}},{"@type":"Question","name":"Do you offer hotel pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes, hotel pickup and drop-off service is available across Dubai."}},{"@type":"Question","name":"Is the service suitable for families?","acceptedAnswer":{"@type":"Answer","text":"Yes, the service is suitable for families, tourists, business travelers and daily travel needs."}}]}
@@ -2184,49 +2184,57 @@ a[href],
 }
 
 
-/* Final complaint visibility fix */
-footer .hero-ctas,
-.footer-grid .hero-ctas{
-  display:grid!important;
-  grid-template-columns:1fr!important;
-  gap:12px!important;
-  width:100%!important;
-  max-width:360px!important;
-}
-footer .btn,
-.footer-grid .btn{
-  width:100%!important;
-  min-height:52px!important;
-  justify-content:center!important;
-  text-align:center!important;
-  border-radius:999px!important;
-  font-size:.94rem!important;
-  font-weight:900!important;
-  letter-spacing:.01em!important;
-}
-footer .btn-yellow,
-.footer-grid .btn-yellow{
-  background:#f5c400!important;
+/* FINAL MERGED FIXES - emirates, bottom actions, visible complaint, no old fields */
+.bottom-action-section{
+  background:#f7f3e8!important;
   color:#111111!important;
-  border:1px solid #f5c400!important;
+  padding:54px 0!important;
 }
+.bottom-action-card{
+  background:#ffffff!important;
+  border:1px solid rgba(17,17,17,.08)!important;
+  border-radius:24px!important;
+  padding:clamp(24px,5vw,42px)!important;
+  text-align:center!important;
+  box-shadow:0 18px 50px rgba(17,17,17,.08)!important;
+}
+.bottom-action-card .pill{
+  margin-left:auto!important;
+  margin-right:auto!important;
+  width:max-content!important;
+}
+.bottom-action-card h2{
+  color:#111111!important;
+  margin:12px 0 10px!important;
+}
+.bottom-action-text{
+  max-width:620px!important;
+  margin:0 auto 24px!important;
+  color:#514a3f!important;
+}
+.bottom-actions{
+  display:flex!important;
+  justify-content:center!important;
+  align-items:center!important;
+  gap:12px!important;
+  flex-wrap:wrap!important;
+}
+.btn-outline-clean,
+.btn-outline-clean:visited,
+.btn-outline-clean:hover,
+.btn-outline-clean:active,
 .btn-complaint-visible,
-.btn-complaint-visible:visited,
-.btn-complaint-visible:hover,
-.btn-complaint-visible:active,
 footer .footer-complaint,
-.footer-grid .footer-complaint,
 button.footer-complaint{
   display:flex!important;
   align-items:center!important;
   justify-content:center!important;
-  width:100%!important;
   min-height:52px!important;
-  padding:13px 20px!important;
+  padding:13px 22px!important;
   border-radius:999px!important;
   background:#ffffff!important;
   color:#111111!important;
-  border:1.5px solid rgba(255,255,255,.85)!important;
+  border:1.5px solid rgba(17,17,17,.22)!important;
   opacity:1!important;
   visibility:visible!important;
   font-size:.94rem!important;
@@ -2234,32 +2242,52 @@ button.footer-complaint{
   text-align:center!important;
   box-shadow:none!important;
 }
+.btn-outline-clean:hover,
 .btn-complaint-visible:hover,
-footer .footer-complaint:hover,
-.footer-grid .footer-complaint:hover{
+footer .footer-complaint:hover{
   background:#f5c400!important;
   color:#111111!important;
   border-color:#f5c400!important;
 }
-footer .contact-actions,
-.footer-contact-actions{
-  width:100%!important;
-  max-width:360px!important;
+.emirates-grid{
+  grid-template-columns:repeat(7,1fr)!important;
 }
-footer strong,
-.footer-grid strong{
-  color:#ffffff!important;
+.emirates-grid span{
+  text-align:center!important;
+  font-weight:800!important;
 }
-footer p,
-.footer-grid p,
-footer a,
-.footer-grid a{
-  color:rgba(255,255,255,.72)!important;
+.form-grid{
+  grid-template-columns:1fr 1fr!important;
 }
-@media(max-width:760px){
-  footer .hero-ctas,
-  .footer-grid .hero-ctas{
-    max-width:100%!important;
+.form-grid .full-field{
+  grid-column:1 / -1!important;
+}
+@media(max-width:1020px){
+  .emirates-grid{
+    grid-template-columns:repeat(3,1fr)!important;
+  }
+}
+@media(max-width:620px){
+  .bottom-action-section{
+    padding:38px 0!important;
+  }
+  .bottom-action-card{
+    border-radius:20px!important;
+    padding:24px 18px!important;
+  }
+  .bottom-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+  }
+  .bottom-actions .btn,
+  .bottom-actions button{
+    width:100%!important;
+  }
+  .emirates-grid{
+    grid-template-columns:1fr 1fr!important;
+  }
+  .form-grid{
+    grid-template-columns:1fr!important;
   }
 }
 
@@ -2493,13 +2521,18 @@ footer a,
   <section class="areas section" id="areas">
   <div class="wrap">
     <div class="section-head">
-      <p class="pill">Dubai Coverage</p>
-      <h2>Available across Dubai.</h2>
-      <p>Safe driver service can be requested for major Dubai areas and selected intercity trips.</p>
+      <p class="pill">Coverage</p>
+      <h2>Available across the UAE.</h2>
+      <p>Safe driver service can be requested across major emirates, based on availability.</p>
     </div>
-    <div class="area-grid">
-      <span>Dubai Marina</span><span>Downtown Dubai</span><span>Business Bay</span><span>Jumeirah</span><span>Deira</span>
-      <span>Bur Dubai</span><span>Dubai Airport</span><span>Al Barsha</span><span>JLT</span><span>Palm Jumeirah</span>
+    <div class="area-grid emirates-grid">
+      <span>Dubai</span>
+      <span>Abu Dhabi</span>
+      <span>Sharjah</span>
+      <span>Ajman</span>
+      <span>Ras Al Khaimah</span>
+      <span>Fujairah</span>
+      <span>Umm Al Quwain</span>
     </div>
   </div>
 </section>
@@ -2520,13 +2553,14 @@ footer a,
   </div>
 </section>
 
-  <section class="cta">
-  <div class="wrap">
-    <p class="pill">Book your driver</p>
-    <h2>Need a safe driver in Dubai?</h2>
-    <div class="hero-ctas" style="justify-content:center">
+  <section class="cta bottom-action-section">
+  <div class="wrap bottom-action-card">
+    <p class="pill">Need a driver?</p>
+    <h2>Book your driver easily.</h2>
+    <p class="bottom-action-text">Send your pickup details and service requirement. For support, use the complaint option below.</p>
+    <div class="bottom-actions">
       <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
-      <a class="btn btn-soft" href="tel:+971507182868">Call</a>
+      <button class="btn btn-outline-clean open-complaint" type="button">Report a Complaint</button>
     </div>
   </div>
 </section>
@@ -2570,6 +2604,9 @@ footer a,
 
 
 
+
+
+
 <script>
 (function(){
   "use strict";
@@ -2587,9 +2624,7 @@ footer a,
   const year = document.getElementById("year");
   const phone = "971507182868";
 
-  function setHeader(){
-    if(header) header.classList.toggle("scrolled", window.scrollY > 16);
-  }
+  function setHeader(){ if(header) header.classList.toggle("scrolled", window.scrollY > 16); }
 
   function closeMobileNav(){
     if(!mobileNav || !menuBtn) return;
@@ -2660,9 +2695,7 @@ footer a,
 
   document.querySelectorAll(".open-booking, .service-select, .footer-service").forEach(function(item){
     item.addEventListener("click", function(event){
-      if(item.tagName.toLowerCase() === "a" || item.tagName.toLowerCase() === "button"){
-        event.preventDefault();
-      }
+      event.preventDefault();
       showBooking(item.getAttribute("data-reason") || "Safe Driver Dubai");
     });
   });
@@ -2691,9 +2724,8 @@ footer a,
   if(bookingForm){
     bookingForm.addEventListener("submit", function(event){
       event.preventDefault();
-
       const message = [
-        "Hello UAE Safe Travel, I need a safe driver service in Dubai.",
+        "Hello UAE Safe Travel, I need a safe driver service.",
         "",
         "Service: " + (document.getElementById("rideReason")?.value || "Safe Driver Dubai"),
         "Date: " + (document.getElementById("rideDate")?.value || "-"),
@@ -2706,7 +2738,6 @@ footer a,
         "",
         "Please share availability and price."
       ].join("\n");
-
       window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
     });
   }
@@ -2714,7 +2745,6 @@ footer a,
   if(complaintForm){
     complaintForm.addEventListener("submit", function(event){
       event.preventDefault();
-
       const message = [
         "Hello UAE Safe Travel, I want to report a complaint.",
         "",
@@ -2727,7 +2757,6 @@ footer a,
         "",
         "Please review and respond."
       ].join("\n");
-
       window.open("https://wa.me/" + phone + "?text=" + encodeURIComponent(message), "_blank", "noopener");
     });
   }

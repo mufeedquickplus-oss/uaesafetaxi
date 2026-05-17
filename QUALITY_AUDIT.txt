@@ -1,22 +1,38 @@
-UAE Safe Travel - Footer Complaint Visibility Fix Audit
+UAE Safe Travel - Merged Final Corrections Audit
 
-footer_complaint_button_exists: PASS
-complaint_button_visible_css: PASS
-footer_actions_full_width: PASS
+bottom_action_simple_visible: PASS
+footer_complaint_visible: PASS
+emirates_only_present: PASS
+old_dubai_area_details_removed: PASS
+map_and_car_fields_removed: PASS
+booking_fields_valid: PASS
+complaint_fields_valid: PASS
+buttons_js_clean: PASS
+single_non_json_script: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-complaint_js_marker_present: PASS
-book_js_marker_present: PASS
 no_dead_links: PASS
+no_visible_taxi_phone_whatsapp: PASS
 
-Fix applied:
-- Report a Complaint button in footer/contact area is now a proper full-width white button.
-- Text is black for strong contrast.
-- Book Now and Report a Complaint stack cleanly on mobile.
-- Popup and JS markers retained.
+This build re-applies all previously approved corrections together:
+- Bottom Book/Complaint section is simple and visible.
+- Report a Complaint is not a pale hidden pill.
+- Coverage lists emirates only.
+- Detailed Dubai locations removed.
+- Booking form has no map fields and no car type.
+- Button JS is rebuilt cleanly.
 
-Footer complaint buttons found:
-1
+Old areas found:
+PASS
+
+Old fields/text found:
+PASS
+
+Missing booking fields:
+PASS
+
+Missing complaint fields:
+PASS
 
 Bad links:
 PASS
