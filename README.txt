@@ -99,3 +99,9 @@ No-blue final fix:
 Brand color lock final:
 - Removed default browser link color behavior.
 - Locked all visible text/link states to black, white, gold or neutral tones.
+
+
+Logo visibility final fix:
+- Header/footer visible logo is now inline SVG.
+- This guarantees the logo shows without relying on PNG path loading.
+- Generated PNG logo remains in /assets for brand reference.

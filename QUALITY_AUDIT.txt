@@ -1,26 +1,22 @@
-UAE Safe Travel - Brand Color Lock Final Audit
+UAE Safe Travel - Logo Visibility Final Fix Audit
 
-brand_color_lock_css_present: PASS
-global_link_color_inherit: PASS
-nav_colors_locked: PASS
-footer_colors_locked: PASS
-button_colors_locked: PASS
-no_default_browser_link_color_found: PASS
+inline_visible_logo_header_present: PASS
+visible_logo_text_present: PASS
+header_logo_no_png_dependency: PASS
+generated_logo_asset_still_included: PASS
+hero_image_still_used: PASS
 booking_popup_present: PASS
 complaint_popup_present: PASS
-logo_image_still_used: PASS
-hero_image_still_used: PASS
+visible_phone_number_hidden: PASS
+visible_platform_mentions_zero: PASS
 no_hash_only_links: PASS
 dead_end_or_missing_asset_links: PASS
 
-Fix applied:
-PASS - Browser default link colors are overridden.
-PASS - Navigation, footer, buttons, FAQ, service actions and form fields are locked to the brand palette.
-PASS - Generated logo and hero image are still used.
-PASS - Booking and complaint popups are retained.
-
-Suspect non-brand link color values:
-PASS
+Why logo was not showing:
+- The previous header used a generated PNG logo asset.
+- If the asset path is not served correctly, or the image has a light/white logo on a dark header, it can appear missing.
+- This version uses an inline SVG logo directly inside index.html for the visible header and footer logo.
+- The generated logo PNG is still included in assets for reference/brand use, but the visible logo no longer depends on it.
 
 href_count: 24
 dead_end_or_missing_asset_links_detail: PASS
