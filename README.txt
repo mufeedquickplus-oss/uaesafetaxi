@@ -141,3 +141,16 @@ Expert final audit:
 - Fixed H1 punctuation spacing.
 - Removed invalid OG image data URL.
 - Rechecked quality, fonts, dead ends, unwanted text, design, size, dirty image, buttons and alignment.
+
+
+Navigation fix:
+- Fixed mobile menu button toggle.
+- Rebuilt nav targets to Home, Services, Areas, FAQ.
+- Removed invalid Booking section nav link after content cleanup.
+- Added fallback JS and CSS for mobile menu.
+
+
+Final hero image update:
+- Replaced hero/background image with the uploaded taxi car image.
+- Embedded the optimized hero image directly in index.html.
+- Included optimized copy in assets/uae-safe-travel-hero-final.jpg.
