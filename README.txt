@@ -154,3 +154,8 @@ Final hero image update:
 - Replaced hero/background image with the uploaded taxi car image.
 - Embedded the optimized hero image directly in index.html.
 - Included optimized copy in assets/uae-safe-travel-hero-final.jpg.
+
+
+Safe driver concept rebuild:
+- Changed the website from taxi-style to safe-driver/private-driver concept.
+- Updated hero, services, booking form, FAQ, CTA, footer and SEO metadata.

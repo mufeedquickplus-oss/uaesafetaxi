@@ -4,13 +4,13 @@
 <!-- Final guaranteed build: logo is embedded, and hero uses a clean car-only crop instead of a website screenshot/mockup. -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Taxi Service in Dubai | UAE Safe Travel</title>
-<meta name="description" content="Reliable taxi service in Dubai for airport transfers, hotel pickup, city rides and family trips. Book a ride or call for quick support."/>
+<title>Safe Driver Dubai | Private Driver Service | UAE Safe Travel</title>
+<meta name="description" content="Hire a safe driver in Dubai for your own car. UAE Safe Travel offers private driver service, hourly driver, daily driver, corporate driver and pick and drop support."/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
-<meta name="keywords" content="taxi service in Dubai, Dubai airport transfer, hotel pickup Dubai, city taxi Dubai, family taxi Dubai, tourist taxi Dubai"/>
+<meta name="keywords" content="safe driver service in Dubai, Dubai airport transfer, hotel pickup Dubai, city taxi Dubai, family taxi Dubai, tourist taxi Dubai"/>
 <link rel="canonical" href="https://uaesafetravel.com/"/>
-<meta property="og:title" content="Taxi Service in Dubai | UAE Safe Travel"/>
-<meta property="og:description" content="Reliable Dubai taxi service for airport transfers, hotel pickup, city rides, family travel and tourist trips."/>
+<meta property="og:title" content="Safe Driver Dubai | UAE Safe Travel"/>
+<meta property="og:description" content="Book a reliable safe driver in Dubai for your own car. Private driver, hourly driver, daily driver, corporate driver and pick and drop service."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://uaesafetravel.com/"/>
 <meta property="og:image" content="https://uaesafetravel.com/assets/og-image.svg"/>
@@ -21,7 +21,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TaxiService","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Dubai taxi service.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":["Dubai Airport Transfer","Dubai City Taxi Service","Hotel Pickup","Family & Tourist Ride"],"priceRange":"AED"}
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Dubai safe driver service.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":["Dubai Airport Transfer","Dubai City Taxi Service","Hotel Pickup","Family & Tourist Ride"],"priceRange":"AED"}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you provide airport pickup in Dubai?","acceptedAnswer":{"@type":"Answer","text":"Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai."}},{"@type":"Question","name":"Can I book through direct booking?","acceptedAnswer":{"@type":"Answer","text":"Yes, bookings can be made directly through direct booking by sharing pickup, drop-off, date and passenger details."}},{"@type":"Question","name":"Do you offer hotel pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes, hotel pickup and drop-off service is available across Dubai."}},{"@type":"Question","name":"Is the service suitable for families?","acceptedAnswer":{"@type":"Answer","text":"Yes, the service is suitable for families, tourists, business travelers and daily travel needs."}}]}
@@ -1635,6 +1635,31 @@ body.nav-open{
   }
 }
 
+
+/* Safe driver concept adjustment */
+.hero-inspired .hero-bg{
+  background-position:center center!important;
+}
+.service-grid{
+  grid-template-columns:repeat(3,1fr)!important;
+}
+.service-card.featured{
+  grid-column:auto!important;
+}
+.service-card{
+  min-height:220px!important;
+}
+@media(max-width:1020px){
+  .service-grid{
+    grid-template-columns:repeat(2,1fr)!important;
+  }
+}
+@media(max-width:620px){
+  .service-grid{
+    grid-template-columns:1fr!important;
+  }
+}
+
 </style>
 </head>
 
@@ -1651,7 +1676,7 @@ body.nav-open{
 
   <div class="nav-actions">
     <a class="btn btn-soft" href="tel:+971507182868">Call</a>
-    <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
+    <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
     <button class="btn btn-soft open-complaint" type="button">Complaint</button>
   </div>
 
@@ -1667,7 +1692,7 @@ body.nav-open{
   <a href="#services">Services</a>
   <a href="#areas">Areas</a>
   <a href="#faq">FAQ</a>
-  <button type="button" class="open-booking" data-reason="General Taxi Booking">Book Now</button>
+  <button type="button" class="open-booking" data-reason="Safe Driver Dubai">Book Now</button>
   <button type="button" class="open-complaint">Report a Complaint</button>
 </div>
 
@@ -1678,21 +1703,21 @@ body.nav-open{
           <div class="booking-top">
             <div>
               <span class="tiny">Quick booking</span>
-              <strong id="bookingFormTitle">Fill ride details</strong>
+              <strong id="bookingFormTitle">Fill driver details</strong>
             </div>
             <button class="form-close" type="button" id="hideBookingBtn">Close</button>
           </div>
 
-          <input type="hidden" id="rideReason" value="General Taxi Booking"/>
+          <input type="hidden" id="rideReason" value="Safe Driver Dubai"/>
 
           <div class="form-grid">
             <label><span>Date</span><input type="date" id="rideDate" /></label>
-            <label><span>To</span><input type="text" id="rideTo" placeholder="Drop-off location" /></label>
-            <label class="optional-field"><span>To map link <small>optional</small></span><input type="url" id="rideToMap" placeholder="Paste map link if available" /></label>
-            <label><span>From</span><input type="text" id="rideFrom" placeholder="Pickup location" /></label>
-            <label class="optional-field"><span>From map link <small>optional</small></span><input type="url" id="rideFromMap" placeholder="Paste map link if available" /></label>
-            <label><span>Number of people</span><input type="number" id="ridePeople" min="1" placeholder="Passengers" /></label>
-            <label class="full-field"><span>Notes</span><textarea id="rideInfo" rows="3" placeholder="Flight number, luggage or preferred time"></textarea></label>
+            <label><span>Drop-off</span><input type="text" id="rideTo" placeholder="Drop-off location" /></label>
+            <label class="optional-field"><span>Drop-off map link <small>optional</small></span><input type="url" id="rideToMap" placeholder="Paste map link if available" /></label>
+            <label><span>Pickup</span><input type="text" id="rideFrom" placeholder="Pickup location" /></label>
+            <label class="optional-field"><span>Pickup map link <small>optional</small></span><input type="url" id="rideFromMap" placeholder="Paste map link if available" /></label>
+            <label><span>No. of passengers</span><input type="number" id="ridePeople" min="1" placeholder="Passengers" /></label>
+            <label class="full-field"><span>Notes</span><textarea id="rideInfo" rows="3" placeholder="Pickup time, car details or special notes"></textarea></label>
           </div>
 
           <button class="btn btn-dark full" type="submit">Send Request</button>
@@ -1739,19 +1764,19 @@ body.nav-open{
   <div class="hero-bg" aria-hidden="true"></div>
   <div class="wrap hero-inner">
     <div class="hero-copy-block">
-      <p class="hero-kicker">Safe. Reliable. On time.</p>
-      <h1>Taxi service in <em>Dubai</em>.</h1>
-      <p class="hero-sub">Airport transfers, city rides, hotel pickup and family trips with a professional driver.</p>
+      <p class="hero-kicker">Safe. Professional. Always on time.</p>
+      <h1>Safe Driver<br><em>Dubai.</em></h1>
+      <p class="hero-sub">Hire a professional driver for your own car. Available for one-way trips, hourly driving, daily service, corporate travel and pick & drop.</p>
 
       <div class="hero-ctas">
-        <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
+        <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
         <a class="btn btn-soft hero-call-btn" href="tel:+971507182868">Call</a>
       </div>
 
       <div class="hero-trust-row" aria-label="Service highlights">
         <div class="trust-item">
           <span class="trust-icon">SAFE</span>
-          <div><strong>Safe Rides</strong><small>Careful driving</small></div>
+          <div><strong>Safe Driver</strong><small>For your own car</small></div>
         </div>
         <div class="trust-item">
           <span class="trust-icon">PRO</span>
@@ -1759,7 +1784,7 @@ body.nav-open{
         </div>
         <div class="trust-item">
           <span class="trust-icon">24/7</span>
-          <div><strong>Available</strong><small>Book anytime</small></div>
+          <div><strong>24/7 Service</strong><small>Book anytime</small></div>
         </div>
       </div>
     </div>
@@ -1767,79 +1792,95 @@ body.nav-open{
 </section>
 
   <section class="services section" id="services">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="pill">Services</p>
-        <h2>Choose your ride.</h2><p>Select a service and send your trip details.</p>
-      </div>
-
-      <div class="service-grid">
-        <button class="service-card featured service-select" type="button" data-reason="Dubai Airport Transfer">
-          <span class="word-label">AIRPORT</span>
-          <h3>Dubai Airport Transfer</h3>
-          <p>Airport pickup and drop-off.</p>
-          <span class="service-action">Book Transfer</span>
-        </button>
-
-        <button class="service-card service-select" type="button" data-reason="Dubai City Taxi">
-          <span class="word-label">CITY</span>
-          <h3>Dubai City Taxi</h3>
-          <p>Everyday rides across Dubai.</p>
-          <span class="service-action">Book City Ride</span>
-        </button>
-
-        <button class="service-card service-select" type="button" data-reason="Hotel Pickup">
-          <span class="word-label">HOTEL</span>
-          <h3>Hotel Pickup</h3>
-          <p>Hotel, apartment and business pickup.</p>
-          <span class="service-action">Book Hotel Pickup</span>
-        </button>
-
-        <button class="service-card service-select" type="button" data-reason="Family & Tourist Ride">
-          <span class="word-label">FAMILY</span>
-          <h3>Family & Tourist Rides</h3>
-          <p>Comfortable rides for families and visitors.</p>
-          <span class="service-action">Book Family Ride</span>
-        </button>
-      </div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="pill">Services</p>
+      <h2>Choose your driver service.</h2>
+      <p>Select the service you need and send your trip details.</p>
     </div>
-  </section>
+
+    <div class="service-grid">
+      <button class="service-card featured service-select" type="button" data-reason="Safe Driver Dubai">
+        <span class="word-label">SAFE</span>
+        <h3>Safe Driver Dubai</h3>
+        <p>A professional driver comes to you and drives your own car safely.</p>
+        <span class="service-action">Book Driver</span>
+      </button>
+
+      <button class="service-card service-select" type="button" data-reason="Hourly Driver Dubai">
+        <span class="word-label">HOURLY</span>
+        <h3>Hourly Driver</h3>
+        <p>Driver support for meetings, errands, events or multiple stops.</p>
+        <span class="service-action">Book Hourly</span>
+      </button>
+
+      <button class="service-card service-select" type="button" data-reason="Daily Safe Driver">
+        <span class="word-label">DAILY</span>
+        <h3>Daily Driver</h3>
+        <p>Daily driver service for work, family travel and personal schedules.</p>
+        <span class="service-action">Book Daily</span>
+      </button>
+
+      <button class="service-card service-select" type="button" data-reason="Pick and Drop Driver">
+        <span class="word-label">PICKUP</span>
+        <h3>Pick & Drop</h3>
+        <p>Reliable pickup and drop-off driving support across Dubai.</p>
+        <span class="service-action">Book Pick & Drop</span>
+      </button>
+
+      <button class="service-card service-select" type="button" data-reason="Corporate Driver Dubai">
+        <span class="word-label">CORP</span>
+        <h3>Corporate Driver</h3>
+        <p>Professional driver service for executives, guests and business travel.</p>
+        <span class="service-action">Book Corporate</span>
+      </button>
+
+      <button class="service-card service-select" type="button" data-reason="Chauffeur Service Dubai">
+        <span class="word-label">VIP</span>
+        <h3>Chauffeur Service</h3>
+        <p>Comfortable driver service for special visits, meetings and occasions.</p>
+        <span class="service-action">Book Chauffeur</span>
+      </button>
+    </div>
+  </div>
+</section>
 
   <section class="areas section" id="areas">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="pill">Dubai coverage</p>
-        <h2>Dubai coverage.</h2><p>Available across major Dubai locations.</p>
-      </div>
-      <div class="area-grid">
-        <span>Dubai Airport</span><span>Deira</span><span>Bur Dubai</span><span>Downtown Dubai</span><span>Business Bay</span>
-        <span>Dubai Marina</span><span>Jumeirah</span><span>Al Barsha</span><span>JLT</span><span>Palm Jumeirah</span>
-      </div>
+  <div class="wrap">
+    <div class="section-head">
+      <p class="pill">Dubai Coverage</p>
+      <h2>Available across Dubai.</h2>
+      <p>Safe driver service can be requested for major Dubai areas and selected intercity trips.</p>
     </div>
-  </section>
+    <div class="area-grid">
+      <span>Dubai Marina</span><span>Downtown Dubai</span><span>Business Bay</span><span>Jumeirah</span><span>Deira</span>
+      <span>Bur Dubai</span><span>Dubai Airport</span><span>Al Barsha</span><span>JLT</span><span>Palm Jumeirah</span>
+    </div>
+  </div>
+</section>
 
   <section class="faq section" id="faq">
   <div class="wrap faq-layout">
     <div>
       <p class="pill">FAQ</p>
       <h2>Questions?</h2>
-      <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book a Ride</button>
+      <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book a Driver</button>
     </div>
     <div class="faq-list">
-      <details open><summary>Do you provide airport pickup?</summary><p>Yes. Airport pickup and drop-off are available in Dubai.</p></details>
-      <details><summary>Can I book a hotel pickup?</summary><p>Yes. Pickup from hotels, apartments and business locations is available.</p></details>
-      <details><summary>Can families book this service?</summary><p>Yes. Family and visitor rides can be requested.</p></details>
-      <details><summary>How do I report a complaint?</summary><p>Use the complaint button and submit your trip details.</p></details>
+      <details open><summary>What is a safe driver service?</summary><p>A professional driver comes to your location and drives your own car to your destination.</p></details>
+      <details><summary>Can I book for hourly service?</summary><p>Yes. Hourly driver service can be requested for meetings, errands, events and multiple stops.</p></details>
+      <details><summary>Do you offer daily driver service?</summary><p>Yes. Daily driver service can be requested for personal, family or office schedules.</p></details>
+      <details><summary>How do I report a complaint?</summary><p>Use the complaint button and submit your name, trip details and complaint.</p></details>
     </div>
   </div>
 </section>
 
   <section class="cta">
   <div class="wrap">
-    <p class="pill">Book your ride</p>
-    <h2>Need a taxi in Dubai?</h2>
+    <p class="pill">Book your driver</p>
+    <h2>Need a safe driver in Dubai?</h2>
     <div class="hero-ctas" style="justify-content:center">
-      <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
+      <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
       <a class="btn btn-soft" href="tel:+971507182868">Call</a>
     </div>
   </div>
@@ -1850,24 +1891,24 @@ body.nav-open{
   <div class="wrap footer-grid">
     <div>
       <a class="brand brand-uploaded-logo footer-logo" href="#home" aria-label="UAE Safe Travel Home"><img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAQDAwMDAgQDAwMEBAQFBgoGBgUFBgwICQcKDgwPDg4MDQ0PERYTDxAVEQ0NExoTFRcYGRkZDxIbHRsYHRYYGRj/2wBDAQQEBAYFBgsGBgsYEA0QGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBj/wAARCAEsAggDASIAAhEBAxEB/8QAHQAAAgICAwEAAAAAAAAAAAAAAAEHCAYJAgQFA//EAGkQAAECBQEFAwQJDgQRCAoDAAECAwAEBQYRBwgSITFBE1FhInGB0wkUFRgykZWh0hYXGSNCUlNXYnKCkpSxY3WToiQlMzY3Q0ZUVnOFsrO0wcLRNDVFR1V0hKQmJzhEZGWjw+HwZnaD/8QAHAEBAAEFAQEAAAAAAAAAAAAAAAEDBAUGBwII/8QARBEAAgECAgYECgcGBgMAAAAAAAECAwQFEQYSITFBkVFhcdEHExQVIlOBobHBMlJicpLh8BYjQ4KiwiU1QlSy0jM08f/aAAwDAQACEQMRAD8AoZ1gELzwQA+kKHCgAghwusAEEHSCACDxg88GIgBx7oMHuMXj2StELGvzRJVWuy2qXOzC5p5xEzNSodXuBQbSgEkcMoWfjid3dmPR9vyU2ZQT4+5iPpRqdxpTKlUnGFtKSi2s1KCzyeT2OSe9dBlIYZrJOVRJtJ5ZPjt4I1S4PcYMHuMbVDsyaQYz9R1Bz/FifpRwVs0aQo/uMoBP8Wp+lFrLTKUd9pL8UP8AsVVhCf8AFXKXcarwD3GFjHSNpS9mrShSsps23APGnD6UVV2rLXsW0LetySte1aVSpubmnnHHpRgNqW22gDBPcVLB9EerHTON1eUrN28oyqZ5NuLWxZvc2RWwh0qMqyqJqPbx7UVfgggjdTDhmHChwAQQQoAIcLkYIAcI84PCDHCIAdYfPpDAz4eMTTpdsrayaqNMz9Jtz3IozuCKtWiZZlSe9CcFbg8Upx4xIIU5c4eCeQMbFLQ9jrsyWZbdvi+axVnsZWxS2kSbQPdvKC1kfFEsUvYu2c6UyEKsM1BQ/tk/UJh0n4lgfNAGpPdPcfig3T3H4o3Be9M2dccNK6P/ACj/AKyH703Z1/FVRv5R/wBZAGnzdVn4J+KDBz8ExuD96ds6/iqo3673rIPem7O34qqN+u/6yANPm6ruMGFdxjcH70zZ1z/Yqo/8o/6yD3puzt+Kqjfyj/rIA0+YV3GDdP3pjcH703Z2/FVRv13/AFkA2TdnUH+xVRv5R/1kAafN09xgweWDG4T3p+zt+Kqi/rvesg96ds7fiqov673rIA094PcfigwruMbhPenbO34qqL+u96yF707Z2/FVRf13vWQBp8wruPxQYPcY3B+9O2dif7FVG/Xe9ZC96bs6/iqo/wDKP+sgDT7uq7jBunHI/FG4MbJ2zsP+qqjfrvesh+9O2dvxVUX9d71kAae8HuMG6R0MbhBsn7O/TSqi/rPesh+9P2dxx+tVRP1nvWQBp63T96YMH70xuFOyjs7n/qponxvfTg96hs7/AIqaJ+s99OANPWFdxhYPcY3DDZQ2d/xVUT43vpw/epbO/wCKmifG79OANPOD3GDB7j8UbhhsqbPA/wCqmhentT/vxzGyvs9jlpRQPShw/wC/AGnbCu4/FBhXcfijcX71rZ8/FPb38kv6Uck7Lmz7yGk9uellX0oA05hKvvT8UceI5xsU2j2dlzQm3FU+T0mtKrXjNt5kqWW1FLIPJ+YwrKW+5PArPAYGVCkun+n1f1d1JRRKDKssqfWXpp5trcYk2ieKt0cABnCUjmcDvMUa9enb05VaryitrZ6hCU5KMVm2YKASOEGDnkY2OyGhGj9GosrSkWRSqkuWaS0udnGgt19Q5rUrqSc/7OGI7SdHNJAMK01tz9lEc1qeFOwhJxVGby7O82KOjFw0nrL3mtnB7jCwe4xskVo3pPvZTpvbmP8AugjFdQrd0J06saauGt6eW4Sj7XLSqZVIXNPEeS2n95PQAmPdv4TbW5qRo0becpSeSS1dr5kVNG61OLnOcUl29xQXrDju1mopq1em6kmQkpBMw4ViUkWuyZZHRKE9AB6TzPEx0Y6XBtxTksma69j2BBDgiSA68oXSA4hxIFBDggAhc4cEAEB7oOkKADpDzg5PIcYXOPqwwuamm5VpO846sNJHeVHA/fENpLNhG1fZcooomzLbjQTurdk2XFDPVSS6fndiXnDx4xj9iU1uiacUmmtp3UtMhIHgkBA+ZEe065HJKFbXoxqP/V6X4nrfM2qpDKo49Gzls+QLOI+CznnAVx8VLyYtqtUqRifGfe7Cnvug43G1H5o10bYNXM1qpRKKD5MhS+0I7lOuKP7kJjYPcD3Z29MEHioBPxkRq/2iquavtJXKsL3kSrjckjwDTaUn+dvRcaMU/H47F+rpyftbUfgecSlqWLX1pJctpF3WCCCOumpjxwghZg9EAOCCDpACxBB1hwARkFlWRc+od6SdqWfSXqnVZs4Qy0MBKR8Ja1HghA5lR4CPjaNp16+b2ptp2zIOT1WqLwYl2EdSealH7lIAKio8AATG3PQHQS19C7ATTac23O16bSlVVrCkYXMrH3Kc8UtJOd1PpOSTAEdaEbFti6aMSlfvVuWuu6kYWFvI3pKTVz+0tK+GofhFjPUBMWiGMYwIUOAADEI8YfSFABDxCh+eACCCCACCCDrAC9EEOCAFDg6wQAoMw4UAHSH08YIIAUOCFADghQ4AIIUOACCDjBjEAEHhBiIa1Z2oNJNI2X5Wr19FUrjYITRaSQ/Mb3c4Qd1ofnkHwMATIpaW0lSyEpAySTgAd8U82ittuh2c1M2ppFMSlcuEbzT9X4OycieR3Oj7g8PIHUq5RVfWra31N1ibmaOiYFtWw4SPcmnOEF5Hc+9wU5+aN1PgY6ejuzRduoi2a3X0u27aowpU9MJ3XZgfesoIyc/fEY7gYs77ELexpOtcS1V+t3SVqFCpXlqU1mzDLRs7UDXTU95qWcmqrVZx7t6hVJxSlhve5uOr7+5I4nGAABwv1p5pzbGktkfUzbQD807hVRqigN+acxyB6JHEADh0HUn0rZt+17GtVFs2ZSkU6noGHHMfbpk9VOK5knz+fuHf3k9DHBtLtNKmKt29v6NNe/8AXJcM973rCsFjarXqbZfr9frI5fvgMcd6ODkwhhtTjiglCRlSlHAA6kmOfpN7jPHWrFcplu0CcrVanG5OQk2i8++5yQkfvJ5ADiSQI14av6n1HVO/nKs6lctTJfLVOkSf6i3n4Sum+rAKj5hyAjM9ojWk6hXD9TluzKhbUg58NJwJ54cO0PegcQkedXUYgs+Md80C0R820lf3cf30lsX1U/m+PQtnSaHjuLeUS8RSfoL3vuHxg/fBzMOOkmuiggggA5Q+kKDMAHCCDrBABB1g8IIAIOkHmg9EAEZhpTShW9b7Upqk7yHaowVjGcpSsLV8yTGHxN2yfRBWdpukko3hJy78x5iUhpPzuRi8arOhh9epHeoyy7ctnvLqygp3EIvdmjaDLo9r0uVYxgoYQD5ynJ+cmPm6uPtNOhUw5jgN4gebpHRWvMcsqzUPQjuWxdhssE5ek+Iyvxj5KXHFSvGPkV8Yx9SqXEYHkXO8E09lBPBTu8rzAcf3xqVuuqGt35WqwVbxnJ9+Yz4KcUR8xEbO9YK4KHp1WqqF7pkqVMvg/lbhCfnxGqzjgZ5gcY2nQClr3N3cP7MVybfxRjcelq06VPtY4III6ca0EEHnggBwZ8IIRgAzxhgccQdekZzo3YDuqGudtWOgLDVRnEiZWnm3Loyt5XoQlXpIgC+ewroexaGm311K9JpNduFr+gA4nypWRzwI7i6RvH8kIHUxb7rHxlJWWkaexIyTCJeWYbS0yy2MJQhIASkDuAAEfaAFDhQ4AUPjHwnZyVp1Ofn56ZZlpVhBdeffWEIbQBkqUo8AAOZMVR1A2/dLrbqD1Os6j1O73mlFJmmVplZRRH3q1gqWPEJwehgC2sEUG+ySP8f/AFRND/LR9THH7JLNfihZ+Wj6mAL9wRQX7JJM/ihZ+Wz6mEfZJJv8ULHy0fUwBfuCKCD2SWa/FCz8tH1MP7JLM/iha+Wj6mAL9Qce+KC/ZJJn8ULPy0fUwvskk1+KFj01o+pgC/cGIoJ9kkmvxQsfLZ9TD+ySzP4oWflo+pgC/UKKDD2SWZ/FC18tH1MA9kkmDz0hZ+Wj6mAL9QdIoL9kkmgeOkLPy0fUwfZJZn8ULXy0fUwBfqDpFBj7JJM/iha+Wj6mOP2SSbJx9aFn5bPqYAv1xhxQF32SKodiew0klEr6FysqI+ZmMfqXsi+o7ycUqwrXlD3vuzD+PiUmANj3KDI6cfNxjVLW9ubaDqwUmUr9JoyVZ4U6mNgjzKc3zEVXNrTq1eW8m5dRrlqDSubC55bbX6iClPzQBt2u/WXSqwkq+q2/6DTHE/8Au65pK3j5mkZWfiiud+eyFadUbtZWw7cqtzTIBCZmaHtGWz0PlAuKH6IjW3vHfK8+UeJPU+eO9SHaMzU0vV2SnpyVA4sycwlhaj+epC8D0R5nJxi2ln1f/SUs2TNqXtb62ak9rJvXKaBSXcp9zaEDLJUD9ypzJcX5irB7ox2w9n3VPUJ5EzIW87IU1w7y6nVAZdrHVQ3vKX6B6YyWz9c9NrFdQ/b+hskJpPKdnan7afz3ha2ju/ogRnL22s88R2thOuAckqqnAeYdlGn4liuOvONjZNdcpQz5KTS9rfYZW2trLfXrexJ9xJunezXppp84zU6qTd9ebIUl2ZTuyjCu9Df3WO8584iXZqbmppaVPuAhIwhCRhKB3JA4CKnnbNQeI07UD/GY9VHE7ZeR/Y+PymPVRzTE9HNKcSnr3NJv+aH/AG927oSNmtcSwu2jq05Zex9xavmIWOEVV9+Wcf2Pz8pj1UA2yyEn/wBXpP8AlMeqjF/sDjvqP6of9i68/WP1/c+4tXnCecVV2mNakqTMaa2vMkKHkVebaV/5ZJH88/o/fR5FxbXlXqdsTtPotqppE++2W2p8zvbFjPNSU7gyrGcceBweOIrYta3XVOOLUtaiVKUo5JJ4kk9TG56HaB1re58sxSGTh9GOae3peTa2cF07eG3DYxjsKlPxNs9+9/IXWCDhmCOvGpBDhQQAQQ4IAIUOCAFBBB15QAQQQ+kAKDnzgg6wARbfYOowf1Or9bUjIlmGGQrzqU6f9EmKkRffYTo/tbS2v1tSCFTM44lJ7wlDbY+da41rSur4uwcfrSj7pKT9yZkcLhrV8+hP4ZL3sta4rhxPGOupffAtzmTHXWrJjlNSqbRCALWY+ZUefOOJV3xwKyDFjOoXEYkBbVlYEhoNcQSvdXNGXkE8ee84kq+ZKo14nmYubtn1gJseh0tK8Knao7MKT3pabIHzuCKZR03weUdXDJVn/EnJ/CPyNa0gnncqH1Ul8/mEOF1h9I3wwYswQ+kKAHCPfBD6wAhzi5/sdtptz+rl03i81vik0xuUZURwS5MOHJHjuMkfpRTEY6xsT9jklEo0wvee5Kdq7DRPgiXz/vmALrZgHxQ+Ahc+EAPlAOPDrBzhKPkHd54gDX3t9a1VNdzS+i9GmlsU9hludrPZqwZhxflNMq/ISnCyOpUn72KNdciJp2tW55rbLv1NR3u0VPIW3vdWiw2W8eG7iIVgA8YfohYg6QA/NAMYhemH4wAQofhBAChwQQAQYgggDt0+XkH3t2eqPtNPRXtdTv8AmmMqlLRsmaQFO6rUuSUekzSJ7h6UNqjCoBwgCZKNojaVeUlMntE6YsqVwCZ1c7Kn/wCqwmJLouwndtxy/bW9qxpzVmyM70hNuzHD9BBiqJWrGMnEfSUmZmQmkTUlMvSzyDlLrCy2oHwKcGALfp9jp1VJ/r3tDzf0T6qOZ9jp1RSP6+LPz5pr1cRNYm1vrrYK2mpK9JisySMD2jXh7dbI7gtR7RPoWIudovtx2Ff83LUK/ZZFnVx5Qbbede35CYUeAAdOC0T3L4flGAIIHsdWqav7uLP/APNerhfY6tUx/dxZ/wD5r1cbJAoKAUggg8QR1jl++ANbP2OrVP8Aw4s//wA16qH9jp1T/wAN7P8AimvVxsl4wQBra+x06pf4cWf8U16uD7HVql91fFnj0TXq42SwY3uEAa2/sdGqShwviz8eaa9XC+x0aogf182f8U16uLDbQW2JJ6HakJsmVsldfnTItTi5hU+JdtsuFWEFO4ok4SDnh8IRXqteyKamzYUmiWRatOB5KmFPzSh/OQD8UAcfsdWqXD/04s//AM16uGPY6dUTxF82eT4CaP8A9uMDq+2/tD1MKRL3TTqUlXSn0tlJHmKws/PGAVjaF1xroUKlqtda0K5oZn1MJPob3RAE7v8AseWpcsyXZm/rLYQOJW6qZQB6S3GGVrZKVbilJrWvekkkU80vVZYV+qEk/NEAVGuVqsOFyrVeoT6zzVNzLjx/nEx54wDlIAPeBiAJUqmlNk0lSkv6/WBNKH3NPl6jMk+Ypl8H44weu0eg0vhSbtZrSs82ZB9hPxugH5o8UqJ+ESY48YABBB5jBxgAgg4CH174AUEOCIAQdIIIkCgh9IIAXfBBD/8A3MALlBw//MHGDhADHPEbMdk+jmibLFHcUnC53+iCcc99bjn7tz5o1nYJBA5nl5423ac0gW5oxbVEACfa8mhBHiltCP3pVGiacV9SlRprplLktX+8zmCQzlOXYvfn/aZKte9xj4qXiBS+EfBa89Y5dUqGzxiclLyY+LzobZWs/cpJ+aDejqVBwIp7p55GB6Ysq1XKLl0FaENqRRXbDqpf1Jt+jb2falMU+oZ5KddP+xsRXDmYlraUqxqu0nXxnKJIMySfDcaTn+cpURMBHeNE7byfB7an9lP8XpfM0bFanjLupLry5bAg4Q+ELrGwmPCDhDg9EAEL5ocKAH1jYX7HFVEO2NfdF3h2jFRlZrd67rjKkZ+NqNeYi12wNerVubSMxbM28EMXJTlyzYJwDMMntWx6Uh0emANnuOMHKFnIzBiADPDlBgnzQ4IAqFti7L1T1OUxqNYEsJm5ZOXEvO00KCVT7Kc7imyeHaoyRg/CTgDiADrfrFHq1vVd2l16lTtLnWiUrlp1hTLiT4pUAY3tkb3AjhHSqNEo1XaDdXpMjUUJ5JnJdDwH6wMAaIwpJ+6QPSIN5P36f1hG8o2FYxH9ZlvY/i1j6EAsKxulmW6P8msfQgDRrlOPho/WEGU/fo/WEbyfqBsXP9Zdu/JjH0IPqBsYj+su3fkxj6EAaNsp+/T+sIMp+/R+sI3k/UDYv+BVu/JjH0IX1AWIf7i7d+TGPoQBo4yj79P6whBST92n9YRvJ+t/Yg/uJtz5MY+hHxmNN9PJtstTFh2w6g8ClylS6h86IA0fFJSnJ5QsiNv92bJWgV3tr9t6eU6mvq5TFGKpFaT34bISfSkxWXU32PKqU+XeqGlN0pqiUgqFJre608fBD6QEE+Ckp88AUaEEe3dNn3TZNyv2/d9BnqNU2eKpacaKFEffJ6KSeikkg98eHxgBwuvOHBAB1gI3usEEQC+Ww9tH1Byqy2il5z65ltxtXuBOPrytBSMmUUo807oJRnlgp5FOL7Ag8e+NF1q1udtm96PcdOcLc3TZ5mcZWnmFNuJUP3RvPYeTMSrbyUlKVpCwD0BGf9sSD6AdIUcVLQ2neWoAeMdV2oJBwy3veKuEAd0RxdUWmioc8cI80zU05zXujuSMRw322QZqZWQ20C4tSjyCRk/MIA1K7Wlwi5dsO95pDgW1KTaKc3g8AGGkNn+cFRCkevdNYXcV81qvuEldRn35xRJ59o6pf+2PJgA6wYgg9MAPkYMGCCADIgghZEQA4coIcHhAC68YOkOCJAQQdfGCAFBDg6wAoPPB1ggAh4hQxmAFB1g9EEAe5ZVKVXNSbfowGfblRl2CPBTiQfmzG3E7rMhJsD7iXRnzqyv/AHo1kbN9HNZ2lraaCN5Mu47NnhnG42op/nFMbNpxSfbzwTyQrcHmT5I/dHKtPLjO7hT+rFf1N5/8UbTgVP8AdOXS/gl3s+K1jGI+ZMJRzxEIRzqc8zYVHICQI6FWdSiVbSfu3APRHZdmWGT9sdSD3czGJXzXmqbY1YrCQQmQp8xMBSuHFLaiPnAizrSU14qL9J7F7SrBavpPcjWjfNXVX9Tbhral73typTDwPgXDj5sR4GYCoqwVE5I4nxgj6ho0o0acacd0UlyOZTk5ScnxDrD6wusOKp5CDvg6QQAQoIIA7tJkXanXpGmsjecmplthKR1K1hOPnjOLto9Z0V2iZhNJmFy81RKkiepb6ifKbCg4yrxBGEnzKELQmkGt7RloynZBaET6ZlQI6NAuf7gi0O1lpJMXVQ1XnQZUu1OhJU3MtNjKn5QHKiO8tneVj70q7hGo4npArDGKFpVeVOccn1Sk/Rf9LXtMrbWDr2k6sd6fuW/4pl2NMb/oup+lNFvihOJMtUWA4tkHJl3RwcaV+UhYUn0A9Yy2NUmyltHP6LXyqg3E645ZVXdSZsJysyL2AkTKB1GMBYHNIBHFIztUkp2VqNMl6hT5pialJhtLzL7CwtDiFDKVJUOBBByCI24xR98GHyg4wQAQusOCACDpBzjipxDfw1AQByMEddU2nH2tBPieEfIvvr5KCfzRAHdOAMk4j5l9pP3YPm4x1dxSuKiT545Bsd0AfUzSfuUE+fhC7dw/BCRCDfhHIIgDgVPKPFxXo4QinePlEmPsEjvhhI7oAwTVDSayNXbKXbd50dE02ATLTjWETMmsj4bLmMpPePgnkQY1T656FXToXf5olbzN0ya3naXVm0brc42DxyPuXE5G8jpkEZBBjcoE8eUYBrTpNRNZtJajZtaCG3HE9tIzpTlUnMpB3HR4ccKHVJUIA0rjMHpj1Llt2qWld1StiuyxlqlTZlyUmWTx3XEKwcHqOGQeoIMeX1gAggggD3bLpD1wajUC35dJU5UKlLSiQBn4bqU8vTG8Jx/sQWWkDyTujuAEaj9kS3zcO2RZbKkBTMlMOVJwkZADDSlg/rbkba90mAPkoKWreWSo+MMN8OUfcN5jmEQB8EtnniMI1qrqrW2c75ryDuOStDmi2c4wtTZQn+coRIIRFdNuKve4mx3WJRLm4urzspTk95Bc7VQ/VaMAapiCnySeQxB0g45g5GACHC6w+kAEEEEAELrDgiAEEKHEgIIIIAOsEHhBAAYIOZg5QAs8YcLEPxgAhfvhwoAPmggxw4w/CALN7EFHE7rrP1VaQpEjIBOSORW6k/5raovK66oZcXgZ4kmKobENNRKWjd9ylI7Qupl0E9dxrH734sXMT78wcOnKeieQjgmnOILzlVW9ppLsUY/PWN7wO3fk0X+t7+WR6rtVYQN1v7Yrw5R5z8/MvZG/upP3KOEdPGeMPOBGgVbqpU47DPRpRicgrvMRjtDVj3I2brmcQcKmWW5JPj2riUn+bvRJeQTmK+7XtVMpo/SqQhWDP1VKj4pabUo/OpMZXRi28pxa2p/bT9ieb9yLXE6ni7SpLqfv2FLeuekKDhDj6lOYBBB54IAOsEBMEAGIXSHC4RALA7HdHcqm0gxMgfa5GSccJ7itSG/3KVF35qYdK3XAvJdUpZ9Jz/tirew9TOxm7xuRwf1FluXbPjuOLPzlEWYUCpXExwDwi3XjMTlBf6cl/TF/GTN+0epatqn07fe18kU3142fp63Z2bvmzJNTtDWovTkiwnKpAniVJSObWePD4HmwR09AtrC9tFJluhzSV3BaCl5VSXXcLlsnJXLLPwD13D5B8CcxdVSlBBQlXA8IgPUnZatq6nHq1Z8wzb1WWSpcsUEyb5790cWie9OU/kiM7op4Q406cbTFXu2Ke/Z9rj7V7eksMV0fcpOra+1d3cXH0u170r1ckWlWjdMuqoKTvOUmcIYnGj3FpRyrzo3h4xJRUne3RzHSNJF36aahae1DerlBnZVtpWWqjK5dYJB5peRwHpwYy6zdqPXmy2G2aVqLU5qVb4Jl6puzzYHcO1BUPQRHXLa6o3MFVoTUovinmvcanUpTpy1ZrJ9ZuIKgkZUoAR81TKEjyRvePSNY0r7IBrawwETNPtCcXjHaOU9xBP6roEfT7IJrOD/zBZmP+5v+tiueDZepx5f3WB3JhBvPMRrWT7ITrKkYNvWYf/Bv+thfZCtac8KBZeP+5vetgDZYGePER9Q0AOUa0B7IXrRj/mCzP2N/1sH2QzWkcPqfsz9kf9bAGzAIjmECNZw9kN1nxxt6zM/90f8AWxwV7IZrUo4+p+zB/wCFf9bAGzTHHAEG76Y19Wl7IxX2Z1tF9aeU2alTgLeo00tl1PiEOlSVebeTF1NNNU7L1cslu6bIqonJMq7J5pxO49LOAZLbqDxSrBz1BHEEiAMywO6CAcRmH1x1gA6QDyT5QjGLv1EsawJEzt6XXSaGzjI9uzKW1r/NR8JR8wMVk1C9kG07oyHZfT+3aldEwnIE3Mn2jKecFQLih+inzwBDXsg+nzFB1ko2oEjLbjNxShYmykc5qXwnePippTf6hingBUOEWluOtbSu2K3Ky6bUYRbspMGYl1syok5GXWUlO8qZdO8s7pIwCfzeUZtbmxVOWVWJD6qbdqGoNUe3V+0pB32lR2Dn4L8yftrnI5CUoTjqT5J8ykorNkpZvIq1YWmNw32VTUq37RpLTyZd2pzCCUF08mWUji+8ejSMnjk7o4x8tTbZp1lX87ask9279ObSzPK3wspmOJWgkcN5OQlQTwCgpIJxk2h121XsfS+sOUHTZ6XqV8S7KpQVCXUhVPtNKk4cl6clKEp7XOR2mN5I5krzil63XFrK1qK1EklSjkk9ST3x5UW5az5fMltZZIuF7Hhb6J/XG5bkUjeTTKL2CCRwC33Uj/NaVGx4I8Ipx7HTbqZXSG7boU3uqqNWRKJURzSw0D/nPH4oucRjrFQ8nzCMCGExy4Q8QAgOMUb9keuANWrYtrIcyZibmqi4gdzaEtJPxuqi8vnjWJ7IFcBqm07I0VteWqRRGGynucdWt1X80ogCqGYIOsEAPjBC6Q4AIXWH1gMAHog8YMwogBDhCD90SBwQQQAusEEEQB9IIIDEgXWHC9MHWIAQ4OEESA6wcYOnCAYyIgF/Nlinpp+y2zNJBS5UJp11XiC8QPmZESwOI4xHugG6jZYtJCfumVKP8q7/AMYkE+MfLmktZ1sTrt8JzX9cjqGGwUbaCXQvggz3QswQcowRejAJipO2TUyu5LUoyVeSzKPzSh4rcSgH4mzFtMknhFQ9sanOt3va9TCD2T1PdYCum8h3eI+JwRuvg+UXjlHW6JZfhfyMNpBn5FPLq+KK0iDrB1gj6MOdhzPKCCDrABD5woOkAHIQc4Mx9GWnZh9DLDanHVqCUISMlSicADxJ4RD2AvPsjU33O2cqpUVJwuoVBzCu9IKED/RriaR8GPD0+tL6g9CLZtZ1KRNoYD0zj7/jvfGtTnxCPaj5e0mu1d4hUqxeabbXY22v6cjqGG0fFW8YPoXPLb78zlzPGBXEY6Qs4hjnmMAXwITupUnhuKGFJIyCPEdYpttcsUCnX1QJCi0enSMwuScmptyVl0NKdKnN1O/ugZwEK+Mxcnx6RQbaWraKxtGVltlW81T22aek+KEAr/nKVG/+DahOpjGum8oxbfujt5+41/SSoo2mT3tpfP5ER9Y5QuvCCPoI0EDB0zAIIAcELpBABDg3Tu7x4Dv5RktradX9fEwGrOs2uVsk435GTW4gedYG6PSYAxk84nLZV1qa0W1r90q7OTDVr1GWXLVRplsunyUlTTgQOakrAHmWqMzsvYK1tuItvXEKNarCuJE9M+2HgP8AFs5GfAqEWCtH2PLTel7jl6XXXLgdGN5mVCZFg944byyP0hAHg3p7IzQpUrl9P9P52fz5KJytTCZZGe8NN7yiPOoRG7up22vrsoptSmVul0l7gDRZP3MlwD3zLpCiPMuLoUjSPZ+0bkmqlLWradBAUG26hUtxbpV0AdfJVnzGM1mquLmteaasa66KJ1SB2M8gIqLbOTjeLaHE73UDygM9/KAKG0rYRuOZll3XrbqjTaAz8OYWh0zj3mXMOqSkHzb3pibdHtFdlqlV1dItGWYuW6peXMwh65GHphxsDgHexcQhsJyQQQAT0MZvTtD7pq9yGo6g32Kt2f8AU5qUaWiZVnmEFwlEqnwZSFH74RntTf080X06nq1NmQtyhSg7aZmDnedWeRUTlbzqjwGSpRJxFnRqXFSo9eCjBbs3nJ9ezYl7W3xSKs404x2PN+7vfu9pHdZ0dqdYMzPaxaiMTluSKO29rSKDTZVttIyd5JUUMoA+6G8v8tPKKo697XzMxQ1aV6EI9w7TlmzKu1aWSWnZpHIoYz5TbZ45WfLXk/BB4x/tG7U1z631RyiSCXqLZbDuZemBX2yaIPkuzJHBSuoQPJT4njFfIuKdKNNtx49bfx9y3LgeJTcssxqCc5SAPNDTzAhdIYSpw7iASo8EgcyenzxUPJtu2Nbf9wNja0ypvceqIfqbnDGe1eVu/wAxKInrjGN6eUBFqaSWzbKGwgU2lS0oRjqhpIPz5jJYAUOCCAEfg46xpt2mbj+qja1v2ppc320VVyTbV03GAGRjw+1xuJqU+zS6PNVKZIDMqyt9ZPRKElR+YRoqq1Rdq9fnqtMkl2cmHJpZPUrWVn/OgDp+mAcoIeOp5xAD4oOMEESA6QQemCACFDg6wAhDgxBAAIIPNBABBBBABmD0wdYIAUODnBAChwQQAoPEw+sI84Av7szz4ntmWiI3smUemJYju3XVKHzLESvzis2x1ciX7auOz3V/bJd9FRZSTzQsdmvHmUlH60WaPAYEfMOltrK1xi5g+MnL2S9L5nTcJqqrZ05Loy5bDiTiFzhkZhYxGumQOQGIi3aC0+f1E0kclqSx2tZpjhnZJCebp3cLaHipPL8pKYlHezAkYXvRd2F7VsLmF1RfpQea7ux7mUa9CNenKlPczVc404ytTbqFIWklKkqGCCDggjoY4xfPVLZ4tPUmpvVqUeVQK47xcm5dsLamFd7reRlX5SSCeuYgOq7JmqUnNlumKotUaz5LrU32Jx4pcSMfGY+gsK07wq9pp1Kipz4qWzk9z+PUjQbrA7qjJqMdZdK7t5BAzAYmj3q+smce4lOP+Umv+Mcveqazc/cSm/KTX/GMt+0+Ef7qH4l3ln5tuvVS5MhbEIxNB2V9ZR/0JTvlJr/jHp0fZE1ZqU2G5xuj05HVx2bLvzNpP+yIelGEJZ+UwfZJN8ltJWGXb/hvkQGOeDFptlzQqZqlal9ULtYXK0aQIfkW3UeVML+5dAPQH4H3yvK+CnJkew9kexLRmGqpe1VNxz7ZCkyqEBLCSP4PJz+mrH5Jib5qeceablWmW5aTaGGpdvknhjJPVXj6BgcI0TSnTujKjK1s+Oxt7G10Zb0nxbyeWxLbrLPYXgU1NVa3Dcv1v+HT0PjOTi5+dXMKSGwcBLY5ISBgJHmGI+PKOI7xD4xxqc3OTlLezcUklkgzxh5MIZ6Qcd7HU9BHkHSrlZkrctioXBUVhMrIS65p3xShJOPTjHpjWNWKnNVu4Z6szqt6ZnZhyZdP5S1FR/fFudq3UOVp1ky9g02cQ5O1JwPTyW1glphByEKxyK144dyD3xTrBJ8nj4R3TwZ4RK2s53tRZOo9n3V3vPkmaPpLdqpWVGO6O/tYufCH4R6VAtyv3TWEUm2qHUaxPLOEy0hLrfcPoSDj0xZOwdg7WW6+zmbnFNs+TWAf6Pc7eZx4MtE4PgpSY6Ya0Va6x2pGnVCqT6JGlyMzPTThwiXlWlOuKPglIJ+aNklB2I9AdNKOa9qZcD9aaZ8p2YrE6mnyScfkIIJ8xWfNHL30OhNgzabO0B05euurufa2pS2KYJZpw/lO7u+seISoeMAVLsfY416vXsnlWh9T0m5g+2q+8JXAPXsuLh/VETWxsPaY6e0tFa1y1ol5GW5liULcilZ+9St0qWv9FAMTVIUXa21UUJq57ipOkNBdwTIUVoTdUWk9FOqJDZ8QQR97Ei2Vs8aXWfVE1xdHeuO4x5S6/cr5qM4pQ+6CnMpQfzEiAIcsCxtGZRxp3RTZ3m7rwRuXPdLapSRP5aHZwKccH+KZI8YsHRrcvaYl2/qiuiSp0ulOBS7ZlPa7SB3F5zecV50hvzRl78zLyks5MTb6GmWkFbjrqglKEjiSVHgAO88IiurayPPzYFiW81XZFOSupTs4ZKXe8Jc9mtTn5+6EdylRZ32IW1hT8bdVFCPS3+syrRoVK8tWlHNkmty8tS5ZZaS5uoSVKUoqdWrA5knKlGIMuLX9yfmHafRXmLRlEkpVUrkYUxNLA6syroSE+CnTn+DMZbbmsnu5eUtak1ZNXZqbwC1mTfZnGpZv8K8oKSptHQEp4ngAYk9baHmi1MNodQfuXBvD4jFvVm8Rtdaxr6qlukkpcs9hUjHyerlXhnlwewrja2n1w3jVxX2/bkqy8ny7muBJmJ+YQekqy4AG0HoopQjubUOMTZZ+n9p2PLzBoNLbROTZBnKg6AuZmyORccxkgccJGEjPACMk3e6PlMzMvIyL05OTDcvLsoU6666oJQ2lIypSieAAAJJ8I84bg1vYZzhnKo985POT7W+HUsl1E3N5Ur7HsityWxI8S97zt3Tyxqhd911FuQpUi32jrquJJ5JQhPNS1HACRxJMamdoDaEunXW9TNTqnafbkm4r3MowXlLI5do5jgt4jmrkAcJ4ZzkG1TtDzmtuoiqfRpl5uy6S6UU6X4p9tLHBU0sd6uISD8FPcVKivvGMsWoQdIUEAHojNtH7e+qvX6y7cKN9uerUq04PyO1Spf8ANSYwqLE7EVviubY1BmFN76KVKzVRUMcilotpP6zqYA2wcxnv4w/RByggAggwIIAjDaMuH6l9lO/qslQSsUZ+XbUei3h2KfncjTJgA47uEbRdvq4fcnZS9yUuYXWKvLS26D8JCN55Xztp+ONXMAAhwoBADggggAhQQ4AOEL98EHWAHBBBABBBBABBBBEAIIIIkC6w4IIgBCggiQEPpC6wQBIOi18p091lpNdmXFIpzijKT+PwDnBSv0Tur/RjYplKgFIUlSFDKVJOQR3jwjVX/wDuIuhsy6tIui12rArk0BWKY1iRW4eM3LJHBIPVbY4eKcHoY5R4StH5V4RxSgs3BZT+7wfs49T6EbVo3fqEnbTex7V29HtLBExxjly4QuEcWN0DhBmEcwokgZOeEAJT8FRHmOIUGeMCTmHXB/bF/rGDtnvwzn6xjhDidoOXaO54uufrGBSlLGHFKUPEkxxzBgnlEZsAFEcOkMA84WQDg84j6+darA0/C2apW25ufSP+bqfh9/PcoA7qP0iIuLSyr3lRUraDlJ8EsylWrU6MdepJJdZIRAAzyjzK5cVAtqlKqNw1mRpcqkf1WbeDYV4JB4qPgAYqFem1heNcDspaMixbsocgPnD80od+8Ruo9CSfGIdkpS9NQ7yRJycvWrmrkyfJbbS5NPq/eQOPgBHRsJ8GV3XSnfzVNdC2y7lzfYa7d6TUobKEdZ9O5d/wLUXXtc2rTHHJW0KPNVx8cEzMzmWl894GCtXxJiCLt161UvKZLDleep0q+d1MjSEmXSrP3OU+Wv0qMT3ph7H1eld7Cqan1tq2ZJWFGnSO7Mzqh3KV/U2z6Vkd0XU010B0m0qlWzaNoybc+kYNUmx7ZnFnv7VXFPmTujwjpOF6HYTh2UqdJSl9aXpP37F7EjW7rGLq42SnkuhbP17TW/pzsc63akqaqbtEFt0t4hZn6+VMrWDx3ks4LivOQAe+LeadbBOk1sdjN3rOz94zycEtPH2rKZ8GkHeUPzlnzRn2rO1dpLpGXqdPVj3dryMj3HpCkvOIV3OuZ3GvSd7wij+pO2BrbqzVvqdtAv23IzqyyxTLfC3JyYzySXgO0UfBASI2gxhe+7NVNAdnmhGkPTlEoS20+RQ6HLIMyvh1ZaGR51kDxir1zbcGqmo1yfUhoPp+9LPvndamHWfb06R98Gx9qaHireA748rRvYNuu4n2rj1kqj9EknVdqqkSzgcnn88ftrhylrPX4SvzTF77G03sXTe200Sx7akaPK4Hadgj7Y8e9xw5Us+KiYAqLaOxvqHqXVmbp2ldQqlOucFpo8vOdu6n8lTpy20PyWkn84RbSw9L7C0wo3uXYtryFHYIAccYRl57xcdVlaz5zGWAY4Y5RzBBGOsACcEYjE70vyi2Sw23Nl2dqkwkqlKTJgKmJjHUAkBCB1cWQgdTnAOVHyVRhFW0jsmrV2dri5Wpy1SnlhczMydTmGVOkDA3gF4wOgxgdBFvdeP8VLybLX4a2eXty2/reVKWprLxmeXVvIqrNRrN9uB+63WVsJUFs0OWUVSbJByCvIBmFjh5Sxug/BQOZ5W7Qq5fs6pihzDlOpLay3NV5SAveIOFNyqVcHFjGC4coQfvyCBno0St7tUoerlyvyhVl6UenUqQ+nqhStwLCT1woEjIzgxJUvLS0pJtSsow0wwygNtNNJCEoSBgJSBwAA5ARoFloVc3V673HqqqtfRis9X2ppbPspZPjnueerYzSpUVRsI6ue9vf+uvkeXbdr0O1KP7m0WRSwhSt911Sit2Yc6uOuHylrP3xPhwHCPYxgQQYEdGjFRSjFZJGvNtvNgPPFJ9vTXFVEttnRu3Jspnqo0JitONq4tSpPkMZHIuEZV+QkDkuLf3bc1MsyxKvddZc7On0uUcnHzniUoSVYHicYHiRGlC+rxq+oOpFavSuulc/VZpcy4M5DYJ8ltP5KUhKR4JESQY9nJzCOYcEAKDpD9EEAHOLvexx28X76vi6VIGJSQl6ehZHV1xTigPQ0mKQxsw9j0oHufs51mvLRhyqVtwA45oZaQgfziv54At1BBB54AIPNBBygCgnsj9wlVQsO1UKwENzdSdT35KGkH5nIofFmtvC4fdra6m6clzeTRqXKyOByClJLyvndHxRWXjmADnBBAIAcGYIIAOkEEEAHxQfugggAggggAggMHDMAEEEEAEHGFBnA4QA4IIIAOsKHBABBwgggA68Y7VNqU/R6vLVSlTbspOyziXmH2Vbq21g5BB746vWF4x5lFSTjJZpkptPNF79GdeKPqNT2KPWnWKfdSE7q5f4Lc7gf1Rnx6lvmOmRymIcY1YtuOMvIeaWptxCgpC0KwUkcQQRyPjFh9N9quvUFlmlX7Ku16RRhKag0QJxsflZ8l304V4mOOaTeDqpGTucKWae+HFfd6V1PauGe43DDNIo5Kndb+nv7y454GFzjEbS1QsS+Wkm27kk5l9QyZRxXZTCfAtqwr4sjxjLhwJCsg9x4Ryy4tqttN068HGS4NNPkzaadWFSOtB5rqFxgzDxk8oRGDyiiVBgw4SUFXKI51F1tsbThpyWqM8ahV0jyaVIkLdB/hD8Fsfnce4GLqzsq97VVG2g5SfBfrYuvcUq1enRjr1HkiRiQnmDEV6ha/WFYiXJVuf92qsjI9oU5SV7h/hHPgo83E+EVa1E2g79v8AQ7IJmxRKOrh7Qp6ykrH8K58Jfm4J8IiyUlpmdnWpKTl3X33VhDTLKCta1E8EpSOJJ7hHVcD8Ge6rik/5I/OXyXM1W90m3xtl7X8l38iVb92iNQb6Q5JJnBQqWrh7TpqigrHc478JXm4DwiPbbti47vuNmg2vRKhWKk+fIlZJlTqz4kDkO9RwPGLWaKbBt4XaZeu6rTD9q0g4WmltYNQfHcrOUsA+OVfkiL9WBpjYml9tJodj23J0mXwO1W0nedfI+6dcOVLPnPmxHUrHDrawp+JtaahHqXx6X1s1avcVa8terJtlK9IfY+ahM+161rFWlSTZwv3CpLgU6fB1/iE+IQD+cIu5ZWnVjac0EUix7Zp9FlQBviWbAW74uOHKlnxUTHYu+9rUsC05i47yrsnR6YwPKmJpe6CeiUjmtR6JSCT3Rr91v28rmuVU1b2kbL9u0kkoVWngPb0wO9scQwk9/FfimL0olyNXNo7S/RmSWzc9ZE1WSnLVEp+HZtfDgVJzhtP5SyPDMa99YdsnVTU52YpdKmzaNuOZT7QpjxDzyf4Z/gpXDmE7qfAxB9DoV13/AHs3SaFT6jX67UHSQ00FPPPKJ4qUonxyVKOBzJjYToHsMW5aIlLo1bEtcNcTh1qkJ8uRlDz8v8OsePkDuVzgCqmiOyjqNrRMs1bsDb1rKVldanmz9uHX2u3wLp/K4J/K6Rsh0f0B040VpAZtOjpdqS0bsxWp3Ds2/wB/l48hP5CAB5+cSc22hppLTSEoQgBKUpGAkDkAOg8I5QAcOgg6w4WQIAfTHIxC116m1mr1NcpYdRZkqbLOFLlaXLJmBOrBwUS6FHdLYOd50/CI3UZGVR8L+vM3q7M27RJlxu3WVlqdnGVFJqaknCmG1DiGAQQtY+GQUJO6FE48jyGktFKUoSAlKUgJCQBgAAcAAMAARyzTTTvyKTscOf7xfSlv1epdL6ejdv3bNg2CePSrXC9Hgun8j2pa+tSks7n1QUOaUeXtmjKSf/pvj90ZnpfdN53VKT1QuCUoopSVhqQnKel1BmykkOLCFqV9rB8kKB8ohRHAAmN6Hbcze92Lt9pS26PLhK6xMtqKVFChlMqgjiFuDiojilvuK0mLDS8tLycmzKSjDbEuyhLbbTSQlCEgYCUgcAAAABGW0Hq4xeUPLcRrNwl9GOUVn9ptJPs6d/QW2NQtKM/E28dq3vN8t/M+uciFDgjfTBBBDg4CAKi+yBX25QNBaZZco8W5i4577cAcEy0uA4oeYuFoegxrPPOLY+yB3M5Vdpan2+heWKNR2k7ueTjy1OqP6vZ/FFTYAcLPhDg6coAUOCCAGOeekbg9lCgfU7sd2LKKbLbkxIGfXkYJL7inc/EpMagZWVenp5mRl0Fb0wtLLaR1UohI+ciN6Ft0dq3bMpNAYADVPkmZRAHc22lH+7AHqQQQQAQEZBGcZ4QR51eqjVFtSpVt9QS3Iyrs0snoG0FZ/wA2ANNWvdwi6Npu+60lW829W5lDZz9w2vsk/MgRHXoj7zk07Oz7068cuvrU8snqpR3j85j4QA4IOkKAHBB4GFADg4weaCADrBBmDpABBBBACgg6QdIAfpghcYIAfohYh9IX7oAfhAOcEKAHBC6QQA8wQusOADpB1g6QQAGCDrBAAFFKgpJIUk5BHAjzGM0ouruptusBikXvWWWQMBpx/tkDzJc3hGFeMOLe4taFzHUrwUl0NJ/EqU6s6bzg2n1EuSu0xq/LI3VV2SmD3vU5kn5gI7B2otW93HulSvk1uIaMGIxctGsJk83aw/Cu4uViV2v4subJVq+0VqxWKK9TV3A1KIeG6tyRlkMO46gLTxTnwwYisrWtZUtRUpRJJJyST1PeY+0nKTU/PsyMjLvTMy+sNtMMoK1uKJwEpSOJJPQRefZ92Enn1S13a3MKaZ4OS9stOYUrqDNLSfJH8Gk5++I4pi/s8OtbJONrTjBPfkks+RQrXFWu06sm+1lbtFNnLUXW6rJVb1P9oUJC92Yrs8kplm8c0o6ur/JT6SmNlOjGzNpronKtzNFp/uncBRuvV6oJSqYORxDY5Mp8E8e8mJbp1Mp1HpctTKVIy8jJSzYaYlpZsNttIHJKUjAA8BH3mX5eVk3ZqZfbZYaQVuOuKCUoSBkqJPAADiSeUXpRPp4iK8bQG1pY+i7L9Dp5buK8N3CaUw5huVJ5KmVj4HfuDyz+SDmIF2kNuF6YXNWRopPKaY8pmbudAwpfQplM8h/CnifuccFGjDrr0xMOTD61uuuKK1rWSpS1E5JJPEknqYAzLUzVq+tW7uVcN8VpydeGUy8sgbkvKIP3DLecIHeeJPUmPc0T0DvrXO6TIW3KCUpUusCfrU0k+15UHjj8tzHJCePfgcYzrZq2VLi1rqjNxV8TNGsdpzy50Dddnyk4LcvnpngXDwTxAyeA2jWraVuWRaUnbFq0mWpdKk0bjEtLpwEjqSealHmVHJJ4kwBhmjmhdh6I2t7mWnTt+feQkT1XmQFTM4offK+5RnkhOEjxPGJLwesPpBAC4Q/MIMd8GYAAOPE4iHtUL091Z2ZsOhTTjTaMIrM+wopU2lQz7VbUOIcWkgrUOKEEAeUsFMvrSpaCAopyPhDmPGIwk9CbekWS2xdF2BJWt1XaTzbhWtaipSlFTRJJUSSTxJMYfHaN/XtJUsOko1JbM22slxyyT29HRvLuynQhVUrhNxXBcfyI8YlW5eXbZl0IaYaQENttp3UoSBgJAHIAAACOvPv1BJl5OlSqZupTryZWSYVwSt1WcFXchIClqPRKVRKbmjtMyA1dNypA/hmD+9mPWtvTKiW9ciK97pVSpTjTK2GDPrbUlkLI31JCEJ8ohIGTnhkDGTnk+H+DC9V1CV7OLp55yybza6Ny37t5tVfSWj4pqjF63DPLL4nq2hbEpaNpy1GlVl5SMuTE0tOFzTyjlx1Xio9OgwBwAj3efMQz4QusduhCMIqEVklsRpcm5PN7wxwgh9IOkeiAgxkc4I4qJwYA1EbYE6qd20L4Kv7TMMS6fMiWaAiDYnDa9kX5LbQvkOjHbTLMwk96Vy7RBiEIAIIIIAIM8IIPDEQDu0eqzVDuGQrUj2XtqRmG5pntUBaN9CgtO8k8CMgcDziwZ26NofORcVH+R2f+EVv5wokFkPf07RH+EVH+R2f+EHv6Nog/3R0f5HY/4RW/rmHAFj/f0bRB/ujo/wAjsf8ACPMuPbI13um0qnbdUuGmGRqUq5JzIZpbTay24kpUAoDIJBPERAfWCAEMhIHOHmCCIAQdcQQRIFDxBCEAOFAYPTAB4wx54UHCAH8xhZ8IIBABBD+KFiADwgg88EAPpC498PMEQBQ4OkLrEgfOD0wocAKHzgheAgBwoIOUAOFBBABmDpBB0gB/ujmyltyYbQ66GW1KAU4UlQQM8TgcTjuEfPpDgC6eg2qOyRohKIqiXblrl2LRuvVuZouOzzzTLoKz2SfHio9TjhE8nb30EIBD9zYHdST9ONWcLj3wBtMG3zoFjdL1zemlH6cVM2ltrS4NX5x+1rSXM0ex0qwWVHcfqRH3T+DwRnk1nHVWTwFZj5oIAalFZyecSNoyNImL7TU9ZZ2rKokoUrRS6bKF1U8r71xYUNxsYGQOKuXAZMRxnHKHzgDaHI7dWzrTKZL0+ms3BJyku2llmXYo+420hIwEpSF4AA5AR2Pf76Bj+33N8kn6cas+sEAbTPf8aBn+33N8kn6cHv8AfQP8Pc3ySfpxqzg6wBtM9/xoH+Hub5KP04Pf8aB/h7m+ST9ONWmIXjAG0z3/ABoH+Hub5JP04Pf8aB/h7m+Sj9ONWcHWANpnv+NA/wAPc3yUfpwe/wB9A/w9zfJJ+nGrOH0gDaV7/jQP8Pc3ySfpw/f8aBdX7m+Sj9ONWfSDzQBtM9/voF+Hub5JP04Pf76B/h7m+ST9ONWcEAbTPf76B/h7m+ST9OA7fOgWMdtc3yUfpxq0hQBNe1LqNZmquvq70sV2eXJTVOl2pj27LdgsPN7yDwycjdCOPniFYUGYAcBhQ4AIOkEEAEKH4wdIAIIIIAIXSHBABB0gggA6wdOEEEQA5wcIIUAOCDmYUAPMEHjBmJAoIOkHCAD54IIDAB4wQQQAxBCHOJIoGg2qlz25J16h2ymZp8432zD3txlG+nJGcKWCOIPMRaXd9bWcVO5qRgnszk0ln7SrSo1KzypxbfUsyODB5o79dotStu5J2g1mX9r1CSdLL7W+F7ixzGUkg+iPPzFxCcakVODzT2p9RTacXk94QR71oWZcd93F7hWvICdn+yW/2RdQ35CcbxyogdRHsXlpJqDYFGbqt10ESEo48mXQ4Jlp3KyCQMIUTySePhFtUxG1p11bTqxVR7otrN9i3lWNvVlB1FF6q45bDCYfWFwgyOZi8KIQRKUjs76wVKjy1Tk7SKpeZaQ83vzbCFFKgCCUqWCOBHA8YjiqU2fo1bm6RVZRcrPSjqmH2XOaFpOCDFla4laXUpQt6sZtb0pJtduTK1S3q0kpVItJ9KyOpBByj0aFRalclySVBo7AfqE66liXaK0o31nkN5RAHpi6nOMIuc3kltbKSTbyR50PnziWhs06ylG99SjQ89Ql/pwhs06zHlajfyhL/TjEftHhP+6p/jj3l35uuvVS5MiWDpEsq2a9ZEn+tRs+aoS/04x+8dINQbBoLVauqhpkpJ15MulwTTTuVkEgYQonkkxVo47hteap0riEpPclKLb7FmeZ2VxCLlKm0l1MwbrBBAIypah6IfSOTTbjz6GGm1uOOKCUIQkqKiTgAAcST3RMVF2UtoO4KW3UKfpjVm2HEhSPbq2pRRB67jq0q+MQBDfpgidfec7RwPHTZ/8Ab5X1sM7G20hjI03eI/jCV9ZAEEGCM21E0l1A0onJCUv+31Ud+fQtyWbVMNOlxKCAo/a1KxgqHPGYwnPDMQAhwJG8rAByegibk7Im0U5TkTrWmc8ptbYdAM1LhWCM/BLmQcdMZzwiQQhBHJaXGnVNutqbWklKkqGCCDggjvjj1gBwRl+nml196rV6ao1g0FVXnJRj2y+0l9trcb3gneytQB4kDhEkq2Ndo4ctOXST/wDMJX1kAQP0giePeabR+MnTlz5QlfWQhsb7SBODpu8B/GEr6yAII6wozimaSX9WtWZrTKk0FUzdUo4809TkvtAoUyMuDfKgg4HcfNGfe852kAMnTaY9E/Kn/wC5AEE47ocTqNjfaPIyNN3/AEz8r62H7zfaPP8A1bvZ/jCV9ZAEE9IIya/NPru0zuw2ze1JVS6qllEwZZTqHPIXndOUKI44PWMZHGAFDj3bPs25r+vSTtS0aWqpVec3yxLJcSgr3ElavKUQBhIJ4mJa95ttG8xpy8f/AB8r6yAIHhxOp2N9o/l9bZ/9vlfWRyOxttHgZ+tw95hPyvrIAggQRImoWheqWlNFlKtqBarlHk5t4y7Dipll3fWElZGG1qI4AnjGWSWyFtDVCnsT0pp28uXfbS60v29KjeSoAg4LncRAEHwROY2O9o/e3TptMft8r6yCY2O9oyWllPK01m3AkZKWp2WWr0AOZMAQZBHq3FbVwWjX3aJdFEqFHqTXFcrPMKZcA78KHEeI4R5RgAgg80SLp9oVqtqlQZqs2JZ01V5GVf8Aazr6HmmkhzdCt0dotOSAQTjOMiAI6gjIr3sS79N7uVbF70N+j1RLSH/a7ykqyhWd1QUkkEHB5HmCOkZHp/oTqnqnQpmsWBa5rUpKv+1n1tzbDZbc3QrBStYVxBBBxg8e4wBHUEZlqHpTf+lVTkqdf9uvUaZnWS/LocdbcDiArdJCkKUOB5jOeI74wyAH8ULzxySFKISlJUonAAGSYnBjY+2i35dD/wBbWaShSQsb87LJIBGeILmR6eUAQdxgESNYehGqupzNTesW1jWGabM+1JpxqbYQlDmM4BUsbwxxyMjxjMTsa7Rw/wCrl75QlfWQBBEHWJ395rtH4/scPfKEr6yEdjfaQGMabvH/AChK+sgCCYDGSWnYlz3xfjNl2vS1T9deU6luTS4hBUW0qUsbyiE8AlXXpGVXvs8ayacWk7c96WU9S6S04hlcyuaYcAUs4SMIWTxPhAEYQdYcEALHGCCCIAx8IDxjY3oXgbN9nBPWmjP6641yA+UPPGxnRBaW9m+zt44/panh+kqOX+FT/L6P3/7ZGzaL/wDsT+780Uk1xx74y893/tR3/ZGAZEZ9reQdoq8iM491HefojAI37Bv8vt/uR/4owN3/AOefa/iTlsnKPvhQB/2VNf7kTTteoxoZTlEZPu01x/8A8nYhnZMCRtBbyjwFJmv9yJg2u5sL0Tp7aQcCstHJ/wAU7HNMcT/bK1y6I/3Gy2T/AMHq+35FKs98SloJp41qHq5KSs80V0inYnZ844KQk+S1+mrA8wV3RFvE8N0n0Rf7QOwGNPNKZVmfl9ytVMpnJ7I8pBI+1tfoJP6ylRt2m2OeasOl4t/vKnox6ul+xe9oxOC2Pldwtb6Mdr7vaSwCy3MNsJfaS45vFDRUAVBON7A6gZGe7Iipu13p6mTqslqNTpbDc3uydS3BwDoH2pw/nJBST3pT3x4WpmuL6NqSQr9BmlO0m2nTJttIV5MygnEyf0+KR4ISYtZXqdQdQ9MpmmOTLc3SK1JAtPp4ndWAptweKTuq84xHKLK1vNE7qzxGr9GqvSXU98X1pZSXXs4G1VqtLFqVW3hvi9nfzzXYazefERn2iKUr2ibMCuA91Wj++MUuGg1G2LrqFvVZktTsi+ph0Y4Eg8x4EYI8CIyvRNSE7RFm7/L3VaP747litSNTDa04PNOEmn/K8jR7aLjcQi96kvibA7quOl2fZFQuWrpmFycg0HXUy6AteN4J4AkA8VDrEOp2tdLkqIVJ3IMf/BI9ZEm37bSL204qtrCdXKIqDIaMwhG+UDeSrO6SM/Bxz6xALWx5T3Ukqv6dB/i1HrI4Fo7baPyt5vF6kozz2ZZ7sl0J8czfsQqYgqiVok45cct/tZl6trbS1a8Jkrkx3+0m/WRF2vOuVlaj6bytAt+Xq6JpuoNzSlTjCW0biULScELPHKh0jI0bHdMbcJdv+cA8Kaj1kQLqrYsvp3qVM2vK1R2pNssMvCYcZDRPaI3sboJ5eeN90bwvRitfQlh1SUqkPSWetls2cYpcekwOJXOJwoNXMUovZw7zCic8oOPPpChx1U1Yvn7H1pPRZ+RrGrVZkWpqdlpv3NpJcSFCXKUJU86kH7s76EhXMAKxziy2rW0zpXorcEtQ7tn6g/VJhkTBkqbK9u402SQlThJSE5IOBnJxnGIgr2PK/wCjv6bV/Td6abbq0lPqqjDCjhTzDqEJUpI67i0ce4LTGe6+bHVG1v1FavVi8Zy3qiqWRLTSBKJmWnwjIQoAqSUqwcHiQcDlxyB0D7IDoOo8ZW7z/kxHrYPsgGhKOPtS78fxYj1sR237G3IJH2zVyZKvCjJ9dHj172N+st09x22dUpSbmgnyGKhTVMIWe7fQteP1TAEG7VmtND1u1mlLhtlE83RpGmNSUuicaDThXvrW4opBIGSoDn9zEFjiOcZPf2n12aZXvM2ledKXT6nLgK3SQpDqD8FxtY4LQcHBHcQcEERjASS4lKUlRUcBKRkk9wgCxmxvo2NUdf5aqVOX7SgW1uVGcChlDzu99oZPnUkqI+9QR1ja5vth/wBr9s2Xinf3N4b2M43sd2esQ1swaSsaPbPVMpE6wGq5UEipVZR5h9aRhsnubRuo84UesVLmNq1Q9kSReTVS/wDQltX1MlIV5BkivCpjz9t9tzz3QBAGEbbOkh062gHbipsoW6FdG/Ps7qfJamc/0Q2O7yiHAO5w90Vm4ZjcXtLaUN6x7PdVoUs0h2syqfdGkOJxn2y2kkIB7nElSP0gekad1oW26tt1tTbiSUqSoYKSDggjvgC4/sdSh9fK7E4/6AT/AKy3F2dYNb7H0Oo1Mql6t1RTNSeWwx7nyweO8lIUcgqTjgYpN7HWB9fS7D19wB/rLcWm2ntAatr7a9v0qmXHJ0Y0ubdmVuTTC3g4FoCQAEkYxgwBiQ2/tCVKO9LXfj+K0ethq2/tCBgBi7gP4rR62IZ+xx3Wpv8Asn0Qf5Oe+lGM6hbC1x6eaVV69pvUGkTzNHk1zi5ZqQdQp0J+5CirAPjAHPZnuWQvL2TCqXZTu29qVZ+szsuH07qw24lSkbwycHdIyIv3qxqva2jlipu272p9dOVNtyY9osB5zfWFFPklQ4eQeOe6Nbew82lO2VRcK/6Pn/8AQGNhOvujadbtJ02SuvroqUz7M8JpMsJg/awsbu7vJ57/ADz0gCKFbf8AoQhXCUu8/wCTEethK9kA0HCcplbvB/ixHrYjxHsbkiUZc1cms+FGT62ODvscNOZlHXTq1OK3ElWBRkccDP4WAK07T+qVs6wa9uXjaiJ9NNVTpaVAnmQ05vthW95IUeHHviGenCPo6kIdUgHOCRHz6wBLezbqHbOlu0RSb3u4TyqbJMTKSmSZDrm+4ypCcJJHDKu+Lz+/90HTxTLXd8lo9bGr7xhg5MAbzrOuul3vYdHu6kB4U+rSjc5LdugIcCFjI3kgnB8MmIGuTbh0Utm8arbdSYuhU5TJt2Sf7GmpUjtG1lCt0lwZGQcHESJs5oxsn6cJ/wDkEmf5gjU7rOOz2j7+A/whn/8ATrgCf9rvaY071u0+oFEs1ittzEhUHJp41CVSykpLKkDBC1ZOTGxe0lJRp5RFgYSmmy54d3YpjRepIKVH8k/ujedbGVabUdCOZpjAAH+ITAFendvjQdp1bapW7d5JKTimI5g4/Cx2KLt4aCVWuy9NenK/S0PrCPbdQpwSw2TwytSVqKR44wOsURmtl7aDcm3XBpTcJSpxRB7NHIkn7+O7RtkjaArVXl6adN6lTw+rcVN1BbbLLIPNS1bxOBzwASegMAbJNedHLc1x0dnaTMy0uuqtMKmKNU0gKXLvbuUbqhzbXwSpPIg55gGNODzS2HlNOtltaCUqQeaSDgj0GN39NYltOdH5GXqtSC5K3aQ2iYnHPJ3kS7AClnuyEExpIqtQ90q3Oz/Z7gmJhx8J7t9ZVj54A402nzlXq8rS6awuYnJt5EuwwgZU44tQSlI85IEbo9GNM5HSPRGg2VKqbLkmwFTj44dvNLO86vPiskDwCRFC9grSZu79YJnUeqyu/S7YAErvjyXJ5YO55+zRvL8CpETht3ayTlmWnQbBtepqlKzUphupzDrasKZl2HAprzb7yUnxDR74ANv3Sj6pNKpDU2nSu9ULcV2M7uJyVyTihxP+LcKT4Ba4rZsS6qjT7aLl7enJgN0a6QmnPhasJRMAky7n6xLfmc8I2IafXZQNcdnGnVybYamZC4KcqXqEnzCVlJbmGj5lb4+IxqN1MseraUa11mzJpx1qapE4RLzSfJLjeQtl5J8UlCvPnugDZFttaZi/9myar0nKdpWLWUamwUjKlMYCZhA/QwvztiNVGFEZjc7oTqJJ6x7OVFuidDL8zMyxk6qwQCkTKBuPJI7lfCx3LEaqtdtOnNKdfbjspKFiTlpgvSDi/u5Rwb7Rz1wk7p8UmAM+2ONKBqXtIyEzUpftaJbqRVp0KHkrWlWGGj+c5g46hCovLtiarfWt2cKg3TZkN1y4M0qRKT5SAtOXnR+a3nB6KWmOnsX6WfW62bpKq1KWLVaucpqs1vDCktFOJdv0IO9joXDFK9snVkak7Rk7IU6aD1DtvepUnunKXHArL7o78rG6D3NpgCxXscS97S+9PJAxV2MD/wAPj/ZE36wbTmmuit5yls3exXXJ6ak0zyDT5NLyOzUtSBklaeOUHh5ohD2OU7+mN7Ddx/Tdg/8Al4kDaD2S2td9S5C7Hb5doRlKcin+10U8TAWEuLXvbxWnHw8Yx0gDzj7IDoME8ZO7893uYj1scD7IHoVvDdlLv3cjh7mN+tiPl+xt08gH67s38jJ9dEZ69bG0loroy/fLN/P1lTU0xLCUXTksA9ovd3t4OK5eaAMV2PnWZ/bxt2ca3g287UXUhQwcGXeIz6DFzNuvHvOamCBwqUjj+WilOxevc217QSPvJ3/VHYurt08djmp44/0zkf8ASwBqrg6QdeUGYAPGCCCAAcDnnGwrQtwzeztaS0q8hMh2efFLiwR8YjXty4xZXZw1oplCpS9PbonW5GWU+p6nTz6t1pCl/DaWrkkE+UlR4ZJBxkRofhDwuvfYanbxzcJKTXHLJp5dmefZmZ3R66hQuWqjyUll7dhGGvcjMU/aMutEw0pHbTnthskcFtrSlSVDvHH5jEcAFQ4AxsnrlhWfd8uxMXPb1OrKEp+0PPI3yEnj5LiSDjwBxGPL0N0j3/IsClj+V+nGAwvwk2lva0retSlrQiotrLLYsuLRkLnRutUqynCaybz258fYVu2UqdUXdaZyossLMrKUx1LzoHkoLikhCSe84PDuB7olXazcaRovS0LP2xysN7o78NOE/vES/KU22dO7XcEtKUy3qQ2e0cUAmXazj4SlH4Rx1JJinev2qEtqZecnTbZLr9Fpu8iXVukGbeWQFOJTzxwSlIIyeJ64iywy5raR6RQxGlTcaVPj1JPLN7s23u6OzMrXNOOHYdK3nLOUvn8sg2cLDavLVJFVqEsHaTQ92beSoZS69n7U2e8ZBUR3I8Ys5rRdtRtywPaVGSXK/XXxS6W2k+UXXOClj80HOe8pjtaQ6eK040ukKO5LKFSe/oqoK3eb6wMp8yRhA8xPWKr62as1O4Nc/dK2qo7Ky1AJk6dMS6sEKBIcdSe9SsgH71KYZz0rx9zp5OjRWzPc8t2f3pbXx1ewZRwrD0pbJz57e5e8nGS2UtNWaXLNVNdZenEtJS+83PBCVuAeUoJ3OAznA7ola0LWpdl2pK25RXpt2TlSrsRNvdqtAUoq3d7A4Ak4HTMUQVrTqu4ndVqDXiP+8/8A4jv27rvqVQ7pkKrOXZVqnLS76XHpKYf3m30A+UgjxGfTgxd4joXj17Scbm7U8tqTbyz6tmzoKVvjVhRknTpOPDPYS9taWES3I6jSEuN7yZGpbo5j+0un50E/mRCWiaCvaIs3I4e6jX+2L5TEjRNRtOnUTGZqiVqS8lxIzltxOUqHcpJwfApik2n9CqFn7XVv2zUmiJqQraGVHHBYBO6seCgQoeBironjLuMFucOrP95ShLL7uT2fyvZ1LI8YtZKneU7iH0Ztc8/nv5ly9Tbjn7P0fr1x0cte3pKWDrPao7RAVvpTxT14ExUte1Lqy6SUzFGT5qan/jF1ajRJGuUd+l1mmonZCZRuPS7ySUOJyDg+kD4oxBzRHSgKyjTyjcf4Jf0o0nRzGcHsaMqeIW3jZt5p5ReSyWza+nMzeI2V5XmpW9XVWXS/kVYRtSasDgqYoyvzqan/AIxGt53hWr5u5246+WDOutobUZdkNIwhO6nCR4Re8aI6Ujylae0b+SX9KIf2ldPbGtTSKTqVuWnTqTOLqjTKn5ZspUUFtwlPEnhkD4o3rANKMEnfU6NlaeLnP0c0orf2PdsMHiGF3yoSnXra0Y7cs2VQggxBHUzVT0qDXK1bFxSlft6qTdMqUovtJeclHC240rvCh8RHIjgYsVSdvPX+nU9Eo/N29VVpGPbM7TMOK8/ZrQCfHESLsQaDWNqHpvcl16gWlJ1xpVRRIyHtsLw0G2950p3SOZcQP0YtSdlPZ6Ty0noZ/RdP+/Ego4rb8173sqlbQx/FbnrYsDsq7W16aw6nTVi3nRKSHfaDs9Lz9MaWzu9mpIUhxClKGCF8FAjiMHOeEw+9U2e1HjpPQh+i6P8AfjK7R0t0u0plp2etC06LbYdR/RU20gIUpA44U6skhI54ziAKweyLW5T3NLbTu9bCBUpWqKp4dx5SmXWlLKSeoCmgR3ZPfEB7FWjydTNdm7iqsp2tAtconnwsZS9Mkn2u0e8byS4R3IA6xku2zrzQtVLoo+nljTQq1Loz63pidlvLROTah2aUM/fpQCobw4KUs4yBk3O2bdJBo5s+0e3HpcIrMyPb9WWkcTMuAZTnuQkJbH5pPWAPhtGXRV5Kx6dpzaT4auy+Zz3EkFpPlS7KhmamT4Ntb3HoVA9IjprYB0GS0lK5i61qCQCr3TQne4c8dlwz3RU3aD2ibpuDatqV0WJcs5TJSioXRqVNySwlRaSrDriTg/1RYUc9UhIjC1bTev8Anhq1c37QPowBt8tmgy9s2jTbelZ2cnGKfLNyjT846HHloQndSVqAG8rAAzjjiNYe27pQnTzX1dy0mSDVDukKnm9wYS1NA/0Q34ZJS4B/CHujuaAbV+pVP2gaCxqJfdVq9tVB32hOIqDoWhjtcJQ8OAxur3ST96VRejaT0ka1f2fKtbzEsHK3Kp90KSsp4pmWwSEZ7lp3mz+cD0gCnPsdCD9fS7Cr/sFP+stxZ/av19ujQW1bcqVq0mk1B2qTj0u6mopcUEhDYUCncUnjk9YrH7Hel9vX272HWHGlt0IIW2tJCkKE03kEdCOI9ESL7I/hGnlicDn3TmTy/gUwBFx9kQ1bPH6kLLB/xcz62Mbvzbi1P1B0zrdk1a2bVl5KryqpR56VbfDiEqxkp3nCM8OoMVk8YBwgCx+w5g7ZNFJPEyE//oDF7NqvVa6tGtCWrss4SKqguqsSf9GsF5G4tLhPkhQ4+QOOYonsNgK2yaJjOfc+f/0BjZ3eVh2jqDbibfvWgS1apiXkzAlplKigOJBCVcCOICj8cAa2ff76+qOSm1gP4qV6yPm9t768raUyU2ruqBSf6VK68PwkXoVsp7PR5aT0P9V0f78NOyls8kcdKKIPQ79OANPCt5SitQ4qOT6Y49YsBtjWbaVg7SqrbsqgytFpjdKlXVSssFbvaK3ypXlEnJG78UQB6IAXSGn4QghpHlAQBuc2c/8A2UNOT/8Ax+T/ANGI1Na0/wDtJX//AP2Ke/0642xbOW/707Tjgr/mCT44/IEantZwRtH39k8fqhn/APWFwBgh+Ar80/ujelaRQ3p3RXF8hTZcn0MpjRao4SrzH90bzLYBXpnSCpKuNLY6H8AmAK2PeyEaKtvLYFDvAlKik4kWehx+Giw2mmoFsaqacSF7WpMLdp84FDcdSEOsrScLbcSCd1aTzGe4jIIMaR5vcTUHyk5+2r/zjFktjfXxeleqn1K3DOlu0rhdS0+pw+RJTXBLb/gk8EL8CD9zAGf7b2umpjV51HRx6lN0C3ClD3bMuFxysMHilRXgBLe8CC2B8JJCiRwimMrLTE9PNS0rLrfmHlpbaaQMqcWo4SkDvJIHpjbNtWaCs6z6PqepEolV20VK5mluYwXxjLksT3LA4dywk8iYp9sN6PTN4a9zF5VynOpploq3w0+2RvT5yG0EHq3hSyOhCM84Avbolp1TtFNnWk23Ndgw9KSyp2rzecAzChvvrJ7k43QfvUCKWosWn7S193Lq5eb1WYkalUFS9Dl5Z4Nbkkz5CCcpPPHx756xPW3Nq4qxdC02TTZkt1i6SqWVunC2pJOO2V+llLY8FK7oofTdobVOi0GUo1IrMjKyMoylhhlFOYwhCRgD4Pz9eMYDSO2xK5tlSwuahNva22sl1ZJ737i/w6pbU6uvcptdHXzRcHZJratK9erv2fanNOOyEyfdq3nH1ZK07o30+JLYSTjq0vvjr+yD6TpnbapOr9Llf6Ip+7TKqUD4TC1ZZcP5qyUZ7nE90U6Z1uvv669tag1KdZm6vQJhDss43LoZK0Be8ppRQBvJUCtPHos98bcHGrX1s0KUkn21bt0UrySBlQbeRkHwWgkeZSYyWHRuYWtON206iSUmtza47lv37i2uHTdWTpfRz2ZlDvY/9U1ULVSpaY1OZKafcDZmZEKPBM40nJSO7faCvOW0xZfaP2bpXWPUvT+4pdtCRJT6ZOtryAXKdxd9JCkqQP8AH+Ea1KvI3Vovrk9T99UncNsVQFt4DALjSwpDg70qG6rxSqNyGnF603UbSag3zSk4l6tJomQ2PK7JZGFtk96VhSfRF6UTBNpXVNnR7Zuq1Zklty1WmUCmUhtOBuvuJICgO5tAUv8AQA6xp5XlThWVqUSclSjknxMWm26NWDfOvRsqnzG/SbUCpVQSfJcnFYL6v0cJb8ClXfFWMEQBsS9jkcI0xvbhyqzH+rmO/ta7TWpejesNKtqzPcQSUzR0Tznt6RL6+0LziDg744YQnhiOj7HGN7TG9jun/nZjp/8ADmLN3toppZqPXma1e9j06tVBlgSzcxNJXvJbCioJG6ocMqUfTAGvP3+2vx4E2uB3+5J9ZGGaobVmrGrNgO2ZdhoZprr7Uwr2nIFlzebOU+VvnhnwjY171XZ75fWnoX6jv04Y2UtnkAH61FDzkfcu/TgDXrsVtb22vaJUfuJ3/VHIupt18NjyqBIz/TOR5f42KbbJDaWtv2hS8s3uNNv1JCEJHwUhh4AegCNoV1WVa9+Wq5bt40KXq9MccQ6uVmUkoUpByk8CORgDRmApQ+CfigKVDmkxuKOyts9k/wBieg/ybn04jXX/AEO0E052arxu2S0woMtPStPW3JvBDmUTDpDTShlfMKWD6IA1fQQHgcA58YIAIYJHKDpCgD1JC5bjpLPY0q4KpINfg5WbcaT8SSBHeTf18p4i87gB/jF76UY76IOMW8rShN60oJvsRUVaolkpPmd+pVys1hwLq9VnqgoclTcwt4jzbxMdNl56WmETEu6tp1CgtDjailSSDkEEcQQescMQRVjCMY6sVkjw5NvNs9xV6XitJCrtrygeYNReOf50eGBxggiKdGFP6EUuxEynKX0nmHWGIUPpx5RUPJ68tdd0yUgiRkrkrErLNjCGWJ11tCRnOAkKwOZjprq9WeqyKq9VZ5yfQQUza5hZdSRwGF5yMdOMdPpBFFUKabais3v2Ht1JNZNnvfVteW5uG7a8R/GD30o4fVld/wDhVXPlB76UeIII8+SUPqLkifHVPrPme2Lyu/8Awrrn7e99KOtULgr1VlhLVSuVKdZCgsNTM046kKHI4USM8Tx8Y82CJjbUYvWjBJ9iDqzaybYdYcKH0iuUz26ZeV30SQEjRbrrlNld4rDElPvMN7x5ndSoDJ747g1J1E/w/un5XmPpxi+IcAZP9cnUX/D66vleY+nHQqd3XXWpb2vWbnrNSZznspyedeT8SlER43WA/FAH0affl5luYl3nGX21BbbjailSFA5BBHEEEcCIyI6i6gqbKF31c6kkYINWmMEHn93GMiCAAADlyhwuvKHjjygABI5Rko1G1DSAlN+3QEjkBVpjh/PjGoIA9an3RcdIqExUKVX6pIzkznt5mVm3GnHsneO+tKgVZPHiefGFV7pue4Gmmq/cVXqrbSiptE/OuzAbJGCUhajg47o8qFAB0g5wQQB3KZVarRKiioUWqTtOm0ApTMSb6mXACMEBSSDgiPeOpmo6ueoN1fK8x9OMWg6wBlH1ytRs/wBkC6vleY+nCOpeoxHHUC6vleY+nGMcDBAHcqVWqtanzPVmpzlRmikJMxOPrecIHIbyiTgR04IOsAEEKHAGRyeoF90+nsyEje1xysqwgNtMMVR9tDaRySlIWAAO4R4ExMPzc47NzUw6/MPLLjjrqyta1E5KlKPEknqY+RgMAP4jGSjUXUBLKWUX1cyG0pCUoTVZgJAAwABv8BGMweaADGTx4k8zDBx5oIIAyVOouoSG0tovy50oSAlKRVpgAAcgBvx8pO+71pof9zbvr8mZl5Uw+ZaovN9s4rmte6obyjgZUeJjH4UAehV67W7gm0TVerNRqj7aOzQ7PTS31JTnOAVkkDJJxHnwemHiAFjjGQyF+XxSaW1TaVeVwyMk0MNy0rUnmm0AnJASlQA4knh3xj/74UAdqoVKpVepuVGrVCaqE24AFzE28p5xWBgZUoknAAHOPVpl9XrQ6eiQot4V+myjZKkS0nUXmW0knJISlQAyeJ4R4GIIA+j7701NOzMy848+6suOOuKKlLUTkqUTxJJJJJj5wdIIA9ekXVdFvsOsUC5KxSmnVBbiJCddYStQGASEKGTjqY9L65eo34wLq+V5j6cYt6IIAyj65Wouf6/7qz/G8x9OH9crUb8YN1fK8x9OMWggDvU+sVWkVRNTpdTnJGeSVFM1KvqadBUCFYWkg8cnPHjmPcOpmo6ueoF1fK8x9OMVggDKRqXqOOWoN1j/ACvMfTjp1S9byrlOXT61d1eqMoshSpecqDzzZIOQSlSiCQeIjwhD6QAoIIIgDMHSEIz6jO6Ki35QV+Tv1VVDf9EqkX5QMFeT8ALG8E4xz4xb3Nz4iKlqOX3Vn80VKcNd5ZpdpgUKJJU9oF9zI6jjzzEl9GAOaB/dSWpHomJL6MWfnR+onyXeVfJl9ePP8iNoIkkuaA44SOpHpmJL6MLtNA/7y1I/aJL6MPOj9RPku8eTL665/kRvjhB6IkjtNBP7x1H/AGiS+jDDmgPWS1I/aJL6MPOj9RPku8eTfbXP8iNucA5RJPaaBf3lqR+0SX0YO10C/vHUj9okvow86P1E+S7x5P8AbXP8iNoIkntNAf7y1I/aJL6MHa6BdJLUj9okvow86P1E/wAK7x5N9uPP8iNoIyG6lWQqZljZLNwNs7ivbArLjKlFWfJ3OyAGMZzmMejIUavjYKeq1nwe8oTjqvLPM+jLS330NIwVLUEjJ6k4ETzM7G2u0vMmWVRqCZnAKZYV6UDisjIASVg5PSILp+8KrK7v4ZH+cIsBtoqbRtl1tZUELEjTyFZwQfayOOenSKp5IPui07jsu5Zq3bqo03SKrKkB6Um0bi054g9xSRxCgSD0Meha2n1z3halz3FRJVh2QtmVTO1Nxx9Lam2lEgFKTxWcpPAROW0kKlObN2hNYu1bqryfo80ibXM59sOSiXEmXU5nifJVwJ4+UrvMdPZ1bfnNnbaBkZVhT0yq2GVpaQMqUlLjhUQOuBxgCHbE04ujUi5JmhWnKsTM7LST1QcQ8+lkBlrG+cq4E+UOEYjv+TnHDnFkdi8LTrjc865/ydi0Kmt137ltOG+KjyAiuGEKY4DiG/nxAE60/ZE1oqVAplZYp9AblalKNT0sZity7SltOJCkHdUoEZBERlf2nd46Y3eu2b3oj1KqKWw6lC1JWh1s5AW2tJKVpOCMg8wRzi1WuzehJkNK1apTt9s1T6g6YGEW+zKrZLG6cbxdO8Fb29y4YxGCbWPY1W39KrotqYU7Yb9u+0KAqbChOgMKAdEyVE5XkpwU+SQOHeQKzEkDlGeX1o7qFpzaduXHd1CMjT7hZ7aRcDqXCRuJXuuJHFtW6tJ3VcefcYyPZr0tOrG0LRqJON5ockfdOruK4ITKtEEpUem+rdR+kT0i2lz2HqvrDY2rNtXxI0tAmJz6obPRLVaWm1yzrCS2JYIbWpSQtlKRyABUo9YA13BCicDnGUXFp7dFq2TbF2VmUYaplzMOzFNcQ+lanENqCVFSRxRxUOcYud9CwnBCs8QeY8DFi9dklWyJs9EHlSah/pkQBXQ8I96zbPrd+3pJ2rbjcsuozm/2KZqZRLtncQVnLiyEjgk8zx5R4PKGFY44B8DAE+HY21zTLtTDlLt5tl1RSh5VwSgQojmAd/iR4RBtUp0xR67OUmc7MzMm+5LO9ksLTvoUUqwocFDIOCOBifr8SlfscekhUkD+n9V4Y/KX/wAIgSiUOpXDcchQaLLKmZ+fmW5WWZTzW4tQSkfGRAGVyOkN/VLROo6sydE7S1afM+1pic7VIUFZSkkN/CUkFaQVDgDnuMYLkeaNnNL0+vW1tQLY0plabS5zSWUtp23K1v1aWQuZfmQVvzXYqXv7wd3QBjOCrHONdmodm1HTvVGuWRWEn23SZxcqpZGA6kHKHB4KQUqH50AdxGl94v6MnVKUkpeatpucEhMTEvMIcclXicAOtA7yAcpwojHlJ7xHGq6aXbRdJaVqPVZKXk6FV5hUvT1PTCEvTZTneWhn4RQMfDxjl3jM4bG66oqtXqxX0yf1qHKM4LvVUlKTLpRunsSkjj22c4xx3d7qEx5m2YbkRr1LydQYlmbTl6Wwi00SH/JDTtwbqmzyKir4XmT03YAhmwbAubUu7hbNpSrMzUjLuzQbefSyns207yzvK4ZA6RjJBB484sNsWqT76FG6OPuHUv8AQRXped/J5mAOJMSfp5oDqXqZbb1xW7SZNiitOlj3Tqs63JMOOjmhCnCN8jrgYHfEYg45jMWGtPUzSm6tn639JtaKZclOlaFMTExRq7b5QsgOqJUHWFjDmFEjeTk9OBzkCJtQNNLy0vupNu3rSfc6eWymZaSHkPIdaUSEuIWgkKSSCM+EZbZezhqhf1gyt52/JUb3ImXnZdp6dqzEqVLbUUqG64oHmDHy1v0w+t3U7cnqNdpum2LgpaZ+i1JbamnCwFY7NbaidwpKhwHDyuQOREyUuX0sf9jwsEarTN0MSQuSpGVNvtMLcU75ed/tSAE4zy6wBX/UfSW7tLZuny12JpaHZ9tbrAkKi1ODdQQDvFsnd4qGM8+PdHt6f7O+peplkOXbaslSXKU3NqkVPTtTZlT2qUpUU4cI6KHHz90Y1qEzpoi4mE6YTVxO0r2untVV5tlD/bbys4DXk7m7u465zFhNPbOkr19jemKRP3pblqtIvpT4n6+8ptglMskdmClJO8d7IGOQMAQZqNonqTpUiSmL0oAlZKeJErPS0w3NS7yhxKQ42SArAJ3Tg449I8qnac3VVtKKzqLTZSXmaHRZlqWqC0TCe1l1OYCFFr4W4SoDe5c+4xP2rdKlNGNjmmaPzd0S91VO5qq3c8tN09tZkJWTCAlJYcWMLKyAcJ5bxyBkb2I7JtwU1rVioaZXI8Pqev6nu0CbCuIS8pJMu4PygvKR4rEARZYen9zaj1qdplryjLzsjIu1KacmH0sNMS7QBWta1cABkeePhZtlV6/75pto2uw1M1WpOFuWaddS0lZCSs5UrgOCTzifJ2hT2z9sg3XIVdHtW7r5rLtvIBGFop0kspmFp/JccynxCkmMK2SnFe/QsAdDPOf6u7AEPz0jM02tTdKnEJRMyry5d1KVBQC0KKVAEc+IPGJTs3Zp1fvi1GLnplvSslR5n/ks5WJ5mRTNd3ZBxQKwehAwehjFa4zTndeaiiqq3aeq4XUzZBxhozZC/wCbmJV2z5y4RtR1OlVhDjNFkpeXaoEtylkSXYp3VMj4OCrfyR1GOggCH7309vLTm7F23etBmaPUkpDiWnsFLqCSAtC0kpWkkEZBPEEc4kK39lvVu5bJpN10yQoSaZVpcTMoubrUvLqcbJxncWoERFdYqdwVOYk11yfqE2tmWaZlzOuLWUS4/qaUb3JGDwxw7otdfbGibuzNocrVedvOXmBbjokxbzMutJR2qd/f7Ugg53cY6ZgCs1/6fXFppdibcuhMgmeVLomgJKcbmkbiioDy2yRnyTw83fGKxkV7NWQ3eEwNPHKy7b4S32C6yhtMyVbo394N+TjezjHTEY9xMALPSD0R69tG2E3C2q726u5StxW+mkqbS/vY8nBcG7jPPwjNi7s+D4MlqWfPMSX0YsLm+dCep4qUutLNfErU6Ous9ZLtIy4wRJfa7P8An/kWpX7RJfRhdpoB/eWpP7RJfRih50fqKn4V3nvyZfXjz/IjaFEkl3QHpJakftMl9GEXNAzyktSP2iS+jE+dH6ifJd48n+2uf5Eb54wZiR+00D/vPUj9okvoxyDmgPWT1J/aJL6MPOj9RPku8eTfbXP8iNoPTEklzQHORJak/tEl9GDtdAf7y1J/aJL6MPOj9RP8K7x5N9uPP8iNhByiSu10BxwkNSPTMyX0Y8a43NKlUNQtKVvFup76d1VVellM7mfKyGwFZxyj3SxFzko+Jms+LSy+JErfJZ665/kYdBBBGRLccLMHSCJAejMHGCAcoAByggB4QxxgAzB1gAzCgBwukPpmD7mAF1ggg7ogDheiDMB4CJB9WHlMTLb6MbyFBYzyyDmLD1XbIvis1Y1eoaeaYzVT3UgVCYoAefBSMJO+tZPDAx3RXQ8oB3QBk9+6h3fqZd790XpWXqnUnUhvtFAJQ0gZ3W20JwEIGTwA6k8Scx99NdTrx0nvVN02ZU0yk72SmHm3Ww6zMNKxvNuIPBSTgHvBAIIjEOsEATXdO09fVw2RUrTpVBtC0adVk7lT+pmlJk3J5PVLi8k7p6gYyCRyJiE93gcHAMODrAFgGtrW712/R6VV9PdNq0KTIM02WmarQ/bLwZaSEpBUpfhnhgZJ4RHOqGrd5auVqSnrrmpRLFOY9rSFOkJZMtKybfDKW208s4GSSTwA5ACMFhiAMztPU+47K02uyzaCzIsM3Q03LT8+W1GZDCCSWUK3sJSrKgrgScx0bAvmuabajUq9raWy1VKa92zXaIyhYIKVIWAQSlSSQRkc4xnpBAHp3DW3bivKp3C5Iyci7UJpybXLSSChlpS1FRShJJITknAycRkF16l3BeGndnWbU2JFun2nLvS0iuXbUlxxLqgpRcJUQTlIxgCMM7ofUwAQCAwdIgGX1fUm4K1o1b+mc0zIpo9Cm5iclXG21B5S3iSvfVvYI4nGAI+emmoFU0u1JkL3otPpk9UZALMsipNKcabWpBT2m6lSfKSCcceB4xieYOsSDv1Crz9Tr01W5yZW7UJp9c09Mk+Wp1Sisrz37xzGT6o6n13Vy75a6Lnk6a3VW5JqSemJJtTZmg2MJccBUcrwcEjAwBw4RhMEAZ85q5c/1hpfSKRl6bTbfTOGfm1SbSkP1F7mDMLKjvhOE4AAHkp7hDrmrtyXHobRdL65J0yep9DfU7TKg80szkohXNlLm9gt9N0p5BP3oxgJ4QHlAGYaY6k1zSm+RdduS8i9PCVfk92dbUtvcdRuqOEqBzjlxjDuO9knJMHQQZ4wAfdZzExWjtG3fbNhSFl1K2bMuyh04KEjLXHR25kyoUreIQsFJxvEnjnnziHekBgDNdSNUrt1Tudmt3TMy29LS6ZSTk5JhMvLSbCeIbabTwSnPHqT38BGY2XtI3RZ2lMjp+bMsev0iSmXptgV6lmcWlbqipRGVgDmRkDOIhmCAM71I1RmdSfc0TNmWdb3tEubv1OUwSXbb+7/AFTBO9jd4d2T3x8kamVxGgytJxLyIoprArfa9mr2x2/Z7mN7exuY6Yz4xhOYOsAZtU9UrjreidJ0wrEvT52mUabXM0ycebV7bkkr+GyhYVjsyeO6QenHgMYfJTczTajL1CQfWxNSzqXmXkHCm1pUFJUD3ggGPj0gHOAJD1f1ovPW66pKvXouSS9JSglGGJFotNIG8VKVulR8pROSc9B3R4enl8VbTTUuk3xQWZR6o0t0vMIm0FbRJQpB3gCCRhR5ERjHUQdD4QB3arU36vX56rTCUJfnJhyZdSgYTvLWVEAd2SYmO3dqbUGk2ZTrXrtGtK85CmICKebopaZ12USAAlKF5BIGBjOeAAzgCIPHGA9YAzLUXVC8NUrwRcd4TzExMNMplZdmXl0sMyzKSSlttCRwSCTzyePOJDo+1HctL0+t+0JrT/TyuydClBJSb1ao5mnkozk+UpeASeeAM4EQUeUHWAMy1G1DmdRrjlqvMWvbNvKl5YSwlrekBJsrAUpW+pAJyvysZ7gIw6FDHGADhBC5wQA4UHWGBxgBQZgIggA4wcDBBABB1gggBwecQjzggAgg6wQB/9k=" alt="UAE Safe Travel Dubai Taxi Service logo"></a>
-      <p>Dubai taxi service.</p>
+      <p>Dubai safe driver service.</p>
     </div>
     <div>
       <strong>Services</strong>
-      <a href="#services" class="footer-service" data-reason="Dubai Airport Transfer">Airport Transfer</a>
-      <a href="#services" class="footer-service" data-reason="Dubai City Taxi">City Taxi Service</a>
-      <a href="#services" class="footer-service" data-reason="Hotel Pickup">Hotel Pickup</a>
-      <a href="#services" class="footer-service" data-reason="Family & Tourist Ride">Family Rides</a>
+      <a href="#services" class="footer-service" data-reason="Safe Driver Dubai">Safe Driver Dubai</a>
+      <a href="#services" class="footer-service" data-reason="Hourly Driver Dubai">Hourly Driver</a>
+      <a href="#services" class="footer-service" data-reason="Daily Safe Driver">Daily Driver</a>
+      <a href="#services" class="footer-service" data-reason="Corporate Driver Dubai">Corporate Driver</a>
     </div>
     <div>
       <strong>Contact</strong>
       <a href="tel:+971507182868">Call</a>
-      <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking" style="margin-top:10px">Book Now</button>
+      <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai" style="margin-top:10px">Book Now</button>
       <button type="button" class="open-complaint">Report a Complaint</button>
     </div>
     <div>
       <strong>Disclaimer</strong>
-      <p>Independent Dubai taxi/private travel service.</p>
+      <p>Independent safe driver/private driver service in Dubai.</p>
     </div>
   </div>
   <div class="wrap footer-bottom">
@@ -1939,11 +1980,11 @@ body.nav-open{
   }
 
   function showBooking(reason){
-    const selected = reason || "General Taxi Booking";
+    const selected = reason || "Safe Driver Dubai";
     if(complaintForm) complaintForm.classList.remove("show");
     if(bookingForm) bookingForm.classList.add("show");
     if(rideReason) rideReason.value = selected;
-    if(bookingTitle) bookingTitle.textContent = selected === "General Taxi Booking" ? "Fill ride details" : selected;
+    if(bookingTitle) bookingTitle.textContent = selected === "Safe Driver Dubai" ? "Fill driver details" : selected;
     openModal();
     setTimeout(function(){ document.getElementById("rideDate")?.focus(); }, 80);
   }
@@ -1979,7 +2020,7 @@ body.nav-open{
       if(item.tagName.toLowerCase() === "a"){
         event.preventDefault();
       }
-      showBooking(item.getAttribute("data-reason") || "General Taxi Booking");
+      showBooking(item.getAttribute("data-reason") || "Safe Driver Dubai");
     });
   });
 
@@ -2013,15 +2054,15 @@ body.nav-open{
       event.preventDefault();
 
       const message = [
-        "Hello UAE Safe Travel, I need a taxi service in Dubai.",
+        "Hello UAE Safe Travel, I need a safe driver service in Dubai.",
         "",
-        "Type of travel: " + (document.getElementById("rideReason")?.value || "General Taxi Booking"),
+        "Service: " + (document.getElementById("rideReason")?.value || "Safe Driver Dubai"),
         "Date: " + (document.getElementById("rideDate")?.value || "-"),
-        "To: " + (document.getElementById("rideTo")?.value.trim() || "-"),
-        "To map link: " + (document.getElementById("rideToMap")?.value.trim() || "-"),
-        "From: " + (document.getElementById("rideFrom")?.value.trim() || "-"),
-        "From map link: " + (document.getElementById("rideFromMap")?.value.trim() || "-"),
-        "Number of people: " + (document.getElementById("ridePeople")?.value || "-"),
+        "Drop-off: " + (document.getElementById("rideTo")?.value.trim() || "-"),
+        "Drop-off map link: " + (document.getElementById("rideToMap")?.value.trim() || "-"),
+        "Pickup: " + (document.getElementById("rideFrom")?.value.trim() || "-"),
+        "Pickup map link: " + (document.getElementById("rideFromMap")?.value.trim() || "-"),
+        "No. of passengers: " + (document.getElementById("ridePeople")?.value || "-"),
         "Additional info: " + (document.getElementById("rideInfo")?.value.trim() || "-"),
         "",
         "Please share availability and price."
