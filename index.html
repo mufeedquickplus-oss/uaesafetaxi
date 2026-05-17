@@ -4,11 +4,12 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Taxi Service in Dubai | UAE Safe Travel</title>
-<meta name="description" content="Book a safe and reliable taxi service in Dubai for airport transfers, hotel pickup, city rides, family travel and daily trips. Direct WhatsApp booking available."/>
+<meta name="description" content="Book a reliable taxi service in Dubai for airport transfers, hotel pickup, city rides, family travel and tourist trips. Fast ride request and call support."/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
+<meta name="keywords" content="taxi service in Dubai, Dubai airport transfer, hotel pickup Dubai, city taxi Dubai, family taxi Dubai, tourist taxi Dubai"/>
 <link rel="canonical" href="https://uaesafetravel.com/"/>
 <meta property="og:title" content="Taxi Service in Dubai | UAE Safe Travel"/>
-<meta property="og:description" content="Safe and reliable Dubai taxi service with WhatsApp booking for airport transfers, hotel pickup, city rides and family travel."/>
+<meta property="og:description" content="Reliable Dubai taxi service for airport transfers, hotel pickup, city rides, family travel and tourist trips."/>
 <meta property="og:type" content="website"/>
 <meta property="og:url" content="https://uaesafetravel.com/"/>
 <meta property="og:image" content="https://uaesafetravel.com/assets/dubai-taxi-hero-reference.png"/>
@@ -19,10 +20,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"TaxiService","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Safe and reliable taxi service in Dubai with direct WhatsApp booking.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":["Dubai Airport Transfer","Dubai City Taxi Service","Hotel Pickup","Family and Tourist Ride"],"priceRange":"AED"}
+{"@context":"https://schema.org","@type":"TaxiService","name":"UAE Safe Travel","url":"https://uaesafetravel.com/","telephone":"+971507182868","description":"Reliable Dubai taxi service for airport transfers, hotel pickup and city rides.","areaServed":{"@type":"City","name":"Dubai"},"serviceType":["Dubai Airport Transfer","Dubai City Taxi Service","Hotel Pickup","Family & Tourist Ride"],"priceRange":"AED"}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you provide airport pickup in Dubai?","acceptedAnswer":{"@type":"Answer","text":"Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai."}},{"@type":"Question","name":"Can I book through WhatsApp?","acceptedAnswer":{"@type":"Answer","text":"Yes, bookings can be made directly through WhatsApp by sharing pickup, drop-off, date and passenger details."}},{"@type":"Question","name":"Do you offer hotel pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes, hotel pickup and drop-off service is available across Dubai."}},{"@type":"Question","name":"Is the service suitable for families?","acceptedAnswer":{"@type":"Answer","text":"Yes, the service is suitable for families, tourists, business travelers and daily travel needs."}}]}
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Do you provide airport pickup in Dubai?","acceptedAnswer":{"@type":"Answer","text":"Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai."}},{"@type":"Question","name":"Can I book through direct booking?","acceptedAnswer":{"@type":"Answer","text":"Yes, bookings can be made directly through direct booking by sharing pickup, drop-off, date and passenger details."}},{"@type":"Question","name":"Do you offer hotel pickup?","acceptedAnswer":{"@type":"Answer","text":"Yes, hotel pickup and drop-off service is available across Dubai."}},{"@type":"Question","name":"Is the service suitable for families?","acceptedAnswer":{"@type":"Answer","text":"Yes, the service is suitable for families, tourists, business travelers and daily travel needs."}}]}
 </script>
 
 <style>
@@ -408,13 +409,454 @@ body.modal-open{
   .hero-image-card > img{height:190px}
 }
 
+
+/* Inline SVG logo - no external logo loading issue */
+.brand-svg{
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+.ust-logo-svg{
+  display:block;
+  width:250px;
+  height:auto;
+  max-height:64px;
+}
+.footer-logo .ust-logo-svg{
+  width:280px;
+  max-height:78px;
+}
+@media(max-width:920px){
+  .ust-logo-svg{width:220px;max-height:58px}
+}
+@media(max-width:600px){
+  .ust-logo-svg{width:178px;max-height:50px}
+  .footer-logo .ust-logo-svg{width:230px}
+}
+
+
+/* Owner polish - cleaner copy, better hierarchy, better usability */
+body{
+  font-size:15.5px;
+}
+.site-header{
+  height:78px;
+}
+.site-header.scrolled{
+  height:70px;
+}
+.hero{
+  padding-top:132px;
+}
+.hero-grid{
+  gap:44px;
+}
+h1{
+  max-width:650px;
+  letter-spacing:-.035em;
+}
+.hero-sub{
+  font-size:1rem;
+  max-width:500px;
+}
+.hero-ctas{
+  margin-top:2px;
+}
+.support-link{
+  border:0;
+  background:transparent;
+  color:#4e493f;
+  font-size:.78rem;
+  font-weight:800;
+  text-decoration:underline;
+  text-underline-offset:4px;
+  cursor:pointer;
+  padding:8px 2px;
+}
+.support-link:hover{
+  color:#111111;
+}
+.trust-line{
+  margin-top:24px;
+}
+.trust-line span{
+  min-width:96px;
+  text-align:center;
+}
+.hero-strip{
+  border-radius:22px 22px 0 0;
+  overflow:hidden;
+  box-shadow:0 -8px 28px rgba(18,18,18,.04);
+}
+.hero-strip strong{
+  font-size:1.35rem;
+}
+.hero-strip span{
+  font-size:.68rem;
+}
+.section{
+  padding:clamp(58px,7vw,88px) 0;
+}
+.section-head{
+  max-width:640px;
+  margin-bottom:32px;
+}
+.section-head p{
+  font-size:.94rem;
+}
+.service-grid{
+  grid-template-columns:repeat(4,1fr);
+}
+.service-card.featured{
+  grid-column:span 1;
+  grid-row:auto;
+}
+.service-card{
+  min-height:275px;
+  display:flex;
+  flex-direction:column;
+}
+.service-card p{
+  flex:1;
+}
+.word-label{
+  height:36px;
+  min-width:68px;
+}
+.split{
+  grid-template-columns:.82fr 1.18fr;
+}
+.mini-process div{
+  min-height:118px;
+}
+.area-grid{
+  max-width:900px;
+  margin:0 auto;
+}
+.quality-card{
+  grid-template-columns:.9fr 1.1fr;
+}
+.check-list li{
+  padding:13px 14px;
+}
+.faq-layout{
+  gap:44px;
+}
+details{
+  padding:16px 18px;
+}
+summary{
+  font-size:.88rem;
+}
+.cta{
+  padding:clamp(64px,8vw,92px) 0;
+}
+.cta h2{
+  max-width:620px;
+}
+.footer-grid{
+  grid-template-columns:1.2fr .8fr .8fr 1fr;
+}
+.modal-shell{
+  width:min(520px,100%);
+}
+.popup-card{
+  padding:26px;
+}
+.form-grid{
+  gap:10px;
+}
+.form-grid input,
+.form-grid textarea{
+  padding:11px 12px;
+}
+@media(max-width:1020px){
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:920px){
+  .hero{padding-top:118px}
+  .hero-grid,
+  .split,
+  .quality-card,
+  .faq-layout{
+    gap:30px;
+  }
+  .service-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:600px){
+  body{font-size:15px}
+  .hero{padding-top:106px}
+  h1{font-size:2.75rem}
+  .hero-sub{font-size:.94rem}
+  .service-grid{grid-template-columns:1fr}
+  .hero-strip div{padding:18px 14px}
+  .quality-card{padding:24px}
+  .check-list{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+}
+
+
+/* Strict mobile stability fix - no floaty behavior */
+html,body{
+  max-width:100%;
+  overflow-x:hidden;
+}
+body{
+  overscroll-behavior-x:none;
+}
+.site-header{
+  left:0;
+  right:0;
+  width:100%;
+}
+.mobile-nav{
+  max-height:calc(100vh - 92px);
+  overflow:auto;
+}
+.hero,
+.section,
+.cta,
+footer{
+  width:100%;
+  overflow:hidden;
+}
+.hero-grid,
+.split,
+.quality-card,
+.faq-layout,
+.footer-grid{
+  min-width:0;
+}
+img,svg{
+  max-width:100%;
+}
+.modal-layer{
+  overscroll-behavior:contain;
+}
+.modal-shell{
+  overscroll-behavior:contain;
+}
+@media(max-width:768px){
+  .site-header{
+    height:72px!important;
+    padding:0 14px!important;
+  }
+  .site-header.scrolled{
+    height:72px!important;
+  }
+  .mobile-nav{
+    top:72px!important;
+    left:12px!important;
+    right:12px!important;
+  }
+  .hero{
+    padding-top:96px!important;
+  }
+  .wrap{
+    width:calc(100% - 28px)!important;
+  }
+  .hero-grid{
+    display:block!important;
+  }
+  .hero-grid > div{
+    width:100%;
+  }
+  .hero-grid > div + div{
+    margin-top:28px;
+  }
+  .hero-service-card,
+  .hero-image-card{
+    width:100%;
+    max-width:100%;
+  }
+  .hero-image-card > img{
+    height:auto!important;
+    max-height:220px;
+    object-fit:cover;
+  }
+  .hero-strip{
+    grid-template-columns:1fr 1fr!important;
+    border-radius:18px 18px 0 0;
+  }
+  .service-grid{
+    grid-template-columns:1fr!important;
+  }
+  .service-card{
+    min-height:auto!important;
+    width:100%;
+  }
+  .mini-process{
+    grid-template-columns:1fr!important;
+  }
+  .area-grid{
+    justify-content:flex-start;
+  }
+  .area-grid span{
+    width:calc(50% - 5px);
+    text-align:center;
+    padding:11px 10px;
+  }
+  .quality-card{
+    grid-template-columns:1fr!important;
+    border-radius:22px;
+  }
+  .check-list{
+    grid-template-columns:1fr!important;
+  }
+  .faq-layout{
+    grid-template-columns:1fr!important;
+  }
+  .footer-grid{
+    grid-template-columns:1fr!important;
+  }
+  .footer-bottom{
+    display:grid;
+    gap:10px;
+  }
+  .wa-float{
+    display:none!important;
+  }
+  .modal-layer{
+    align-items:flex-start!important;
+    justify-content:center!important;
+    padding:10px!important;
+    overflow:auto!important;
+  }
+  .modal-backdrop{
+    position:fixed;
+  }
+  .modal-shell{
+    width:100%!important;
+    max-width:100%!important;
+    max-height:none!important;
+    margin:12px 0!important;
+    border-radius:20px!important;
+    overflow:visible!important;
+  }
+  .popup-card{
+    border-radius:20px!important;
+    padding:20px!important;
+  }
+  .form-grid{
+    grid-template-columns:1fr!important;
+  }
+  .full-field{
+    grid-column:auto!important;
+  }
+  .booking-top{
+    position:sticky;
+    top:0;
+    z-index:2;
+    background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(255,251,238,.96));
+    margin:-20px -20px 14px;
+    padding:18px 20px 14px;
+    border-radius:20px 20px 0 0;
+  }
+  .form-close{
+    min-width:64px;
+    height:36px;
+  }
+}
+@media(max-width:420px){
+  h1{
+    font-size:2.35rem!important;
+    line-height:1.05!important;
+  }
+  h2{
+    font-size:1.9rem!important;
+  }
+  .hero-sub,
+  .section-head p,
+  .muted{
+    font-size:.91rem!important;
+  }
+  .hero-ctas{
+    gap:9px;
+  }
+  .hero-ctas .btn,
+  .nav-actions .btn{
+    width:100%;
+  }
+  .trust-line span{
+    min-width:calc(50% - 4px);
+    flex:1;
+  }
+  .hero-strip strong{
+    font-size:1.05rem!important;
+  }
+  .hero-strip span{
+    font-size:.62rem!important;
+  }
+  .area-grid span{
+    width:100%;
+  }
+  .ust-logo-svg{
+    width:155px!important;
+  }
+  .brand-svg{
+    max-width:calc(100% - 58px);
+  }
+}
+
+
+/* View check fixes */
+.hero-image-card > img{
+  object-position:center center;
+  background:#111111;
+}
+@media(max-width:600px){
+  .ust-logo-svg{
+    width:178px!important;
+  }
+  .site-header{
+    padding-left:12px!important;
+    padding-right:12px!important;
+  }
+}
+@media(max-width:360px){
+  .ust-logo-svg{
+    width:162px!important;
+  }
+}
+
 </style>
 </head>
 
 <body>
 <header class="site-header" id="siteHeader">
-  <a class="brand brand-image" href="#home" aria-label="UAE Safe Travel Home">
-    <img src="assets/uae-safe-travel-logo.png" alt="UAE Safe Travel Dubai Taxi Service logo"/>
+  <a class="brand brand-svg" href="#home" aria-label="UAE Safe Travel Home">
+    <svg class="ust-logo-svg" viewBox="0 0 560 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ustGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="48%" stop-color="#f5c400"/>
+      <stop offset="100%" stop-color="#a46f00"/>
+    </linearGradient>
+    <linearGradient id="ustBlack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b3b3b"/>
+      <stop offset="55%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#2a2a2a"/>
+    </linearGradient>
+    <filter id="ustShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ustShadow)">
+    <rect x="8" y="23" width="104" height="104" rx="30" fill="url(#ustBlack)"/>
+    <path d="M34 49v38c0 21 13 34 32 34s32-13 32-34V49H80v38c0 11-5 17-14 17s-14-6-14-17V49H34Z" fill="url(#ustGold)"/>
+    <path d="M36 96c24-18 45-20 71-9" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+    <path d="M54 93c13-5 25-5 38 0" fill="none" stroke="#f5c400" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <text x="132" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="#f5c400">UAE</text>
+    <text x="230" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="currentColor">SAFE TRAVEL</text>
+    <rect x="132" y="88" width="92" height="3" rx="2" fill="#f5c400"/>
+    <text x="238" y="97" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4.4" fill="currentColor">DUBAI TAXI SERVICE</text>
+  </g>
+</svg>
   </a>
 
   <nav class="nav-links" aria-label="Main navigation">
@@ -426,7 +868,7 @@ body.modal-open{
 
   <div class="nav-actions">
     <a class="btn btn-soft" href="tel:+971507182868">Call</a>
-    <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Book on WhatsApp</button>
+    <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
     <button class="btn btn-soft open-complaint" type="button">Complaint</button>
   </div>
 
@@ -440,7 +882,7 @@ body.modal-open{
   <a href="#booking">Booking</a>
   <a href="#areas">Areas</a>
   <a href="#faq">FAQ</a>
-  <button type="button" class="open-booking" data-reason="General taxi booking">Book on WhatsApp</button>
+  <button type="button" class="open-booking" data-reason="General Taxi Booking">Book Now</button>
   <button type="button" class="open-complaint">Report a Complaint</button>
 </div>
 
@@ -456,7 +898,7 @@ body.modal-open{
             <button class="form-close" type="button" id="hideBookingBtn">Close</button>
           </div>
 
-          <input type="hidden" id="rideReason" value="General taxi booking"/>
+          <input type="hidden" id="rideReason" value="General Taxi Booking"/>
 
           <div class="form-grid">
             <label><span>Date</span><input type="date" id="rideDate" /></label>
@@ -465,10 +907,10 @@ body.modal-open{
             <label><span>From</span><input type="text" id="rideFrom" placeholder="Pickup location" /></label>
             <label class="optional-field"><span>From map link <small>optional</small></span><input type="url" id="rideFromMap" placeholder="Paste map link if available" /></label>
             <label><span>Number of people</span><input type="number" id="ridePeople" min="1" placeholder="Passengers" /></label>
-            <label class="full-field"><span>Any additional info</span><textarea id="rideInfo" rows="3" placeholder="Flight number, luggage, preferred time or other notes"></textarea></label>
+            <label class="full-field"><span>Notes</span><textarea id="rideInfo" rows="3" placeholder="Flight number, luggage or preferred time"></textarea></label>
           </div>
 
-          <button class="btn btn-dark full" type="submit">Send Booking on WhatsApp</button>
+          <button class="btn btn-dark full" type="submit">Send Request</button>
         </form>
 
         <form class="popup-card complaint-card" id="complaintForm" aria-label="Complaint form">
@@ -487,22 +929,22 @@ body.modal-open{
             </label>
 
             <label>
-              <span>Date of traveling <small>optional</small></span>
+              <span>Travel date <small>optional</small></span>
               <input type="date" id="complaintDate" />
             </label>
 
             <label class="full-field">
               <span>Trip details</span>
-              <textarea id="complaintTrip" rows="3" placeholder="Pickup, drop-off, time, or booking reference if available"></textarea>
+              <textarea id="complaintTrip" rows="3" placeholder="Pickup, drop-off, time or booking reference"></textarea>
             </label>
 
             <label class="full-field">
               <span>Complaint</span>
-              <textarea id="complaintDetails" rows="4" placeholder="Please describe the issue clearly"></textarea>
+              <textarea id="complaintDetails" rows="4" placeholder="Describe the issue"></textarea>
             </label>
           </div>
 
-          <button class="btn btn-dark full" type="submit">Send Complaint on WhatsApp</button>
+          <button class="btn btn-dark full" type="submit">Send Complaint</button>
         </form>
   </div>
 </div>
@@ -511,21 +953,21 @@ body.modal-open{
   <section class="hero" id="home">
     <div class="wrap hero-grid">
       <div>
-        <p class="pill">Dubai taxi service with direct WhatsApp booking</p>
-        <h1>Executive taxi service in <em>Dubai</em>, booked with ease.</h1>
-        <p class="hero-sub">Airport transfers, hotel pickup, city rides and family travel with direct booking support. Share your trip details and receive availability through WhatsApp.</p>
+        <p class="pill">Dubai taxi service with direct booking</p>
+        <h1>Reliable taxi service in <em>Dubai</em>.</h1>
+        <p class="hero-sub">Book airport transfers, hotel pickup, city rides and family trips with quick confirmation.</p>
 
         <div class="hero-ctas">
-          <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Book on WhatsApp</button>
+          <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
           <a class="btn btn-soft" href="tel:+971507182868">Call</a>
-          <button class="btn btn-link open-complaint" type="button">Report a complaint</button>
+          <button class="support-link open-complaint" type="button">Report a complaint</button>
         </div>
-        <p class="hero-note">Start with WhatsApp booking and share your ride details in a few seconds.</p>
+        <p class="hero-note">Quick booking. Clear response. Safe travel.</p>
 
         <div class="trust-line">
-          <span>Airport pickup</span>
-          <span>Hotel transfer</span>
-          <span>Family friendly</span>
+          <span>Airport</span>
+          <span>Hotel Pickup</span>
+          <span>City Rides</span>
         </div>
       </div>
 
@@ -534,9 +976,9 @@ body.modal-open{
           <img src="assets/dubai-taxi-hero-reference.png" alt="Premium Dubai taxi service visual with UAE Safe Travel branding"/>
           <div class="hero-image-card-content">
             <span class="tiny">Direct booking</span>
-            <strong>Request your ride</strong>
-            <p>Choose a travel type, enter your trip details and send the request through WhatsApp.</p>
-            <button class="btn btn-dark full open-booking" type="button" data-reason="General taxi booking">Open Booking Form</button>
+            <strong>Quick booking</strong>
+            <p>Select your ride type and send your trip details.</p>
+            <button class="btn btn-dark full open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
           </div>
         </div>
       </div>
@@ -544,10 +986,10 @@ body.modal-open{
 
     <div class="wrap">
       <div class="hero-strip">
-        <div><strong>DXB</strong><span>Airport transfers</span></div>
-        <div><strong>City</strong><span>Dubai rides</span></div>
-        <div><strong>Hotel</strong><span>Pickup and drop-off</span></div>
-        <div><strong>Family</strong><span>Safe travel</span></div>
+        <div><strong>Airport</strong><span>Pickup and drop-off</span></div>
+        <div><strong>City</strong><span>Daily rides</span></div>
+        <div><strong>Hotel</strong><span>Guest pickup</span></div>
+        <div><strong>Family</strong><span>Comfortable trips</span></div>
       </div>
     </div>
   </section>
@@ -556,37 +998,37 @@ body.modal-open{
     <div class="wrap">
       <div class="section-head">
         <p class="pill">Services</p>
-        <h2>Professional travel options for Dubai.</h2>
-        <p>Select a travel type and complete the booking form with your route, date, passenger count and notes.</p>
+        <h2>Taxi services in Dubai.</h2>
+        <p>Choose your ride type. We will confirm availability and price.</p>
       </div>
 
       <div class="service-grid">
         <button class="service-card featured service-select" type="button" data-reason="Dubai Airport Transfer">
           <span class="word-label">AIRPORT</span>
           <h3>Dubai Airport Transfer</h3>
-          <p>Pickup and drop-off for Dubai airport passengers. Share terminal, flight time and destination through WhatsApp.</p>
-          <span class="service-action">Book airport transfer</span>
+          <p>Airport pickup and drop-off for Dubai passengers.</p>
+          <span class="service-action">Book Transfer</span>
         </button>
 
         <button class="service-card service-select" type="button" data-reason="Dubai City Taxi">
           <span class="word-label">CITY</span>
           <h3>Dubai City Taxi</h3>
-          <p>Comfortable rides for meetings, shopping, appointments and daily city travel across Dubai.</p>
-          <span class="service-action">Book city ride</span>
+          <p>Daily city rides for work, shopping, meetings and personal trips.</p>
+          <span class="service-action">Book City Ride</span>
         </button>
 
         <button class="service-card service-select" type="button" data-reason="Hotel Pickup">
           <span class="word-label">HOTEL</span>
           <h3>Hotel Pickup</h3>
-          <p>Easy pickup and drop-off from hotels, serviced apartments and business locations.</p>
-          <span class="service-action">Book hotel pickup</span>
+          <p>Pickup and drop-off from hotels, apartments and business locations.</p>
+          <span class="service-action">Book Hotel Pickup</span>
         </button>
 
-        <button class="service-card service-select" type="button" data-reason="Family and Tourist Ride">
+        <button class="service-card service-select" type="button" data-reason="Family & Tourist Ride">
           <span class="word-label">FAMILY</span>
-          <h3>Family and Tourist Rides</h3>
-          <p>Professional travel support for families, guests and visitors exploring Dubai.</p>
-          <span class="service-action">Book family ride</span>
+          <h3>Family & Tourist Rides</h3>
+          <p>Comfortable travel for families, guests and Dubai visitors.</p>
+          <span class="service-action">Book Family Ride</span>
         </button>
       </div>
     </div>
@@ -596,14 +1038,14 @@ body.modal-open{
     <div class="wrap split">
       <div>
         <p class="pill">Booking</p>
-        <h2>A clear booking process.</h2>
-        <p class="muted">Submit the essential trip details and receive availability confirmation through WhatsApp.</p>
+        <h2>How booking works.</h2>
+        <p class="muted">Send your ride details. We confirm the trip quickly.</p>
       </div>
       <div class="mini-process">
         <div><strong>01</strong><span>Select date</span></div>
         <div><strong>02</strong><span>Add From and To</span></div>
         <div><strong>03</strong><span>Add people and notes</span></div>
-        <div><strong>04</strong><span>Confirm on WhatsApp</span></div>
+        <div><strong>04</strong><span>Confirm Ride</span></div>
       </div>
     </div>
   </section>
@@ -612,8 +1054,8 @@ body.modal-open{
     <div class="wrap">
       <div class="section-head">
         <p class="pill">Dubai coverage</p>
-        <h2>Popular service areas.</h2>
-        <p>Available across major areas in Dubai. Intercity rides may be available based on driver availability.</p>
+        <h2>Areas we cover.</h2>
+        <p>Available across major Dubai locations. Intercity rides can be requested.</p>
       </div>
       <div class="area-grid">
         <span>Dubai Airport</span><span>Deira</span><span>Bur Dubai</span><span>Downtown Dubai</span><span>Business Bay</span>
@@ -626,16 +1068,16 @@ body.modal-open{
     <div class="wrap quality-card">
       <div>
         <p class="pill">Trust</p>
-        <h2>Reliable service with clear communication.</h2>
-        <p>UAE Safe Travel supports passengers who value punctual communication, clear pickup details and dependable Dubai transportation.</p>
+        <h2>Why choose UAE Safe Travel?</h2>
+        <p>Safe rides, clear pickup details and direct communication from booking to drop-off.</p>
       </div>
       <ul class="check-list">
-        <li>Direct WhatsApp booking</li>
-        <li>Call button available</li>
-        <li>Airport and hotel pickup focus</li>
-        <li>Service-based booking form</li>
+        <li>Direct booking booking</li>
+        <li>Call support</li>
+        <li>Airport and hotel pickup</li>
+        <li>Ride type selected</li>
         <li>Optional map links</li>
-        <li>Complaint support available</li>
+        <li>Complaint support</li>
       </ul>
     </div>
   </section>
@@ -644,15 +1086,17 @@ body.modal-open{
     <div class="wrap faq-layout">
       <div>
         <p class="pill">FAQ</p>
-        <h2>Questions before booking?</h2>
-        <p class="muted">The answers are short, helpful and written for passengers who want clear booking information.</p>
-        <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Ask through Booking Form</button>
+        <h2>Questions?</h2>
+        <p class="muted">Common questions before you book.</p>
+        <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book a Ride</button>
       </div>
       <div class="faq-list">
-        <details open><summary>Do you provide airport pickup in Dubai?</summary><p>Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai. Share your flight details, pickup time and destination through WhatsApp.</p></details>
-        <details><summary>Can I book through WhatsApp?</summary><p>Yes, bookings can be made directly through WhatsApp by submitting the booking form or sending your trip details manually.</p></details>
+        <details open><summary>Do you provide airport pickup in Dubai?</summary><p>Yes, UAE Safe Travel provides airport pickup and drop-off service in Dubai. Share your flight details, pickup time and destination through direct booking.</p></details>
+        <details><summary>Can I book through direct booking?</summary><p>Yes, bookings can be made directly through direct booking by submitting the booking form or sending your trip details manually.</p></details>
         <details><summary>Do you offer hotel pickup?</summary><p>Yes, hotel pickup and drop-off service is available across Dubai.</p></details>
         <details><summary>Is the service suitable for families?</summary><p>Yes, the service is suitable for families, tourists, business travelers and daily travel needs.</p></details>
+        <details><summary>Which areas do you cover in Dubai?</summary><p>We cover major Dubai locations including Dubai Airport, Deira, Bur Dubai, Downtown Dubai, Business Bay, Dubai Marina, Jumeirah, Al Barsha, JLT and Palm Jumeirah.</p></details>
+        <details><summary>Can I request airport transfer?</summary><p>Yes, airport pickup and drop-off can be requested with your date, pickup location, drop-off location and passenger details.</p></details>
       </div>
     </div>
   </section>
@@ -660,10 +1104,10 @@ body.modal-open{
   <section class="cta">
     <div class="wrap">
       <p class="pill">Ready to ride?</p>
-      <h2>Ready for your Dubai journey?</h2>
-      <p>Share your route, date and passenger details. UAE Safe Travel will respond with availability and pricing.</p>
+      <h2>Need a ride in Dubai?</h2>
+      <p>Send your trip details and get a direct response on booking.</p>
       <div class="hero-ctas" style="justify-content:center">
-        <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking">Book Now</button>
+        <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking">Book Now</button>
         <a class="btn btn-soft" href="tel:+971507182868">Call</a>
       </div>
     </div>
@@ -673,27 +1117,57 @@ body.modal-open{
 <footer>
   <div class="wrap footer-grid">
     <div>
-      <a class="brand brand-image footer-logo" href="#home" aria-label="UAE Safe Travel Home">
-        <img src="assets/uae-safe-travel-logo.png" alt="UAE Safe Travel Dubai Taxi Service logo"/>
+      <a class="brand brand-svg footer-logo" href="#home" aria-label="UAE Safe Travel Home">
+        <svg class="ust-logo-svg" viewBox="0 0 560 150" role="img" aria-label="UAE Safe Travel Dubai Taxi Service logo" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ustGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fff0a8"/>
+      <stop offset="48%" stop-color="#f5c400"/>
+      <stop offset="100%" stop-color="#a46f00"/>
+    </linearGradient>
+    <linearGradient id="ustBlack" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3b3b3b"/>
+      <stop offset="55%" stop-color="#080808"/>
+      <stop offset="100%" stop-color="#2a2a2a"/>
+    </linearGradient>
+    <filter id="ustShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.20"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#ustShadow)">
+    <rect x="8" y="23" width="104" height="104" rx="30" fill="url(#ustBlack)"/>
+    <path d="M34 49v38c0 21 13 34 32 34s32-13 32-34V49H80v38c0 11-5 17-14 17s-14-6-14-17V49H34Z" fill="url(#ustGold)"/>
+    <path d="M36 96c24-18 45-20 71-9" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+    <path d="M54 93c13-5 25-5 38 0" fill="none" stroke="#f5c400" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g>
+    <text x="132" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="#f5c400">UAE</text>
+    <text x="230" y="70" font-family="Arial, Helvetica, sans-serif" font-size="37" font-weight="900" letter-spacing="1.4" fill="currentColor">SAFE TRAVEL</text>
+    <rect x="132" y="88" width="92" height="3" rx="2" fill="#f5c400"/>
+    <text x="238" y="97" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="800" letter-spacing="4.4" fill="currentColor">DUBAI TAXI SERVICE</text>
+  </g>
+</svg>
       </a>
-      <p>Safe and reliable taxi service in Dubai with direct WhatsApp booking.</p>
+      <p>Reliable Dubai taxi service for airport transfers, hotel pickup and city rides.</p>
     </div>
     <div>
       <strong>Services</strong>
       <a href="#services" class="footer-service" data-reason="Dubai Airport Transfer">Airport Transfer</a>
       <a href="#services" class="footer-service" data-reason="Dubai City Taxi">City Taxi Service</a>
       <a href="#services" class="footer-service" data-reason="Hotel Pickup">Hotel Pickup</a>
-      <a href="#services" class="footer-service" data-reason="Family and Tourist Ride">Family Rides</a>
+      <a href="#services" class="footer-service" data-reason="Family & Tourist Ride">Family Rides</a>
     </div>
     <div>
       <strong>Contact</strong>
       <a href="tel:+971507182868">Call</a>
-      <button class="btn btn-yellow open-booking" type="button" data-reason="General taxi booking" style="margin-top:10px">Book on WhatsApp</button>
+      <button class="btn btn-yellow open-booking" type="button" data-reason="General Taxi Booking" style="margin-top:10px">Book Now</button>
       <button type="button" class="open-complaint">Report a Complaint</button>
     </div>
     <div>
       <strong>Disclaimer</strong>
-      <p>UAE Safe Travel is an independent taxi/private travel service provider in Dubai. We are not affiliated with any government transport authority.</p>
+      <p>Independent Dubai taxi/private travel service. Not affiliated with any government transport authority.</p>
     </div>
   </div>
   <div class="wrap footer-bottom">
@@ -701,10 +1175,6 @@ body.modal-open{
     <a href="#home">Back to top</a>
   </div>
 </footer>
-
-<a class="wa-float" href="https://wa.me/971507182868" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
 
 <script>
 (function(){
@@ -734,9 +1204,9 @@ body.modal-open{
   }
 
   function showBooking(reason){
-    const selectedReason = reason || "General taxi booking";
+    const selectedReason = reason || "General Taxi Booking";
     if(reasonField) reasonField.value = selectedReason;
-    if(title) title.textContent = selectedReason === "General taxi booking" ? "Fill ride details" : selectedReason;
+    if(title) title.textContent = selectedReason === "General Taxi Booking" ? "Fill ride details" : selectedReason;
 
     complaintForm?.classList.remove("show");
     bookingForm?.classList.add("show");
@@ -821,7 +1291,7 @@ body.modal-open{
       "Hello UAE Safe Travel, I want to report a complaint.",
       "",
       "Name: " + (name || "-"),
-      "Date of traveling: " + (travelDate || "-"),
+      "Travel date: " + (travelDate || "-"),
       "Trip details: " + (trip || "-"),
       "Complaint: " + (complaint || "-"),
       "",
@@ -849,7 +1319,7 @@ body.modal-open{
   bookingForm?.addEventListener("submit", event => {
     event.preventDefault();
 
-    const reason = document.getElementById("rideReason")?.value || "General taxi booking";
+    const reason = document.getElementById("rideReason")?.value || "General Taxi Booking";
     const date = document.getElementById("rideDate")?.value || "";
     const to = document.getElementById("rideTo")?.value.trim() || "";
     const toMap = document.getElementById("rideToMap")?.value.trim() || "";

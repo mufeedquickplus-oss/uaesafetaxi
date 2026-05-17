@@ -40,3 +40,45 @@ Latest brand asset update:
 - Applied the approved taxi hero reference visual inside the website hero card.
 - Added hero image asset: assets/dubai-taxi-hero-reference.png
 - Booking and complaint popup logic retained.
+
+Logo visibility fix:
+- Header and footer logo have been converted to inline SVG.
+- This avoids broken logo display caused by missing image path, upload path issues, or extraction issues.
+- The PNG logo files can remain in assets, but the visible logo no longer depends on them.
+
+
+Owner polish update:
+- Reduced unnecessary wording.
+- Made copy more direct and customer-facing.
+- Improved CTA hierarchy.
+- Improved service card structure.
+- Improved font contrast and mobile spacing.
+- Kept logo, hero image, booking popup and complaint popup working.
+
+
+Strict mobile fix:
+- Removed floating WhatsApp button on mobile/site to avoid floaty behavior.
+- Mobile popup is now a stable top-aligned panel.
+- Header is fixed-height on mobile.
+- Forms and cards are forced into clean single-column layout.
+- Added horizontal overflow protection.
+
+
+View check update:
+- Checked desktop and mobile render.
+- Replaced nested website mockup hero image with a clean taxi/skyline crop.
+- Fixed hero copy typo.
+- Improved mobile logo sizing.
+- Booking popup and complaint popup retained.
+
+
+SEO/copy update:
+- Reduced visible WhatsApp mentions while retaining WhatsApp-based functionality.
+- Updated title and meta description.
+- Added useful local FAQ items.
+- Checked H1/H2 structure, image alt text, canonical, schema, links and keyword coverage.
+
+Final SEO/copy cleanup:
+- Shortened title.
+- Reduced visible WhatsApp mentions.
+- Kept functionality unchanged.
