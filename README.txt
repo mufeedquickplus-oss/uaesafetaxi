@@ -84,16 +84,18 @@ Final SEO/copy cleanup:
 - Kept functionality unchanged.
 
 
-Visual satisfaction update:
-- Embedded hero image directly into HTML to prevent broken image display.
-- Strengthened logo sizing.
-- Hid extra hero image card on mobile for cleaner first screen.
-- Improved mobile footer/button stacking.
-- Confirmed no visible WhatsApp repetition.
+Final correction:
+- Replaced random inline logo with generated logo image.
+- Applied generated hero/taxi image to the real website.
+- Reduced unwanted spacing in hero and sections.
+- Booking/complaint popup functionality retained.
 
 
-No image dependency fix:
-- Removed normal image tags from the page.
-- Logo is now inline SVG in index.html.
-- Hero taxi visual is now inline SVG in index.html.
-- This prevents logo/hero image loading failures caused by missing asset paths.
+No-blue final fix:
+- Added global color lock to prevent browser default blue link styling.
+- Locked nav, footer, button, FAQ and form colors.
+- This prevents blue text from appearing because of unstyled anchor states.
+
+Brand color lock final:
+- Removed default browser link color behavior.
+- Locked all visible text/link states to black, white, gold or neutral tones.
