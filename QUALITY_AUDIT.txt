@@ -1,24 +1,23 @@
-UAE Safe Drivers - Send Request Button Visibility Fix Audit
+UAE Safe Drivers - Driver With Car Update Audit
 
-send_request_button_present: PASS
-send_complaint_button_present: PASS
-submit_visibility_css_present: PASS
-submit_buttons_have_full_width: PASS
-submit_buttons_have_contrast: PASS
-booking_popup_present: PASS
-complaint_popup_present: PASS
+driver_with_car_mentioned: PASS
+driver_with_car_service_card_added: PASS
+booking_form_service_option_added: PASS
+booking_message_includes_service_option: PASS
+faq_updated: PASS
+send_request_button_visible_retained: PASS
 floating_icons_retained: PASS
 pricing_cards_retained: PASS
+booking_popup_present: PASS
+complaint_popup_present: PASS
 no_dead_links: PASS
 
-Fix applied:
-- Send Request button now has full-width dark background and white text.
-- Send Complaint button uses the same visible style.
-- Hover state changes to gold with black text.
-- Mobile sizing locked.
-
-Submit buttons found:
-['Send Request', 'Send Complaint']
+Applied:
+- Mentioned customers can book driver-only or driver with car.
+- Added Driver with Car service card.
+- Added Service option field in booking form.
+- Booking message now includes Service option.
+- Added short FAQ entry.
 
 Bad links:
 PASS

@@ -5,7 +5,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Safe Driver Dubai | Private Driver Service | UAE Safe Driverss</title>
-<meta name="description" content="Hire a safe driver in Dubai or across the UAE for your own car. Book hourly, daily, corporate, chauffeur, pick and drop driver service."/>
+<meta name="description" content="Hire UAE Safe Drivers for driver-only or driver-with-car service across the UAE. Book one-way, hourly, daily, corporate, chauffeur, and pick and drop driver service."/>
 <meta name="robots" content="index, follow, max-image-preview:large"/>
 <meta name="keywords" content="safe driver service in Dubai, Dubai airport transfer, hotel pickup Dubai, city taxi Dubai, family taxi Dubai, tourist taxi Dubai"/>
 <link rel="canonical" href="https://uaesafetravel.com/"/>
@@ -2715,6 +2715,15 @@ footer .footer-complaint:hover{
   <div class="nav-actions">
     <a class="btn btn-soft" href="tel:+971507182868">Call</a>
     <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
+
+
+      <button class="service-card service-select" type="button" data-reason="Driver with Car">
+        <span class="word-label">CAR</span>
+        <h3>Driver with Car</h3>
+        <div class="card-price">On request</div>
+        <p>Need both driver and vehicle? Request a driver with car based on timing and availability.</p>
+        <span class="service-action">Request Driver with Car</span>
+      </button>
     <button class="btn btn-soft open-complaint" type="button">Complaint</button>
   </div>
 
@@ -2775,6 +2784,17 @@ footer .footer-complaint:hover{
         <option>Hourly service</option>
         <option>Half day</option>
         <option>Full day</option>
+        <option>Not sure</option>
+      </select>
+    </label>
+
+
+    <label>
+      <span>Service option</span>
+      <select id="rideVehicleOption">
+        <option value="">Select option</option>
+        <option>Driver only</option>
+        <option>Driver with car</option>
         <option>Not sure</option>
       </select>
     </label>
@@ -2846,7 +2866,7 @@ footer .footer-complaint:hover{
     <div class="hero-copy-block">
       <p class="hero-kicker">Safe. Professional. Always on time.</p>
       <h1>Need a safe driver in Dubai?</h1>
-      <p class="hero-sub">Hire a professional driver for your own car. Available for one-way trips, hourly service, daily service and pick & drop.</p>
+      <p class="hero-sub">Hire a professional driver for your own car, or request a driver with car based on availability. Available for one-way trips, hourly service, daily service and pick & drop.</p>
 <div class="hero-ctas">
         <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
         <a class="btn btn-soft hero-call-btn" href="tel:+971507182868">Call</a>
@@ -2957,6 +2977,7 @@ footer .footer-complaint:hover{
       <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book a Driver</button>
     </div>
     <div class="faq-list">
+      <details><summary>Can I request a driver with car?</summary><p>Yes. You can request either a driver for your own car or a driver with car, based on availability.</p></details>
       <details open><summary>What is a safe driver service?</summary><p>A professional driver comes to your location and drives your own car to your destination.</p></details>
       <details><summary>Can I book for hourly service?</summary><p>Yes. Hourly driver service can be requested for meetings, errands, events and multiple stops.</p></details>
       <details><summary>Do you offer daily driver service?</summary><p>Yes. Daily driver service can be requested for personal, family or office schedules.</p></details>
@@ -2969,7 +2990,7 @@ footer .footer-complaint:hover{
   <div class="wrap bottom-action-card">
     <p class="pill">Need a driver?</p>
     <h2>Book your driver easily.</h2>
-    <p class="bottom-action-text">Choose a service above and send your pickup details. For support, use the complaint option below.</p>
+    <p class="bottom-action-text">Choose a service above and send your pickup details. Driver-only and driver-with-car requests are available based on availability.</p>
     <div class="bottom-actions">
       <button class="btn btn-yellow open-booking" type="button" data-reason="Safe Driver Dubai">Book Now</button>
       <button class="btn btn-outline-clean open-complaint" type="button">Report a Complaint</button>
@@ -3148,6 +3169,7 @@ footer .footer-complaint:hover{
         "Pickup location: " + (document.getElementById("rideFrom")?.value.trim() || "-"),
         "Drop-off location: " + (document.getElementById("rideTo")?.value.trim() || "-"),
         "Service duration: " + (document.getElementById("rideDuration")?.value || "-"),
+        "Service option: " + (document.getElementById("rideVehicleOption")?.value || "-"),
         "No. of passengers: " + (document.getElementById("ridePeople")?.value || "-"),
         "Notes: " + (document.getElementById("rideInfo")?.value.trim() || "-"),
         "",
